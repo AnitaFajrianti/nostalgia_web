@@ -36,7 +36,7 @@ export default function ContactPage() {
 
             <p className="mt-6 max-w-md leading-relaxed text-gray-600">
               Ceritakan kebutuhan, ide, atau project yang ingin kamu
-              kembangkan bersama Nostalgia.
+              kembangkan bersama Nostalgia.Kala.
             </p>
 
             <div className="mt-12 space-y-8">
@@ -50,7 +50,7 @@ export default function ContactPage() {
               <div>
                 <p className="text-sm text-gray-500">WhatsApp</p>
                 <a
-                  href="https://wa.me/6281901604670"
+                  href="https://wa.me/6281901604670?text=Halo%20Nostalgia%20Kala%2C%20saya%20ingin%20menanyakan%20informasi%20lebih%20lanjut."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 block font-medium transition hover:opacity-60"
@@ -182,7 +182,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-2 gap-y-8 text-sm">
             {/* INSTAGRAM */}
             <div>
-              <p className="text-gray-500">Instagram</p>
+              <p className="text-sm text-gray-500">Instagram</p>
               <a
                 href="https://www.instagram.com/studionostalgia.id"
                 target="_blank"
@@ -195,9 +195,9 @@ export default function ContactPage() {
 
             {/* WHATSAPP */}
             <div>
-              <p className="text-gray-500">WhatsApp</p>
+              <p className="text-sm text-gray-500">WhatsApp</p>
               <a
-                href="https://wa.me/6281901604670"
+                href="https://wa.me/6281901604670?text=Halo%2C%20Nostalgia%20Kala.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 block font-medium transition hover:opacity-60"
@@ -208,7 +208,7 @@ export default function ContactPage() {
 
             {/* LOCATION */}
             <div>
-              <p className="text-gray-500">Location</p>
+              <p className="text-sm text-gray-500">Location</p>
               <p className="mt-2 font-medium">
                 Indonesia
               </p>

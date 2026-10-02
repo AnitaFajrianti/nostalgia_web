@@ -2,7 +2,16 @@ import Link from "next/link";
 import CTA from "@/components/CTA";
 import PhotoImage from "@/components/PhotoImage";
 
-const projects = [
+type PortfolioItem = {
+  slug: string;
+  title: string;
+  category: string;
+  image: string;
+  alt: string;
+  video?: string;
+};
+
+const projects: PortfolioItem[] = [
   {
     slug: "project-one",
     title: "Project One",
@@ -30,6 +39,14 @@ const projects = [
     category: "Visual / Creative",
     image: "/images/film-production.jpg",
     alt: "Kamera video saat proses pengambilan gambar",
+  },
+  {
+    slug: "17an",
+    title: "17an",
+    category: "Event Documentation",
+    image: "/images/film-production.jpg",
+    alt: "Video dokumentasi acara 17an",
+    video: "/videos/portfolio-17an.MOV",
   },
 ];
 
@@ -121,11 +138,28 @@ export default function PortfolioPage() {
                 href={`/portfolio/${project.slug}`}
                 className="group block"
               >
-                <PhotoImage
-                  src={project.image}
-                  alt={project.alt}
-                  className="aspect-[4/3] transition duration-500 group-hover:opacity-90"
-                />
+                {project.video ? (
+                  <div className="relative aspect-[4/3] overflow-hidden bg-[var(--beige)]">
+                    <video
+                      src={project.video}
+                      poster={project.image}
+                      muted
+                      playsInline
+                      preload="none"
+                      aria-label={project.alt}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                    <span className="absolute bottom-4 left-4 border border-[var(--cream-light)] bg-[var(--brown)]/80 px-3 py-2 text-xs uppercase tracking-[0.15em] text-[var(--cream-light)]">
+                      Watch film
+                    </span>
+                  </div>
+                ) : (
+                  <PhotoImage
+                    src={project.image}
+                    alt={project.alt}
+                    className="aspect-[4/3] transition duration-500 group-hover:opacity-90"
+                  />
+                )}
 
                 <div className="mt-5 flex justify-between gap-4">
                   <div>

@@ -10,22 +10,22 @@ export default function Home() {
       <Hero />
 
       {/* INTRO */}
-      <section className="bg-[var(--cream)] px-6 py-28 md:px-10 md:py-40">
+      <section className="border-t border-[var(--line)] bg-[var(--cream)] px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 md:grid-cols-2">
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--brown-light)]">
-                About Nostalgia
+              <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+                About Nostalgia.Kala
               </p>
             </div>
 
             <div>
-              <h2 className="font-[family-name:var(--font-serif)] text-4xl font-semibold leading-tight tracking-[-0.03em] md:text-6xl">
+              <h2 className="text-2xl leading-relaxed md:text-3xl">
                 We create things people remember.
               </h2>
 
               <p className="mt-8 max-w-xl text-base leading-relaxed text-[var(--brown-light)]">
-                Nostalgia adalah creative studio yang menggabungkan ide,
+                Nostalgia.Kala adalah creative studio yang menggabungkan ide,
                 visual, dan storytelling untuk menciptakan karya yang punya
                 karakter.
               </p>
@@ -34,7 +34,7 @@ export default function Home() {
                 href="/about"
                 className="mt-8 inline-block border-b border-[var(--brown)] pb-1 text-sm font-medium"
               >
-                Discover Nostalgia →
+                Discover Nostalgia.Kala →
               </Link>
             </div>
           </div>
@@ -42,15 +42,15 @@ export default function Home() {
       </section>
 
       {/* FEATURED WORK */}
-      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-28 md:px-10 md:py-40">
+      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-14 flex items-end justify-between gap-6">
+          <div className="mb-12 flex items-end justify-between gap-6">
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--brown-light)]">
+              <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
                 Selected Work
               </p>
 
-              <h2 className="mt-4 font-[family-name:var(--font-serif)] text-5xl font-semibold tracking-[-0.03em] md:text-7xl">
+              <h2 className="text-4xl font-bold md:text-5xl">
                 Featured
               </h2>
             </div>
@@ -73,7 +73,7 @@ export default function Home() {
 
               <div className="mt-5 flex items-start justify-between gap-6">
                 <div>
-                  <h3 className="font-[family-name:var(--font-serif)] text-3xl font-semibold">
+                  <h3 className="text-2xl font-semibold">
                     Featured Project
                   </h3>
 
@@ -96,7 +96,7 @@ export default function Home() {
               />
 
               <div className="mt-5">
-                <h3 className="font-[family-name:var(--font-serif)] text-2xl font-semibold">
+                <h3 className="text-2xl font-semibold">
                   Project Two
                 </h3>
 
@@ -110,19 +110,19 @@ export default function Home() {
       </section>
 
       {/* PHILOSOPHY */}
-      <section className="bg-[var(--brown)] px-6 py-28 text-[var(--cream)] md:px-10 md:py-40">
+      <section className="border-t border-[var(--line)] bg-[var(--brown)] px-6 py-24 text-[var(--cream)]">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-[var(--cream)]/60">
+          <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--cream)]/60">
             Our Philosophy
           </p>
 
-          <h2 className="mt-8 max-w-6xl font-[family-name:var(--font-serif)] text-5xl font-semibold leading-[0.95] tracking-[-0.04em] md:text-8xl">
+          <h2 className="max-w-6xl text-4xl font-bold leading-tight md:text-5xl">
             Good work doesn&apos;t just look good.
             <br />
             It stays with you.
           </h2>
 
-          <div className="mt-16 flex justify-end">
+          <div className="mt-12 flex justify-end">
             <p className="max-w-md text-base leading-relaxed text-[var(--cream)]/70">
               Kami percaya bahwa karya yang baik bukan hanya tentang tampilan,
               tetapi tentang bagaimana sebuah pengalaman terasa dan diingat.
@@ -132,15 +132,15 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-[var(--cream)] px-6 py-28 md:px-10 md:py-40">
+      <section className="border-t border-[var(--line)] bg-[var(--cream)] px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-16 md:grid-cols-2">
+          <div className="grid gap-12 md:grid-cols-2">
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--brown-light)]">
+              <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
                 What We Do
               </p>
 
-              <h2 className="mt-5 max-w-xl font-[family-name:var(--font-serif)] text-5xl font-semibold leading-tight tracking-[-0.03em] md:text-7xl">
+              <h2 className="max-w-xl text-4xl font-bold leading-tight md:text-5xl">
                 Ideas into experiences.
               </h2>
             </div>
@@ -152,7 +152,7 @@ export default function Home() {
                     01
                   </span>
 
-                  <span className="flex-1 px-6 font-[family-name:var(--font-serif)] text-2xl">
+                  <span className="flex-1 px-6 text-2xl">
                     Branding
                   </span>
 
@@ -164,7 +164,7 @@ export default function Home() {
                     02
                   </span>
 
-                  <span className="flex-1 px-6 font-[family-name:var(--font-serif)] text-2xl">
+                  <span className="flex-1 px-6 text-2xl">
                     Creative
                   </span>
 
@@ -176,7 +176,7 @@ export default function Home() {
                     03
                   </span>
 
-                  <span className="flex-1 px-6 font-[family-name:var(--font-serif)] text-2xl">
+                  <span className="flex-1 px-6 text-2xl">
                     Digital
                   </span>
 
@@ -188,7 +188,7 @@ export default function Home() {
                     04
                   </span>
 
-                  <span className="flex-1 px-6 font-[family-name:var(--font-serif)] text-2xl">
+                  <span className="flex-1 px-6 text-2xl">
                     Experience
                   </span>
 
@@ -201,15 +201,15 @@ export default function Home() {
       </section>
 
       {/* JOURNAL */}
-      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-28 md:px-10 md:py-40">
+      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-14 flex items-end justify-between">
+          <div className="mb-12 flex items-end justify-between gap-6">
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-[var(--brown-light)]">
+              <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
                 Journal
               </p>
 
-              <h2 className="mt-4 font-[family-name:var(--font-serif)] text-5xl font-semibold tracking-[-0.03em] md:text-7xl">
+              <h2 className="text-4xl font-bold md:text-5xl">
                 From our desk.
               </h2>
             </div>
@@ -234,7 +234,7 @@ export default function Home() {
                 Creative
               </p>
 
-              <h3 className="mt-3 font-[family-name:var(--font-serif)] text-3xl font-semibold">
+              <h3 className="mt-3 text-2xl font-semibold">
                 Article title goes here.
               </h3>
             </article>
@@ -250,7 +250,7 @@ export default function Home() {
                 Branding
               </p>
 
-              <h3 className="mt-3 font-[family-name:var(--font-serif)] text-3xl font-semibold">
+              <h3 className="mt-3 text-2xl font-semibold">
                 Another story worth reading.
               </h3>
             </article>
@@ -266,8 +266,8 @@ export default function Home() {
                 Ideas
               </p>
 
-              <h3 className="mt-3 font-[family-name:var(--font-serif)] text-3xl font-semibold">
-                Thoughts from Nostalgia.
+              <h3 className="mt-3 text-2xl font-semibold">
+                Thoughts from Nostalgia.Kala.
               </h3>
             </article>
           </div>

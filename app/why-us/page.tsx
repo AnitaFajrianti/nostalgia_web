@@ -9,7 +9,7 @@ export default function WhyUsPage() {
         <div className="mx-auto flex min-h-[50vh] max-w-7xl items-end">
           <div className="max-w-4xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Why Nostalgia
+              Why Nostalgia.Kala
             </p>
 
             <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-7xl">

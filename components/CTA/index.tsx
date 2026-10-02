@@ -2,14 +2,14 @@ import Link from "next/link";
 
 const CTA = () => {
   return (
-    <section className="bg-[var(--brown)] px-6 py-28 text-[var(--cream)] md:px-10 md:py-40">
-      <div className="mx-auto max-w-[1440px]">
-        <p className="text-xs uppercase tracking-[0.25em] text-[var(--cream)]/60">
+    <section className="border-t border-[var(--line)] bg-[var(--brown)] px-6 py-24 text-[var(--cream)]">
+      <div className="mx-auto max-w-7xl">
+        <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--cream)]/60">
           Start Something
         </p>
 
-        <div className="mt-8 flex flex-col justify-between gap-12 md:flex-row md:items-end">
-          <h2 className="max-w-5xl font-[family-name:var(--font-serif)] text-6xl font-semibold leading-[0.9] tracking-[-0.04em] md:text-8xl">
+        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <h2 className="max-w-5xl text-4xl font-bold leading-tight md:text-5xl">
             Let&apos;s create something worth remembering.
           </h2>
 

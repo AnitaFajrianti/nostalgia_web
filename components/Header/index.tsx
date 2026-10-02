@@ -43,7 +43,7 @@ const Header = () => {
               href="/"
               className="shrink-0 font-[family-name:var(--font-serif)] text-3xl font-semibold tracking-[-0.04em] md:text-4xl"
             >
-              Nostalgia
+              Nostalgia.Kala
             </Link>
 
             {/* DESKTOP NAV */}
@@ -105,7 +105,7 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
               className="font-[family-name:var(--font-serif)] text-3xl font-semibold tracking-[-0.04em]"
             >
-              Nostalgia
+              Nostalgia.Kala
             </Link>
 
             {/* CLOSE BUTTON */}

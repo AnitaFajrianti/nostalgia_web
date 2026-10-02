@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="mx-auto flex min-h-[50vh] max-w-7xl items-end">
           <div className="max-w-4xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              About Nostalgia
+              About Nostalgia.Kala
             </p>
 
             <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-7xl">
@@ -29,10 +29,19 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <p className="text-2xl leading-relaxed md:text-3xl">
-              Nostalgia is a creative studio focused on creating meaningful
-              digital experiences, visual identities, and creative solutions
-              for brands.
+            <p className="text-lg leading-relaxed md:text-xl">
+              NOSTALGIA adalah brand event documentation yang mengabadikan
+              berbagai momen dan pengalaman dalam sebuah acara menjadi kenangan
+              yang dapat kembali dirasakan di kemudian hari. Mulai dari
+              corporate event, gathering, celebration, hingga berbagai momen
+              spesial lainnya, NOSTALGIA hadir untuk menangkap cerita, emosi,
+              dan detail kecil yang sering kali hanya terjadi sekali.
+            </p>
+
+            <p className="mt-6 text-lg leading-relaxed md:text-xl">
+              NOSTALGIA tidak hanya berfokus pada dokumentasi sebuah acara,
+              tetapi bagaimana setiap momen dapat disimpan dan diceritakan
+              kembali melalui visual yang hangat, natural, dan memorable.
             </p>
           </div>
         </div>
@@ -60,7 +69,7 @@ export default function AboutPage() {
 
             <div className="flex items-end">
               <p className="max-w-xl text-lg leading-relaxed text-gray-600">
-                Cerita, perjalanan, dan pendekatan Nostalgia bisa ditempatkan
+                Cerita, perjalanan, dan pendekatan Nostalgia.Kala bisa ditempatkan
                 di area ini. Bagian ini nantinya dapat diisi dengan visual,
                 timeline, atau storytelling sesuai brand guideline.
               </p>

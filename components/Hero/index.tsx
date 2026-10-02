@@ -29,8 +29,8 @@ const Hero = () => {
               Stories Worth Remembering
             </p>
 
-            <h1 className="font-[family-name:var(--font-serif)] text-[18vw] font-semibold leading-[0.72] tracking-[-0.06em] md:text-[12vw]">
-              Nostalgia
+            <h1 className="font-[family-name:var(--font-serif)] text-[12vw] font-semibold leading-[0.85] tracking-[-0.06em] md:text-[10vw]">
+              Nostalgia.Kala
             </h1>
           </div>
         </div>

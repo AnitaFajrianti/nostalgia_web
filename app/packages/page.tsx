@@ -31,7 +31,7 @@ export default function PackagesPage() {
           <div>
             <p className="text-2xl leading-relaxed md:text-3xl">
               Pilih layanan yang sesuai dengan kebutuhan project kamu, atau
-              diskusikan kebutuhan khusus bersama tim Nostalgia.
+              diskusikan kebutuhan khusus bersama tim Nostalgia.Kala.
             </p>
           </div>
         </div>

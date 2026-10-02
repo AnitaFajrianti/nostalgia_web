@@ -3,14 +3,27 @@ import { notFound } from "next/navigation";
 import CTA from "@/components/CTA";
 import PhotoImage from "@/components/PhotoImage";
 
-const projects = {
+type Project = {
+  title: string;
+  category: string;
+  year?: string;
+  image: string;
+  video?: string;
+  description: string;
+  challenge: string;
+  approach: string;
+  services: string[];
+  gallery: string[];
+};
+
+const projects: Record<string, Project> = {
   "project-one": {
     title: "Project One",
     category: "Branding / Digital",
     year: "2026",
     image: "/images/camera-detail.jpg",
     description:
-      "Project ini merupakan bagian dari perjalanan kreatif Nostalgia dalam membantu brand membangun visual dan pengalaman yang memiliki karakter.",
+      "Project ini merupakan bagian dari perjalanan kreatif Nostalgia.Kala dalam membantu brand membangun visual dan pengalaman yang memiliki karakter.",
     challenge:
       "Bagaimana menciptakan identitas visual yang mampu menyampaikan karakter brand secara konsisten dan mudah dikenali?",
     approach:
@@ -99,6 +112,21 @@ const projects = {
       "/images/portrait-photography.jpg",
     ],
   },
+
+  "17an": {
+    title: "17an",
+    category: "Event Documentation",
+    image: "/images/film-production.jpg",
+    video: "/videos/portfolio-17an.MOV",
+    description:
+      "Dokumentasi acara 17an yang mengabadikan suasana, cerita, dan momen kebersamaan dalam perayaan.",
+    challenge:
+      "Menangkap momen-momen acara yang berlangsung spontan agar suasana dan kebersamaannya dapat dikenang kembali.",
+    approach:
+      "Mendokumentasikan rangkaian acara, interaksi, dan detail suasana melalui video yang natural dan bercerita.",
+    services: ["Event Documentation", "Video Production", "Video Editing"],
+    gallery: [],
+  },
 };
 
 export function generateStaticParams() {
@@ -114,7 +142,7 @@ export default async function ProjectDetailPage({
 }) {
   const { slug } = await params;
 
-  const project = projects[slug as keyof typeof projects];
+  const project = projects[slug];
 
   if (!project) {
     notFound();
@@ -123,44 +151,61 @@ export default async function ProjectDetailPage({
   return (
     <main>
       {/* PROJECT HERO */}
-      <section className="bg-[var(--cream)] px-6 pb-20 pt-40 md:px-10 md:pb-28 md:pt-48">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="grid gap-10 md:grid-cols-12 md:items-end">
-            <div className="md:col-span-8">
-              <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+      <section className="min-h-[55vh] bg-[var(--cream)] px-6 pb-16 pt-32 md:pb-24 md:pt-40">
+        <div className="mx-auto flex min-h-[35vh] max-w-7xl items-end">
+          <div className="grid w-full gap-8 md:grid-cols-12 md:items-end">
+            <div className={project.year ? "md:col-span-8" : "md:col-span-12"}>
+              <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
                 {project.category}
               </p>
 
-              <h1 className="mt-6 font-[family-name:var(--font-serif)] text-6xl font-semibold leading-[0.9] tracking-[-0.04em] text-[var(--brown)] md:text-8xl">
+              <h1 className="text-5xl font-bold leading-tight tracking-tight text-[var(--brown)] md:text-7xl">
                 {project.title}
               </h1>
             </div>
 
-            <div className="md:col-span-4 md:text-right">
-              <p className="text-sm text-[var(--brown-light)]">Year</p>
-
-              <p className="mt-1 text-[var(--brown)]">
-                {project.year}
-              </p>
-            </div>
+            {project.year && (
+              <div className="md:col-span-4 md:pb-2 md:text-right">
+                <p className="text-sm text-[var(--brown-light)]">Year</p>
+                <p className="mt-1 font-medium text-[var(--brown)]">
+                  {project.year}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>
 
       {/* HERO IMAGE */}
-      <section className="bg-[var(--cream)] px-6 md:px-10">
-        <div className="mx-auto max-w-[1440px]">
-          <PhotoImage
-            src={project.image}
-            alt={project.title}
-            className="aspect-[16/9]"
-          />
+      <section className="bg-[var(--cream)] px-6">
+        <div className="mx-auto max-w-7xl">
+          {project.video ? (
+            <div className="aspect-[16/9] overflow-hidden bg-[var(--brown)]">
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster={project.image}
+                aria-label={`${project.title} event documentation`}
+                className="h-full w-full object-contain"
+              >
+                <source src={project.video} type="video/quicktime" />
+                Browser Anda tidak mendukung pemutar video.
+              </video>
+            </div>
+          ) : (
+            <PhotoImage
+              src={project.image}
+              alt={project.title}
+              className="aspect-[16/9]"
+            />
+          )}
         </div>
       </section>
 
       {/* PROJECT INTRO */}
-      <section className="bg-[var(--cream-light)] px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto grid max-w-[1440px] gap-12 md:grid-cols-12">
+      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
               About The Project
@@ -176,8 +221,8 @@ export default async function ProjectDetailPage({
       </section>
 
       {/* CHALLENGE & APPROACH */}
-      <section className="bg-[var(--cream)] px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto grid max-w-[1440px] gap-16 md:grid-cols-2">
+      <section className="bg-[var(--cream)] px-6 py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
               The Challenge
@@ -201,9 +246,9 @@ export default async function ProjectDetailPage({
       </section>
 
       {/* SERVICES */}
-      <section className="border-y border-[var(--line)] bg-[var(--cream-light)] px-6 py-20 md:px-10">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="grid gap-10 md:grid-cols-12">
+      <section className="border-y border-[var(--line)] bg-[var(--cream-light)] px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-4">
               <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
                 What We Did
@@ -235,38 +280,40 @@ export default async function ProjectDetailPage({
       </section>
 
       {/* PROJECT GALLERY */}
-      <section className="bg-[var(--cream)] px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto max-w-[1440px]">
-          <div className="mb-12">
-            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Project Gallery
-            </p>
+      {project.gallery.length > 0 && (
+        <section className="bg-[var(--cream)] px-6 py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-12">
+              <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+                Project Gallery
+              </p>
 
-            <h2 className="mt-4 font-[family-name:var(--font-serif)] text-4xl font-semibold text-[var(--brown)] md:text-5xl">
-              Behind the work.
-            </h2>
-          </div>
+              <h2 className="mt-4 font-[family-name:var(--font-serif)] text-4xl font-semibold text-[var(--brown)] md:text-5xl">
+                Behind the work.
+              </h2>
+            </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            {project.gallery.map((image, index) => (
-              <PhotoImage
-                key={image}
-                src={image}
-                alt={`${project.title} gallery ${index + 1}`}
-                className={
-                  index === 0
-                    ? "aspect-[16/10] md:col-span-2"
-                    : "aspect-[4/3]"
-                }
-              />
-            ))}
+            <div className="grid gap-8 md:grid-cols-2">
+              {project.gallery.map((image, index) => (
+                <PhotoImage
+                  key={image}
+                  src={image}
+                  alt={`${project.title} gallery ${index + 1}`}
+                  className={
+                    index === 0
+                      ? "aspect-[16/10] md:col-span-2"
+                      : "aspect-[4/3]"
+                  }
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* BACK TO PORTFOLIO */}
-      <section className="bg-[var(--cream-light)] px-6 py-20 md:px-10">
-        <div className="mx-auto max-w-[1440px]">
+      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-24">
+        <div className="mx-auto max-w-7xl">
           <Link
             href="/portfolio"
             className="inline-flex items-center gap-3 border-b border-[var(--terracotta)] pb-2 text-sm text-[var(--terracotta)] transition hover:text-[var(--terracotta-dark)]"

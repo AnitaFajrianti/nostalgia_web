@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 import "./globals.css";
 
@@ -18,8 +19,8 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nostalgia",
-  description: "Nostalgia — Creative Studio",
+  title: "Nostalgia.Kala",
+  description: "Nostalgia.Kala — Event Documentation",
 };
 
 export default function RootLayout({
@@ -37,6 +38,7 @@ export default function RootLayout({
         <main>{children}</main>
 
         <Footer />
+        <WhatsAppWidget />
       </body>
     </html>
   );

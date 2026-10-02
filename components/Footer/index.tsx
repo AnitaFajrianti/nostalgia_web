@@ -9,20 +9,19 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[var(--cream)] text-[var(--brown)]">
-      <div className="mx-auto max-w-[1440px] px-6 py-14 md:px-10 md:py-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.7fr_repeat(3,minmax(0,1fr))] lg:gap-12">
+    <footer className="border-t border-[var(--line)] bg-[var(--cream)] px-6 text-[var(--brown)] md:px-10">
+      <div className="mx-auto max-w-7xl py-24">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_repeat(3,minmax(0,1fr))]">
           <div>
             <Link
               href="/"
-              className="font-[family-name:var(--font-serif)] text-4xl font-bold tracking-[-0.04em]"
+              className="font-[family-name:var(--font-serif)] text-3xl font-semibold tracking-[-0.04em] md:text-4xl"
             >
-              Nostalgia
+              Nostalgia.Kala
             </Link>
 
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-[var(--brown-light)]">
-              Creative studio untuk ide, visual, dan pengalaman yang layak
-              untuk diingat.
+            <p className="mt-6 max-w-sm text-sm leading-relaxed text-[var(--brown-light)]">
+              Mengabadikan cerita, emosi, dan detail kecil dari setiap acara.
             </p>
 
             <div className="mt-6 flex items-center gap-4">
@@ -85,7 +84,7 @@ const Footer = () => {
                 Email Us
               </a>
               <a
-                href="https://wa.me/6281901604670"
+                href="https://wa.me/6281901604670?text=Halo%2C%20Nostalgia%20Kala.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition hover:text-[var(--terracotta)]"
@@ -105,20 +104,20 @@ const Footer = () => {
           </div>
         </div>
 
-      <div className="mt-10 flex flex-col items-center gap-4 border-t border-[var(--line)] pt-5 text-xs text-[var(--brown-light)]">
-        <p className="text-center">
-          © {new Date().getFullYear()} Nostalgia. All rights reserved.
-        </p>
+        <div className="mt-12 flex flex-col items-center gap-4 border-t border-[var(--line)] pt-6 text-xs text-[var(--brown-light)] sm:flex-row sm:justify-between">
+          <p className="text-center sm:text-left">
+            © {new Date().getFullYear()} Nostalgia.Kala. All rights reserved.
+          </p>
 
-        <button
-          type="button"
-          onClick={scrollToTop}
-          aria-label="Scroll to top"
-          className="flex h-10 w-10 items-center justify-center bg-[var(--brown)] text-[var(--cream)] transition hover:-translate-y-1"
-        >
-          <ArrowUp size={18} strokeWidth={1.8} />
-        </button>
-      </div>
+          <button
+            type="button"
+            onClick={scrollToTop}
+            aria-label="Scroll to top"
+            className="flex h-10 w-10 items-center justify-center bg-[var(--brown)] text-[var(--cream)] transition hover:-translate-y-1"
+          >
+            <ArrowUp size={18} strokeWidth={1.8} />
+          </button>
+        </div>
       </div>
     </footer>
   );
