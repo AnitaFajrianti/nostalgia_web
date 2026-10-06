@@ -30,9 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body
-        className={`${serif.variable} ${sans.variable} font-[family-name:var(--font-sans)]`}
-      >
+      <body className={`${serif.variable} ${sans.variable}`}>
         <Header />
 
         <main>{children}</main>

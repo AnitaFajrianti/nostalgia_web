@@ -2,67 +2,149 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import CTA from "@/components/CTA";
 import PhotoImage from "@/components/PhotoImage";
+import PortfolioGallery from "@/components/PortfolioGallery";
 
 type Project = {
   title: string;
   category: string;
   year?: string;
-  image: string;
+  image?: string;
   video?: string;
   description: string;
   challenge: string;
   approach: string;
   services: string[];
   gallery: string[];
+  interactiveGallery?: boolean;
 };
+
+const preweddingGallery = [
+  {
+    src: "/images/prewed-porto/foto-prewedding-kasual-pasangan-jaket-kuning.jpg",
+    alt: "Prewedding kasual pasangan dengan jaket kuning",
+  },
+  {
+    src: "/images/prewed-porto/foto-prewedding-vespa-vintage-outdoor.jpg",
+    alt: "Prewedding vespa vintage outdoor",
+  },
+  {
+    src: "/images/prewed-porto/foto-prewedding-hitam-putih-estetik.jpg",
+    alt: "Prewedding hitam putih estetik",
+  },
+  {
+    src: "/images/prewed-porto/foto-prewedding-pose-candid-danau-alam.jpg",
+    alt: "Prewedding candid di danau dan alam",
+  },
+  {
+    src: "/images/prewed-porto/foto-prewedding-lamaran.jpg",
+    alt: "Foto prewedding lamaran",
+  },
+  {
+    src: "/images/prewed-porto/foto-prewedding-elegan-pasangan.jpg",
+    alt: "Prewedding pasangan elegan",
+  },
+  {
+    src: "/images/prewed-porto/foto-prewedding-hijab-jas-hitam-elegan.jpg",
+    alt: "Prewedding hijab dan jas hitam elegan",
+  },
+  {
+    src: "/images/prewed-porto/foto-prewedding-santai-duduk-di-taman.jpg",
+    alt: "Prewedding santai duduk di taman",
+  },
+  {
+    src: "/images/prewed-porto/foto-prewedding-close-up-senyum-pasangan.jpg",
+    alt: "Prewedding close-up senyum pasangan",
+  },
+];
+
+const weddingGallery = [
+  {
+    src: "/images/wedding-porto/jasa-fotografer-wedding-intimate-bogor.jpg",
+    alt: "Dokumentasi wedding intimate di Bogor",
+  },
+  {
+    src: "/images/wedding-porto/dokumentasi-akad-bogor.jpg",
+    alt: "Dokumentasi prosesi akad nikah di Bogor",
+  },
+  {
+    src: "/images/wedding-porto/dokumentasi-momen-haru-ijab-kabul-pernikahan-bogor.jpg",
+    alt: "Momen haru ijab kabul pernikahan di Bogor",
+  },
+  {
+    src: "/images/wedding-porto/foto-akad-nikah-pengantin-pria-busana-putih.jpg",
+    alt: "Pengantin pria dalam prosesi akad nikah",
+  },
+  {
+    src: "/images/wedding-porto/foto-pasangan-pengantin-akad-nikah.jpg",
+    alt: "Pasangan pengantin setelah akad nikah",
+  },
+  {
+    src: "/images/wedding-porto/foto-pasangan-pengantin.jpg",
+    alt: "Pasangan pengantin",
+  },
+  {
+    src: "/images/wedding-porto/foto-prosesi-ijab-kabul-akad-nikah.jpg",
+    alt: "Prosesi ijab kabul dalam akad nikah",
+  },
+  {
+    src: "/images/wedding-porto/foto-prosesi-sungkeman-akad-nikah.jpg",
+    alt: "Prosesi sungkeman setelah akad nikah",
+  },
+  {
+    src: "/images/wedding-porto/jasa-foto-akad-nikah-pengantin.jpg",
+    alt: "Fotografi akad nikah dan pengantin",
+  },
+  {
+    src: "/images/wedding-porto/jasa-fotografer-pernikahan-pasangan-pengantin-bogor.jpg",
+    alt: "Fotografer pernikahan pasangan pengantin di Bogor",
+  },
+  {
+    src: "/images/wedding-porto/vendor-foto-pernikahan-momen-romantis-pengantin-bogor.jpg",
+    alt: "Momen romantis pasangan pengantin di Bogor",
+  },
+];
 
 const projects: Record<string, Project> = {
   "project-one": {
-    title: "Project One",
-    category: "Branding / Digital",
+    title: "Project Prewedding",
+    category: "Prewedding",
     year: "2026",
-    image: "/images/camera-detail.jpg",
+    image: "/images/prewed-porto/foto-prewedding-hijab-jas-hitam-elegan.jpg",
     description:
-      "Project ini merupakan bagian dari perjalanan kreatif Nostalgia.Kala dalam membantu brand membangun visual dan pengalaman yang memiliki karakter.",
+      "Project ini merupakan dokumentasi prewedding yang menangkap momen dan karakter pasangan melalui visual yang natural, hangat, dan personal.",
     challenge:
-      "Bagaimana menciptakan identitas visual yang mampu menyampaikan karakter brand secara konsisten dan mudah dikenali?",
+      "Bagaimana menghasilkan rangkaian foto prewedding yang terasa natural dan mampu merepresentasikan karakter pasangan?",
     approach:
-      "Kami memulai dari memahami karakter brand, kemudian menerjemahkannya ke dalam konsep visual, direction, dan berbagai kebutuhan komunikasi.",
+      "Kami mengabadikan momen melalui pendekatan visual yang natural, dengan memperhatikan suasana, ekspresi, dan interaksi pasangan agar setiap foto terasa personal.",
     services: [
-      "Brand Strategy",
-      "Visual Identity",
+      "Prewedding Photography",
       "Creative Direction",
-      "Digital Content",
+      "Couple Session",
+      "Photo Documentation",
     ],
-    gallery: [
-      "/images/camera-detail.jpg",
-      "/images/film-production.jpg",
-      "/images/photography-session.jpg",
-    ],
+    gallery: preweddingGallery.map(({ src }) => src),
+    interactiveGallery: true,
   },
 
   "project-two": {
-    title: "Project Two",
-    category: "Campaign / Creative",
+    title: "Project Wedding",
+    category: "Wedding Documentation",
     year: "2026",
-    image: "/images/photography-session.jpg",
+    image: "/images/wedding-porto/jasa-fotografer-wedding-intimate-bogor.jpg",
     description:
-      "Sebuah creative campaign yang dikembangkan untuk membangun komunikasi visual yang lebih dekat dengan audiens.",
+      "Dokumentasi pernikahan yang mengabadikan momen sakral, kebersamaan, dan cerita pasangan melalui foto yang hangat dan personal.",
     challenge:
-      "Menciptakan campaign yang tidak hanya menarik secara visual, tetapi juga memiliki pesan yang mudah diterima audiens.",
+      "Bagaimana menangkap rangkaian momen pernikahan yang berlangsung spontan dengan tetap menghadirkan cerita yang utuh dan berkesan?",
     approach:
-      "Konsep dikembangkan melalui kombinasi storytelling, visual direction, photography, dan creative content.",
+      "Kami mendokumentasikan prosesi dan interaksi pasangan serta keluarga dengan pendekatan yang natural agar setiap momen terasa dekat dan autentik.",
     services: [
-      "Campaign Concept",
-      "Creative Direction",
-      "Photography",
-      "Content",
+      "Wedding Photography",
+      "Akad Documentation",
+      "Couple Session",
+      "Family Moments",
     ],
-    gallery: [
-      "/images/photography-session.jpg",
-      "/images/portrait-photography.jpg",
-      "/images/camera-detail.jpg",
-    ],
+    gallery: weddingGallery.map(({ src }) => src),
+    interactiveGallery: true,
   },
 
   "project-three": {
@@ -114,10 +196,9 @@ const projects: Record<string, Project> = {
   },
 
   "17an": {
-    title: "17an",
+    title: "Semarak Kemerdekaan",
     category: "Event Documentation",
-    image: "/images/film-production.jpg",
-    video: "/videos/portfolio-17an.MOV",
+    video: "/videos/portfolio-17an.mp4",
     description:
       "Dokumentasi acara 17an yang mengabadikan suasana, cerita, dan momen kebersamaan dalam perayaan.",
     challenge:
@@ -159,7 +240,7 @@ export default async function ProjectDetailPage({
                 {project.category}
               </p>
 
-              <h1 className="text-5xl font-bold leading-tight tracking-tight text-[var(--brown)] md:text-7xl">
+              <h1 className="type-hero font-bold text-[var(--brown)]">
                 {project.title}
               </h1>
             </div>
@@ -185,21 +266,20 @@ export default async function ProjectDetailPage({
                 controls
                 playsInline
                 preload="metadata"
-                poster={project.image}
                 aria-label={`${project.title} event documentation`}
                 className="h-full w-full object-contain"
               >
-                <source src={project.video} type="video/quicktime" />
+                <source src={project.video} type="video/mp4" />
                 Browser Anda tidak mendukung pemutar video.
               </video>
             </div>
-          ) : (
+          ) : project.image ? (
             <PhotoImage
               src={project.image}
               alt={project.title}
               className="aspect-[16/9]"
             />
-          )}
+          ) : null}
         </div>
       </section>
 
@@ -213,7 +293,7 @@ export default async function ProjectDetailPage({
           </div>
 
           <div className="md:col-span-8">
-            <p className="max-w-4xl font-[family-name:var(--font-serif)] text-3xl leading-tight text-[var(--brown)] md:text-5xl">
+            <p className="max-w-4xl text-[var(--brown)]">
               {project.description}
             </p>
           </div>
@@ -228,7 +308,7 @@ export default async function ProjectDetailPage({
               The Challenge
             </p>
 
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--brown-light)]">
+            <p className="mt-6 max-w-xl text-[var(--brown-light)]">
               {project.challenge}
             </p>
           </div>
@@ -238,7 +318,7 @@ export default async function ProjectDetailPage({
               Our Approach
             </p>
 
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--brown-light)]">
+            <p className="mt-6 max-w-xl text-[var(--brown-light)]">
               {project.approach}
             </p>
           </div>
@@ -266,7 +346,7 @@ export default async function ProjectDetailPage({
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
-                    <span className="flex-1 px-6 font-[family-name:var(--font-serif)] text-2xl text-[var(--brown)]">
+                    <span className="type-service flex-1 px-6 text-[var(--brown)]">
                       {service}
                     </span>
 
@@ -288,25 +368,34 @@ export default async function ProjectDetailPage({
                 Project Gallery
               </p>
 
-              <h2 className="mt-4 font-[family-name:var(--font-serif)] text-4xl font-semibold text-[var(--brown)] md:text-5xl">
+              <h2 className="mt-4 font-semibold text-[var(--brown)]">
                 Behind the work.
               </h2>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2">
-              {project.gallery.map((image, index) => (
-                <PhotoImage
-                  key={image}
-                  src={image}
-                  alt={`${project.title} gallery ${index + 1}`}
-                  className={
-                    index === 0
-                      ? "aspect-[16/10] md:col-span-2"
-                      : "aspect-[4/3]"
-                  }
-                />
-              ))}
-            </div>
+            {project.interactiveGallery ? (
+              <PortfolioGallery
+                images={
+                  slug === "project-two" ? weddingGallery : preweddingGallery
+                }
+                projectTitle={project.title}
+              />
+            ) : (
+              <div className="grid gap-8 md:grid-cols-2">
+                {project.gallery.map((image, index) => (
+                  <PhotoImage
+                    key={image}
+                    src={image}
+                    alt={`${project.title} gallery ${index + 1}`}
+                    className={
+                      index === 0
+                        ? "aspect-[16/10] md:col-span-2"
+                        : "aspect-[4/3]"
+                    }
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </section>
       )}

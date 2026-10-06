@@ -9,7 +9,7 @@ const CTA = () => {
         </p>
 
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-          <h2 className="max-w-5xl text-4xl font-bold leading-tight md:text-5xl">
+          <h2 className="max-w-5xl font-bold">
             Let&apos;s create something worth remembering.
           </h2>
 

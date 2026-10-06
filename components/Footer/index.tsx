@@ -15,18 +15,18 @@ const Footer = () => {
           <div>
             <Link
               href="/"
-              className="font-[family-name:var(--font-serif)] text-3xl font-semibold tracking-[-0.04em] md:text-4xl"
+              className="font-display text-3xl font-semibold tracking-[-0.04em] md:text-4xl"
             >
               Nostalgia.Kala
             </Link>
 
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-[var(--brown-light)]">
+            <p className="mt-6 max-w-sm leading-relaxed text-[var(--brown-light)]">
               Mengabadikan cerita, emosi, dan detail kecil dari setiap acara.
             </p>
 
             <div className="mt-6 flex items-center gap-4">
               <a
-                href="https://www.instagram.com/studionostalgia.id"
+                href="https://www.instagram.com/nostalgiakala.id"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -35,7 +35,7 @@ const Footer = () => {
                 <Camera size={17} strokeWidth={2} />
               </a>
               <a
-                href="https://wa.me/6281901604670"
+                href="https://wa.me/628111187077"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -54,9 +54,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.16em]">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em]">
               Explore
-            </h2>
+            </p>
             <nav className="mt-5 flex flex-col gap-3 text-sm text-[var(--brown-light)]">
               <Link href="/portfolio" className="transition hover:text-[var(--terracotta)]">Portfolio</Link>
               <Link href="/packages" className="transition hover:text-[var(--terracotta)]">Packages</Link>
@@ -65,9 +65,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.16em]">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em]">
               Company
-            </h2>
+            </p>
             <nav className="mt-5 flex flex-col gap-3 text-sm text-[var(--brown-light)]">
               <Link href="/about" className="transition hover:text-[var(--terracotta)]">About Us</Link>
               <Link href="/why-us" className="transition hover:text-[var(--terracotta)]">Why Us</Link>
@@ -76,15 +76,15 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.16em]">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em]">
               Support
-            </h2>
+            </p>
             <div className="mt-5 flex flex-col gap-3 text-sm text-[var(--brown-light)]">
               <a href="mailto:hello@nostalgia.com" className="transition hover:text-[var(--terracotta)]">
                 Email Us
               </a>
               <a
-                href="https://wa.me/6281901604670?text=Halo%2C%20Nostalgia%20Kala.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
+                href="https://wa.me/628111187077?text=Halo%2C%20Nostalgia%20Kala.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition hover:text-[var(--terracotta)]"
@@ -92,7 +92,7 @@ const Footer = () => {
                 WhatsApp
               </a>
               <a
-                href="https://www.instagram.com/studionostalgia.id"
+                href="https://www.instagram.com/nostalgiakala.id"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition hover:text-[var(--terracotta)]"

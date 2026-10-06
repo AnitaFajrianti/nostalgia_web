@@ -2,21 +2,32 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const isHome = pathname === "/";
+  const isOverHero = isHome && !isScrolled;
 
-  const navLinkClass = isHome
+  const navLinkClass = isOverHero
     ? "text-sm text-white/85 transition hover:text-white"
     : "text-sm text-[var(--brown)]/80 transition hover:text-[var(--terracotta)]";
 
-  const borderClass = isHome
+  const borderClass = isOverHero
     ? "border-white/60"
     : "border-[var(--brown)]/40";
+
+  useEffect(() => {
+    const updateScrollState = () => setIsScrolled(window.scrollY > 24);
+
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+
+    return () => window.removeEventListener("scroll", updateScrollState);
+  }, []);
 
   const mobileLinks = [
     { label: "Home", href: "/" },
@@ -32,8 +43,10 @@ const Header = () => {
     <>
       {/* HEADER */}
       <header
-        className={`absolute inset-x-0 top-0 z-50 ${
-          isHome ? "text-white" : "text-[var(--brown)]"
+        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+          isOverHero
+            ? "text-white"
+            : "bg-[var(--cream)]/95 text-[var(--brown)] shadow-sm backdrop-blur"
         }`}
       >
         <div className="mx-auto max-w-[1440px] px-6 md:px-10">
@@ -41,7 +54,7 @@ const Header = () => {
             {/* LOGO */}
             <Link
               href="/"
-              className="shrink-0 font-[family-name:var(--font-serif)] text-3xl font-semibold tracking-[-0.04em] md:text-4xl"
+              className="font-display shrink-0 text-3xl font-semibold tracking-[-0.04em] md:text-4xl"
             >
               Nostalgia.Kala
             </Link>
@@ -63,12 +76,12 @@ const Header = () => {
             <Link
               href="/contact"
               className={`hidden shrink-0 border px-5 py-3 text-sm transition sm:inline-flex ${borderClass} ${
-                isHome
+                isOverHero
                   ? "hover:bg-white hover:text-[var(--brown)]"
                   : "bg-[var(--terracotta)] text-white hover:bg-[var(--terracotta-dark)]"
               }`}
             >
-              Let's Talk
+              Let&apos;s Talk
             </Link>
 
             {/* MOBILE MENU BUTTON */}
@@ -81,12 +94,12 @@ const Header = () => {
               <span className="flex flex-col gap-1.5">
                 <span
                   className={`block h-px w-6 ${
-                    isHome ? "bg-white" : "bg-[var(--brown)]"
+                    isOverHero ? "bg-white" : "bg-[var(--brown)]"
                   }`}
                 />
                 <span
                   className={`block h-px w-6 ${
-                    isHome ? "bg-white" : "bg-[var(--brown)]"
+                    isOverHero ? "bg-white" : "bg-[var(--brown)]"
                   }`}
                 />
               </span>
@@ -103,7 +116,7 @@ const Header = () => {
             <Link
               href="/"
               onClick={() => setIsMenuOpen(false)}
-              className="font-[family-name:var(--font-serif)] text-3xl font-semibold tracking-[-0.04em]"
+              className="font-display text-3xl font-semibold tracking-[-0.04em]"
             >
               Nostalgia.Kala
             </Link>
@@ -134,7 +147,7 @@ const Header = () => {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`flex min-h-[64px] items-center px-5 text-[17px] transition ${
+                    className={`flex min-h-[64px] items-center px-5 text-sm transition ${
                       isActive
                         ? "rounded-xl bg-[var(--beige)] text-[var(--brown)]"
                         : "text-[var(--brown)] hover:text-[var(--terracotta)]"
@@ -153,7 +166,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className="flex h-14 w-full items-center justify-center bg-[var(--terracotta)] text-sm font-medium text-white transition hover:bg-[var(--terracotta-dark)]"
               >
-                Let's Talk →
+                Let&apos;s Talk →
               </Link>
             </div>
           </div>

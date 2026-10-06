@@ -28,7 +28,7 @@ const WhatsAppWidget = () => {
               </span>
             </span>
             <span className="flex flex-col whitespace-nowrap text-left">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--cream-light)]/75">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--cream-light)]/75">
                 Nostalgia.Kala
               </span>
               <span className="mt-0.5 text-sm font-semibold">

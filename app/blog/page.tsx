@@ -12,7 +12,7 @@ export default function BlogPage() {
               Journal
             </p>
 
-            <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-7xl">
+            <h1 className="type-hero font-bold">
               Ideas, stories, and things worth sharing.
             </h1>
           </div>
@@ -38,7 +38,7 @@ export default function BlogPage() {
                 Creative / 01 October 2026
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">
+              <h2 className="mt-4 font-bold">
                 Article title goes here.
               </h2>
 
@@ -67,7 +67,7 @@ export default function BlogPage() {
                 Latest
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+              <h2 className="mt-4 font-bold">
                 Latest Articles
               </h2>
             </div>
@@ -92,11 +92,11 @@ export default function BlogPage() {
                   Creative / 01 Oct 2026
                 </p>
 
-                <h3 className="mt-3 text-2xl font-semibold leading-tight">
+                <h3 className="mt-3 font-semibold">
                   Article title one.
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                <p className="mt-3 text-base leading-relaxed text-gray-600">
                   Short description of the article.
                 </p>
               </div>
@@ -116,11 +116,11 @@ export default function BlogPage() {
                   Branding / 28 Sep 2026
                 </p>
 
-                <h3 className="mt-3 text-2xl font-semibold leading-tight">
+                <h3 className="mt-3 font-semibold">
                   Article title two.
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                <p className="mt-3 text-base leading-relaxed text-gray-600">
                   Short description of the article.
                 </p>
               </div>
@@ -140,11 +140,11 @@ export default function BlogPage() {
                   Digital / 24 Sep 2026
                 </p>
 
-                <h3 className="mt-3 text-2xl font-semibold leading-tight">
+                <h3 className="mt-3 font-semibold">
                   Article title three.
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                <p className="mt-3 text-base leading-relaxed text-gray-600">
                   Short description of the article.
                 </p>
               </div>
@@ -164,11 +164,11 @@ export default function BlogPage() {
                   Creative / 20 Sep 2026
                 </p>
 
-                <h3 className="mt-3 text-2xl font-semibold leading-tight">
+                <h3 className="mt-3 font-semibold">
                   Article title four.
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                <p className="mt-3 text-base leading-relaxed text-gray-600">
                   Short description of the article.
                 </p>
               </div>
@@ -187,11 +187,11 @@ export default function BlogPage() {
                     Strategy / 16 Sep 2026
                   </p>
 
-                  <h3 className="mt-3 text-2xl font-semibold leading-tight">
+                  <h3 className="mt-3 font-semibold">
                     Article title five.
                   </h3>
 
-                  <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                  <p className="mt-3 text-base leading-relaxed text-gray-600">
                     Short description of the article.
                   </p>
                 </div>
@@ -212,11 +212,11 @@ export default function BlogPage() {
                   Ideas / 12 Sep 2026
                 </p>
 
-                <h3 className="mt-3 text-2xl font-semibold leading-tight">
+                <h3 className="mt-3 font-semibold">
                   Article title six.
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                <p className="mt-3 text-base leading-relaxed text-gray-600">
                   Short description of the article.
                 </p>
               </div>

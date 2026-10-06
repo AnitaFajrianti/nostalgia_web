@@ -12,7 +12,7 @@ export default function PackagesPage() {
               Packages
             </p>
 
-            <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-7xl">
+            <h1 className="type-hero font-bold">
               Creative solutions built around your needs.
             </h1>
           </div>
@@ -29,7 +29,7 @@ export default function PackagesPage() {
           </div>
 
           <div>
-            <p className="text-2xl leading-relaxed md:text-3xl">
+            <p>
               Pilih layanan yang sesuai dengan kebutuhan project kamu, atau
               diskusikan kebutuhan khusus bersama tim Nostalgia.Kala.
             </p>
@@ -45,7 +45,7 @@ export default function PackagesPage() {
               Choose Your Package
             </p>
 
-            <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+            <h2 className="mt-4 font-bold">
               Find what fits your project.
             </h2>
           </div>
@@ -55,7 +55,7 @@ export default function PackagesPage() {
             <article className="border border-gray-200 p-8">
               <span className="text-sm text-gray-400">01</span>
 
-              <h3 className="mt-10 text-2xl font-semibold">
+              <h3 className="mt-10 font-semibold">
                 Starter
               </h3>
 
@@ -66,12 +66,12 @@ export default function PackagesPage() {
               <div className="mt-10 border-t border-gray-200 pt-6">
                 <p className="text-sm text-gray-500">Starting from</p>
 
-                <p className="mt-2 text-3xl font-bold">
+                <p className="type-price mt-2 font-bold">
                   Rp X.XXX.XXX
                 </p>
               </div>
 
-              <ul className="mt-8 space-y-3 text-sm text-gray-600">
+              <ul className="mt-8 space-y-3 text-base text-gray-600">
                 <li>✓ Service item</li>
                 <li>✓ Service item</li>
                 <li>✓ Service item</li>
@@ -82,7 +82,7 @@ export default function PackagesPage() {
             <article className="border border-gray-200 p-8">
               <span className="text-sm text-gray-400">02</span>
 
-              <h3 className="mt-10 text-2xl font-semibold">
+              <h3 className="mt-10 font-semibold">
                 Professional
               </h3>
 
@@ -93,12 +93,12 @@ export default function PackagesPage() {
               <div className="mt-10 border-t border-gray-200 pt-6">
                 <p className="text-sm text-gray-500">Starting from</p>
 
-                <p className="mt-2 text-3xl font-bold">
+                <p className="type-price mt-2 font-bold">
                   Rp X.XXX.XXX
                 </p>
               </div>
 
-              <ul className="mt-8 space-y-3 text-sm text-gray-600">
+              <ul className="mt-8 space-y-3 text-base text-gray-600">
                 <li>✓ Service item</li>
                 <li>✓ Service item</li>
                 <li>✓ Service item</li>
@@ -110,7 +110,7 @@ export default function PackagesPage() {
             <article className="border border-gray-200 p-8">
               <span className="text-sm text-gray-400">03</span>
 
-              <h3 className="mt-10 text-2xl font-semibold">
+              <h3 className="mt-10 font-semibold">
                 Custom
               </h3>
 
@@ -121,12 +121,12 @@ export default function PackagesPage() {
               <div className="mt-10 border-t border-gray-200 pt-6">
                 <p className="text-sm text-gray-500">Pricing</p>
 
-                <p className="mt-2 text-3xl font-bold">
+                <p className="type-price mt-2 font-bold">
                   Let&apos;s Talk
                 </p>
               </div>
 
-              <ul className="mt-8 space-y-3 text-sm text-gray-600">
+              <ul className="mt-8 space-y-3 text-base text-gray-600">
                 <li>✓ Custom service</li>
                 <li>✓ Custom scope</li>
                 <li>✓ Custom timeline</li>
@@ -145,7 +145,7 @@ export default function PackagesPage() {
                 What&apos;s Included
               </p>
 
-              <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+              <h2 className="mt-4 font-bold">
                 More than just a package.
               </h2>
             </div>
@@ -193,7 +193,7 @@ export default function PackagesPage() {
               </p>
 
               <div className="mt-6 flex flex-col items-start gap-8">
-                <h2 className="max-w-3xl text-4xl font-bold md:text-5xl">
+                <h2 className="max-w-3xl font-bold">
                   Have something different in mind?
                 </h2>
 

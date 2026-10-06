@@ -12,7 +12,7 @@ export default function ContactPage() {
               Contact
             </p>
 
-            <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-7xl">
+            <h1 className="type-hero font-bold">
               Have a project in mind?
               <br />
               Let&apos;s talk.
@@ -30,7 +30,7 @@ export default function ContactPage() {
               Get In Touch
             </p>
 
-            <h2 className="mt-5 max-w-lg text-4xl font-bold md:text-5xl">
+            <h2 className="mt-5 max-w-lg font-bold">
               Tell us what you&apos;re working on.
             </h2>
 
@@ -50,24 +50,24 @@ export default function ContactPage() {
               <div>
                 <p className="text-sm text-gray-500">WhatsApp</p>
                 <a
-                  href="https://wa.me/6281901604670?text=Halo%20Nostalgia%20Kala%2C%20saya%20ingin%20menanyakan%20informasi%20lebih%20lanjut."
+                  href="https://wa.me/628111187077?text=Halo%20Nostalgia%20Kala%2C%20saya%20ingin%20menanyakan%20informasi%20lebih%20lanjut."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 block font-medium transition hover:opacity-60"
                 >
-                  +62 819-0160-4670
+                  +62 811-1187-077
                 </a>
               </div>
 
               <div>
                 <p className="text-sm text-gray-500">Instagram</p>
                 <a
-                  href="https://www.instagram.com/studionostalgia.id"
+                  href="https://www.instagram.com/nostalgiakala.id"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 block font-medium transition hover:opacity-60"
                 >
-                  @studionostalgia.id
+                  @nostalgiakala.id
                 </a>
               </div>
 
@@ -174,7 +174,7 @@ export default function ContactPage() {
               Find Us
             </p>
 
-            <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+            <h2 className="mt-4 font-bold">
               Let&apos;s stay connected.
             </h2>
           </div>
@@ -189,7 +189,7 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="mt-2 block font-medium transition hover:opacity-60"
               >
-                @studionostalgia.id
+                @nostalgiakala.id
               </a>
             </div>
 
@@ -197,12 +197,12 @@ export default function ContactPage() {
             <div>
               <p className="text-sm text-gray-500">WhatsApp</p>
               <a
-                href="https://wa.me/6281901604670?text=Halo%2C%20Nostalgia%20Kala.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
+                href="https://wa.me/628111187077?text=Halo%2C%20Nostalgia%20Kala.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 block font-medium transition hover:opacity-60"
               >
-                +62 819-0160-4670
+                +62 811-1187-077
               </a>
             </div>
 

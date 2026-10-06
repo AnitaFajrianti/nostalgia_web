@@ -29,7 +29,7 @@ const Hero = () => {
               Stories Worth Remembering
             </p>
 
-            <h1 className="font-[family-name:var(--font-serif)] text-[12vw] font-semibold leading-[0.85] tracking-[-0.06em] md:text-[10vw]">
+            <h1 className="hero-brand-title font-semibold">
               Nostalgia.Kala
             </h1>
           </div>
@@ -37,7 +37,7 @@ const Hero = () => {
 
         <div className="border-t border-white/30 pt-5">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <p className="max-w-md text-sm leading-relaxed text-white/85 md:text-base">
+            <p className="max-w-md leading-relaxed text-white/85">
               Creative studio untuk ide, visual, dan pengalaman yang layak
               untuk diingat.
             </p>

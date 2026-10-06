@@ -8,23 +8,30 @@ type PortfolioItem = {
   category: string;
   image: string;
   alt: string;
-  video?: string;
+};
+
+const featuredProject = {
+  slug: "17an",
+  title: "Semarak Kemerdekaan",
+  category: "Event Documentation",
+  alt: "Video dokumentasi acara 17an",
+  video: "/videos/portfolio-17an.mp4",
 };
 
 const projects: PortfolioItem[] = [
   {
     slug: "project-one",
-    title: "Project One",
-    category: "Branding / Digital",
-    image: "/images/camera-detail.jpg",
-    alt: "Kamera profesional untuk proyek branding",
+    title: "Project Prewedding",
+    category: "Prewedding",
+    image: "/images/prewed-porto/foto-prewedding-hijab-jas-hitam-elegan.jpg",
+    alt: "Foto prewedding pasangan dengan hijab dan jas hitam elegan",
   },
   {
     slug: "project-two",
-    title: "Project Two",
-    category: "Campaign / Creative",
-    image: "/images/photography-session.jpg",
-    alt: "Sesi pemotretan untuk kampanye kreatif",
+    title: "Project Wedding",
+    category: "Wedding Documentation",
+    image: "/images/wedding-porto/jasa-fotografer-wedding-intimate-bogor.jpg",
+    alt: "Dokumentasi wedding intimate di Bogor",
   },
   {
     slug: "project-three",
@@ -40,14 +47,6 @@ const projects: PortfolioItem[] = [
     image: "/images/film-production.jpg",
     alt: "Kamera video saat proses pengambilan gambar",
   },
-  {
-    slug: "17an",
-    title: "17an",
-    category: "Event Documentation",
-    image: "/images/film-production.jpg",
-    alt: "Video dokumentasi acara 17an",
-    video: "/videos/portfolio-17an.MOV",
-  },
 ];
 
 export default function PortfolioPage() {
@@ -61,7 +60,7 @@ export default function PortfolioPage() {
               Our Portfolio
             </p>
 
-            <h1 className="text-5xl font-bold leading-tight tracking-tight text-[var(--brown)] md:text-7xl">
+            <h1 className="type-hero font-bold text-[var(--brown)]">
               Work that turns ideas into memorable experiences.
             </h1>
           </div>
@@ -77,44 +76,46 @@ export default function PortfolioPage() {
                 Featured Project
               </p>
 
-              <h2 className="mt-4 font-[family-name:var(--font-serif)] text-4xl font-semibold text-[var(--brown)] md:text-5xl">
-                Project One
+              <h2 className="mt-4 font-semibold text-[var(--brown)]">
+                {featuredProject.title}
               </h2>
             </div>
-
-            <span className="hidden text-sm text-[var(--brown-light)] md:block">
-              01 / Featured
-            </span>
           </div>
 
-          <Link href="/portfolio/project-one" className="group block">
-            <PhotoImage
-              src="/images/camera-detail.jpg"
-              alt="Kamera profesional untuk proyek branding"
-              className="aspect-[16/9] transition duration-500 group-hover:opacity-90"
-            />
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            aria-label={featuredProject.alt}
+            className="aspect-[16/9] w-full bg-[var(--brown)] object-contain"
+          >
+            <source src={featuredProject.video} type="video/mp4" />
+            Browser Anda tidak mendukung pemutar video.
+          </video>
 
-            <div className="mt-6 grid gap-6 md:grid-cols-2">
-              <div>
-                <p className="text-lg text-[var(--brown-light)]">
-                  Strategi brand, visual identity, creative direction, dan
-                  digital content untuk membangun identitas yang konsisten.
-                </p>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <div>
+              <p className="text-[var(--brown-light)]">
+                Dokumentasi acara 17an yang mengabadikan suasana, cerita, dan
+                momen kebersamaan dalam perayaan.
+              </p>
 
-                <span className="mt-5 inline-block border-b border-[var(--terracotta)] pb-1 text-sm text-[var(--terracotta)]">
-                  View Project →
-                </span>
-              </div>
-
-              <div className="md:text-right">
-                <p className="text-sm text-[var(--brown-light)]">Category</p>
-
-                <p className="mt-1 font-medium text-[var(--brown)]">
-                  Branding / Digital
-                </p>
-              </div>
+              <Link
+                href={`/portfolio/${featuredProject.slug}`}
+                className="mt-5 inline-block border-b border-[var(--terracotta)] pb-1 text-sm text-[var(--terracotta)]"
+              >
+                Lihat detail proyek →
+              </Link>
             </div>
-          </Link>
+
+            <div className="md:text-right">
+              <p className="text-sm text-[var(--brown-light)]">Category</p>
+
+              <p className="mt-1 font-medium text-[var(--brown)]">
+                {featuredProject.category}
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -126,61 +127,50 @@ export default function PortfolioPage() {
               Selected Work
             </p>
 
-            <h2 className="mt-4 font-[family-name:var(--font-serif)] text-4xl font-semibold text-[var(--brown)] md:text-5xl">
+            <h2 className="mt-4 font-semibold text-[var(--brown)]">
               Our Projects
             </h2>
           </div>
 
           <div className="grid gap-10 md:grid-cols-2">
             {projects.map((project, index) => (
-              <Link
-                key={project.slug}
-                href={`/portfolio/${project.slug}`}
-                className="group block"
-              >
-                {project.video ? (
-                  <div className="relative aspect-[4/3] overflow-hidden bg-[var(--beige)]">
-                    <video
-                      src={project.video}
-                      poster={project.image}
-                      muted
-                      playsInline
-                      preload="none"
-                      aria-label={project.alt}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-                    <span className="absolute bottom-4 left-4 border border-[var(--cream-light)] bg-[var(--brown)]/80 px-3 py-2 text-xs uppercase tracking-[0.15em] text-[var(--cream-light)]">
-                      Watch film
-                    </span>
-                  </div>
-                ) : (
+              <article key={project.slug}>
+                <Link
+                  href={`/portfolio/${project.slug}`}
+                  className="group block"
+                >
                   <PhotoImage
                     src={project.image}
                     alt={project.alt}
                     className="aspect-[4/3] transition duration-500 group-hover:opacity-90"
                   />
-                )}
+                </Link>
 
                 <div className="mt-5 flex justify-between gap-4">
                   <div>
-                    <h3 className="font-[family-name:var(--font-serif)] text-2xl font-semibold text-[var(--brown)]">
-                      {project.title}
-                    </h3>
+                    <Link
+                      href={`/portfolio/${project.slug}`}
+                      className="group block"
+                    >
+                      <h3 className="font-semibold text-[var(--brown)]">
+                        {project.title}
+                      </h3>
 
-                    <p className="mt-1 text-sm text-[var(--brown-light)]">
-                      {project.category}
-                    </p>
+                      <p className="mt-1 text-sm text-[var(--brown-light)]">
+                        {project.category}
+                      </p>
 
-                    <span className="mt-4 inline-block text-sm text-[var(--terracotta)]">
-                      View Project →
-                    </span>
+                      <span className="mt-4 inline-block text-sm text-[var(--terracotta)]">
+                        Lihat detail proyek →
+                      </span>
+                    </Link>
                   </div>
 
                   <span className="text-sm text-[var(--brown-light)]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>
-              </Link>
+              </article>
             ))}
           </div>
         </div>
@@ -195,7 +185,7 @@ export default function PortfolioPage() {
                 Expertise
               </p>
 
-              <h2 className="mt-4 max-w-xl font-[family-name:var(--font-serif)] text-4xl font-semibold text-[var(--brown)] md:text-5xl">
+              <h2 className="mt-4 max-w-xl font-semibold text-[var(--brown)]">
                 Different needs, different approaches.
               </h2>
             </div>

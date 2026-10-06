@@ -11,11 +11,11 @@ export default function BlogDetailPage() {
             Creative / 01 October 2026
           </p>
 
-          <h1 className="mt-6 text-5xl font-bold leading-tight tracking-tight md:text-7xl">
+          <h1 className="mt-6 font-bold">
             Article title goes here.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-600">
+          <p className="mt-6 max-w-2xl text-gray-600">
             Short introduction atau excerpt dari artikel yang akan dibaca.
           </p>
         </div>
@@ -54,12 +54,12 @@ export default function BlogDetailPage() {
 
           {/* CONTENT */}
           <div className="max-w-3xl">
-            <p className="text-xl leading-relaxed">
+            <p>
               Intro artikel bisa ditempatkan di sini. Area ini nantinya
               digunakan untuk konten utama dari artikel.
             </p>
 
-            <h2 className="mt-16 text-3xl font-bold">
+            <h2 className="mt-16 font-bold">
               Subheading artikel
             </h2>
 
@@ -79,7 +79,7 @@ export default function BlogDetailPage() {
               className="my-12 aspect-[16/9]"
             />
 
-            <h2 className="text-3xl font-bold">
+            <h2 className="font-bold">
               Another section
             </h2>
 
@@ -99,7 +99,7 @@ export default function BlogDetailPage() {
               Continue Reading
             </p>
 
-            <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+            <h2 className="mt-4 font-bold">
               Related Articles
             </h2>
           </div>
@@ -116,7 +116,7 @@ export default function BlogDetailPage() {
                 Creative
               </p>
 
-              <h3 className="mt-2 text-xl font-semibold">
+              <h3 className="mt-2 font-semibold">
                 Related article one.
               </h3>
             </article>
@@ -132,7 +132,7 @@ export default function BlogDetailPage() {
                 Branding
               </p>
 
-              <h3 className="mt-2 text-xl font-semibold">
+              <h3 className="mt-2 font-semibold">
                 Related article two.
               </h3>
             </article>
@@ -148,7 +148,7 @@ export default function BlogDetailPage() {
                 Digital
               </p>
 
-              <h3 className="mt-2 text-xl font-semibold">
+              <h3 className="mt-2 font-semibold">
                 Related article three.
               </h3>
             </article>

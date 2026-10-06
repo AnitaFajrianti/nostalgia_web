@@ -1,5 +1,12 @@
 import CTA from "@/components/CTA";
-import PhotoImage from "@/components/PhotoImage";
+
+const clientNeeds = [
+  "Sudah punya raw footage tetapi tidak punya waktu atau tenaga untuk mengolahnya.",
+  "Membutuhkan Reels atau social media content dengan hasil yang lebih polished.",
+  "Membutuhkan design untuk memperkuat visual brand.",
+  "Membutuhkan dokumentasi event sekaligus hasil edit yang siap dipublikasikan.",
+  "Ingin mendapatkan hasil visual yang lebih premium tanpa harus membangun tim kreatif sendiri.",
+];
 
 export default function WhyUsPage() {
   return (
@@ -7,188 +14,73 @@ export default function WhyUsPage() {
       {/* HERO */}
       <section className="min-h-[70vh] px-6 py-24">
         <div className="mx-auto flex min-h-[50vh] max-w-7xl items-end">
-          <div className="max-w-4xl">
+          <div className="max-w-5xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
               Why Nostalgia.Kala
             </p>
 
-            <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-7xl">
-              We believe good work starts with the right perspective.
+            <h1 className="type-hero font-bold">
+              Why Nostalgia Exists?
             </h1>
           </div>
         </div>
       </section>
 
-      {/* INTRO */}
+      {/* WHY NOSTALGIA EXISTS */}
       <section className="border-t px-6 py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">
-          <div>
-            <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Our Approach
+        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12">
+          <div className="md:col-span-4">
+            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+              Kebutuhan Klien
             </p>
           </div>
 
-          <div>
-            <p className="text-2xl leading-relaxed md:text-3xl">
-              Kami tidak hanya mengerjakan brief. Kami memahami tujuan,
-              menemukan ide, lalu mengubahnya menjadi karya yang relevan.
+          <div className="md:col-span-8">
+            <p className="mb-12 text-base leading-relaxed">
+              Banyak momen dan konten sebenarnya sudah dimiliki oleh klien,
+              tetapi belum tentu sudah menjadi sesuatu yang siap digunakan atau
+              memiliki nilai visual yang kuat.
             </p>
+
+            <p className="mb-4 text-sm uppercase tracking-[0.15em] text-[var(--brown-light)]">
+              Ada klien yang:
+            </p>
+
+            <div>
+              {clientNeeds.map((need, index) => (
+                <div
+                  key={need}
+                  className="grid gap-3 border-t border-[var(--line)] py-6 sm:grid-cols-[3rem_1fr] sm:gap-6"
+                >
+                  <span className="text-sm text-[var(--brown-light)]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <p>{need}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ADVANTAGES */}
-      <section className="px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-12">
-            <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              What We Bring
+      {/* OUR ROLE */}
+      <section className="bg-[var(--brown)] px-6 py-24 text-[var(--cream)]">
+        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-12 md:items-end">
+          <div className="md:col-span-4">
+            <p className="text-sm uppercase tracking-[0.2em] text-[var(--cream)]/60">
+              Our Role
             </p>
+          </div>
 
-            <h2 className="mt-4 max-w-3xl text-4xl font-bold md:text-5xl">
-              A creative partner from idea to execution.
+          <div className="md:col-span-8">
+            <h2 className="font-bold">
+              Nostalgia hadir untuk menjembatani kebutuhan tersebut.
             </h2>
           </div>
-
-          <div className="grid gap-px bg-gray-200 md:grid-cols-2">
-            <article className="bg-white p-8 md:p-10">
-              <span className="text-sm text-gray-400">01</span>
-
-              <h3 className="mt-12 text-2xl font-semibold">
-                Strategic Thinking
-              </h3>
-
-              <p className="mt-4 leading-relaxed text-gray-600">
-                Setiap project dimulai dari memahami kebutuhan dan tujuan yang
-                ingin dicapai.
-              </p>
-            </article>
-
-            <article className="bg-white p-8 md:p-10">
-              <span className="text-sm text-gray-400">02</span>
-
-              <h3 className="mt-12 text-2xl font-semibold">
-                Creative Direction
-              </h3>
-
-              <p className="mt-4 leading-relaxed text-gray-600">
-                Ide dikembangkan menjadi konsep visual yang memiliki karakter
-                dan arah yang jelas.
-              </p>
-            </article>
-
-            <article className="bg-white p-8 md:p-10">
-              <span className="text-sm text-gray-400">03</span>
-
-              <h3 className="mt-12 text-2xl font-semibold">
-                Collaborative Process
-              </h3>
-
-              <p className="mt-4 leading-relaxed text-gray-600">
-                Kami membangun proses kerja yang terbuka dan kolaboratif
-                bersama client.
-              </p>
-            </article>
-
-            <article className="bg-white p-8 md:p-10">
-              <span className="text-sm text-gray-400">04</span>
-
-              <h3 className="mt-12 text-2xl font-semibold">
-                Attention to Detail
-              </h3>
-
-              <p className="mt-4 leading-relaxed text-gray-600">
-                Detail kecil diperhatikan agar hasil akhir tetap konsisten dan
-                terasa utuh.
-              </p>
-            </article>
-          </div>
         </div>
       </section>
 
-      {/* PROCESS */}
-      <section className="border-t px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 md:grid-cols-2">
-            <div>
-            <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                Our Process
-              </p>
-
-              <h2 className="mt-4 text-4xl font-bold md:text-5xl">
-                From idea to final result.
-              </h2>
-            </div>
-
-            <div>
-              <div className="border-t border-gray-200 py-6">
-                <div className="flex gap-6">
-                  <span className="text-sm text-gray-400">01</span>
-
-                  <div>
-                    <h3 className="font-semibold">Discover</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                      Memahami brand, kebutuhan, audience, dan tujuan project.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-t border-gray-200 py-6">
-                <div className="flex gap-6">
-                  <span className="text-sm text-gray-400">02</span>
-
-                  <div>
-                    <h3 className="font-semibold">Develop</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                      Mengembangkan konsep dan menentukan creative direction.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-t border-gray-200 py-6">
-                <div className="flex gap-6">
-                  <span className="text-sm text-gray-400">03</span>
-
-                  <div>
-                    <h3 className="font-semibold">Create</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                      Mengubah konsep menjadi karya dan pengalaman yang nyata.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-y border-gray-200 py-6">
-                <div className="flex gap-6">
-                  <span className="text-sm text-gray-400">04</span>
-
-                  <div>
-                    <h3 className="font-semibold">Deliver</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                      Finalisasi dan memastikan hasil sesuai kebutuhan project.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* VISUAL BREAK */}
-      <section className="px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <PhotoImage
-            src="/images/film-production.jpg"
-            alt="Kamera profesional dalam proses produksi"
-            className="aspect-[16/7]"
-          />
-        </div>
-      </section>
-
-      {/* CTA */}
       <CTA />
     </main>
   );

@@ -4,6 +4,42 @@ import Hero from "@/components/Hero";
 import CTA from "@/components/CTA";
 import PhotoImage from "@/components/PhotoImage";
 
+const serviceGroups = [
+  {
+    name: "Event Documentation",
+    category: "CAPTURE",
+    services: [
+      "Event Photography",
+      "Event Videography",
+      "Highlight Video",
+      "Event Recap",
+      "Behind The Scenes",
+    ],
+  },
+  {
+    name: "Content Editing",
+    category: "CREATE",
+    services: [
+      "Reels Editing",
+      "Short-form Video",
+      "Event Recap Editing",
+      "Social Media Video",
+      "Raw Footage Editing",
+    ],
+  },
+  {
+    name: "Visual Content",
+    category: "DESIGN",
+    services: [
+      "Instagram Feed",
+      "Carousel",
+      "Promotional Content",
+      "Event Announcement",
+      "Social Media Visual",
+    ],
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -20,21 +56,21 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-2xl leading-relaxed md:text-3xl">
-                We create things people remember.
+              <h2>
+                Partner visual kreatif untuk momen dan ide yang bermakna.
               </h2>
 
               <p className="mt-8 max-w-xl text-base leading-relaxed text-[var(--brown-light)]">
-                Nostalgia.Kala adalah creative studio yang menggabungkan ide,
-                visual, dan storytelling untuk menciptakan karya yang punya
-                karakter.
+                Nostalgia adalah layanan partner visual kreatif yang membantu
+                klien mengabadikan, menciptakan, dan mengubah momen menjadi
+                konten visual yang bermakna.
               </p>
 
               <Link
                 href="/about"
                 className="mt-8 inline-block border-b border-[var(--brown)] pb-1 text-sm font-medium"
               >
-                Discover Nostalgia.Kala →
+                Kenali Nostalgia.Kala →
               </Link>
             </div>
           </div>
@@ -50,7 +86,7 @@ export default function Home() {
                 Selected Work
               </p>
 
-              <h2 className="text-4xl font-bold md:text-5xl">
+              <h2 className="font-bold">
                 Featured
               </h2>
             </div>
@@ -73,7 +109,7 @@ export default function Home() {
 
               <div className="mt-5 flex items-start justify-between gap-6">
                 <div>
-                  <h3 className="text-2xl font-semibold">
+                  <h3 className="font-semibold">
                     Featured Project
                   </h3>
 
@@ -96,7 +132,7 @@ export default function Home() {
               />
 
               <div className="mt-5">
-                <h3 className="text-2xl font-semibold">
+                <h3 className="font-semibold">
                   Project Two
                 </h3>
 
@@ -116,7 +152,7 @@ export default function Home() {
             Our Philosophy
           </p>
 
-          <h2 className="max-w-6xl text-4xl font-bold leading-tight md:text-5xl">
+          <h2 className="max-w-6xl font-bold">
             Good work doesn&apos;t just look good.
             <br />
             It stays with you.
@@ -134,68 +170,41 @@ export default function Home() {
       {/* SERVICES */}
       <section className="border-t border-[var(--line)] bg-[var(--cream)] px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 md:grid-cols-2">
-            <div>
-              <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                What We Do
-              </p>
+          <div className="mb-12 max-w-3xl">
+            <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+              Our Services
+            </p>
 
-              <h2 className="max-w-xl text-4xl font-bold leading-tight md:text-5xl">
-                Ideas into experiences.
-              </h2>
-            </div>
+            <h2 className="font-bold">
+              Dari momen yang ditangkap hingga visual siap digunakan.
+            </h2>
+          </div>
 
-            <div>
-              <div className="border-t border-[var(--line)]">
-                <div className="flex items-center justify-between border-b border-[var(--line)] py-6">
+          <div className="grid gap-px bg-[var(--line)] md:grid-cols-3">
+            {serviceGroups.map((group, index) => (
+              <article
+                key={group.category}
+                className="bg-[var(--cream)] p-8 md:p-10"
+              >
+                <div className="flex items-center justify-between">
                   <span className="text-sm text-[var(--brown-light)]">
-                    01
+                    {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <span className="flex-1 px-6 text-2xl">
-                    Branding
+                  <span className="text-xs tracking-[0.15em] text-[var(--terracotta)]">
+                    {group.category}
                   </span>
-
-                  <span>↗</span>
                 </div>
 
-                <div className="flex items-center justify-between border-b border-[var(--line)] py-6">
-                  <span className="text-sm text-[var(--brown-light)]">
-                    02
-                  </span>
+                <h3 className="mt-10 font-semibold">{group.name}</h3>
 
-                  <span className="flex-1 px-6 text-2xl">
-                    Creative
-                  </span>
-
-                  <span>↗</span>
-                </div>
-
-                <div className="flex items-center justify-between border-b border-[var(--line)] py-6">
-                  <span className="text-sm text-[var(--brown-light)]">
-                    03
-                  </span>
-
-                  <span className="flex-1 px-6 text-2xl">
-                    Digital
-                  </span>
-
-                  <span>↗</span>
-                </div>
-
-                <div className="flex items-center justify-between border-b border-[var(--line)] py-6">
-                  <span className="text-sm text-[var(--brown-light)]">
-                    04
-                  </span>
-
-                  <span className="flex-1 px-6 text-2xl">
-                    Experience
-                  </span>
-
-                  <span>↗</span>
-                </div>
-              </div>
-            </div>
+                <ul className="mt-6 space-y-3 border-t border-[var(--line)] pt-6 text-[var(--brown-light)]">
+                  {group.services.map((service) => (
+                    <li key={service}>{service}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -209,7 +218,7 @@ export default function Home() {
                 Journal
               </p>
 
-              <h2 className="text-4xl font-bold md:text-5xl">
+              <h2 className="font-bold">
                 From our desk.
               </h2>
             </div>
@@ -234,7 +243,7 @@ export default function Home() {
                 Creative
               </p>
 
-              <h3 className="mt-3 text-2xl font-semibold">
+              <h3 className="mt-3 font-semibold">
                 Article title goes here.
               </h3>
             </article>
@@ -250,7 +259,7 @@ export default function Home() {
                 Branding
               </p>
 
-              <h3 className="mt-3 text-2xl font-semibold">
+              <h3 className="mt-3 font-semibold">
                 Another story worth reading.
               </h3>
             </article>
@@ -266,7 +275,7 @@ export default function Home() {
                 Ideas
               </p>
 
-              <h3 className="mt-3 text-2xl font-semibold">
+              <h3 className="mt-3 font-semibold">
                 Thoughts from Nostalgia.Kala.
               </h3>
             </article>
