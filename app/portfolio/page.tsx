@@ -53,9 +53,9 @@ export default function PortfolioPage() {
   return (
     <main>
       {/* HERO */}
-      <section className="min-h-[70vh] bg-[var(--cream)] px-6 py-24 md:px-10">
-        <div className="mx-auto flex min-h-[50vh] max-w-7xl items-end">
-          <div className="max-w-4xl">
+      <section className="min-h-[60vh] bg-[var(--cream)] px-6 py-16">
+        <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
+          <div className="max-w-5xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
               Our Portfolio
             </p>

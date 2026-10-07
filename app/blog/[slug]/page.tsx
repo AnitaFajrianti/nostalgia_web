@@ -1,23 +1,43 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
 import CTA from "@/components/CTA";
 import PhotoImage from "@/components/PhotoImage";
+import { articles } from "../articles";
 
-export default function BlogDetailPage() {
+export function generateStaticParams() {
+  return articles.map(({ slug }) => ({ slug }));
+}
+
+export default async function BlogDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const article = articles.find((item) => item.slug === slug);
+
+  if (!article) {
+    notFound();
+  }
+
+  const relatedArticles = articles
+    .filter((item) => item.slug !== article.slug)
+    .slice(0, 3);
+
   return (
     <main>
       {/* ARTICLE HEADER */}
-      <section className="px-6 pb-16 pt-24">
-        <div className="mx-auto max-w-5xl">
-          <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
-            Creative / 01 October 2026
-          </p>
+      <section className="min-h-[60vh] px-6 py-16">
+        <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
+          <div className="max-w-5xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
+              Journal / {article.category}
+            </p>
 
-          <h1 className="mt-6 font-bold">
-            Article title goes here.
-          </h1>
+            <h1 className="mt-6 font-bold">{article.title}</h1>
 
-          <p className="mt-6 max-w-2xl text-gray-600">
-            Short introduction atau excerpt dari artikel yang akan dibaca.
-          </p>
+            <p className="mt-6 max-w-2xl text-gray-600">{article.excerpt}</p>
+          </div>
         </div>
       </section>
 
@@ -25,8 +45,8 @@ export default function BlogDetailPage() {
       <section className="px-6 pb-24">
         <div className="mx-auto max-w-7xl">
           <PhotoImage
-            src="/images/film-production.jpg"
-            alt="Kamera merekam adegan produksi video"
+            src={article.image}
+            alt={article.imageAlt}
             className="aspect-[16/8]"
           />
         </div>
@@ -38,55 +58,49 @@ export default function BlogDetailPage() {
           {/* META */}
           <aside>
             <div className="sticky top-24">
-              <p className="text-sm text-gray-500">Published</p>
+              <p className="text-sm text-gray-500">Topik</p>
 
-              <p className="mt-2 text-sm font-medium">
-                01 October 2026
-              </p>
+              <p className="mt-2 text-sm font-medium">{article.category}</p>
 
-              <p className="mt-6 text-sm text-gray-500">Category</p>
-
-              <p className="mt-2 text-sm font-medium">
-                Creative
-              </p>
+              <Link
+                href="/blog"
+                className="mt-6 inline-block text-sm underline underline-offset-4"
+              >
+                Kembali ke Journal
+              </Link>
             </div>
           </aside>
 
           {/* CONTENT */}
           <div className="max-w-3xl">
-            <p>
-              Intro artikel bisa ditempatkan di sini. Area ini nantinya
-              digunakan untuk konten utama dari artikel.
+            <p className="leading-relaxed text-gray-600">
+              {article.introduction}
             </p>
 
-            <h2 className="mt-16 font-bold">
-              Subheading artikel
-            </h2>
+            {article.sections.map((section, index) => (
+              <section key={section.heading}>
+                <h2 className={`${index === 0 ? "mt-16" : "mt-12"} font-bold`}>
+                  {section.heading}
+                </h2>
 
-            <p className="mt-6 leading-relaxed text-gray-600">
-              Paragraf artikel. Konten panjang nantinya dapat ditempatkan
-              secara natural di area ini.
-            </p>
+                {section.paragraphs.map((paragraph) => (
+                  <p
+                    key={paragraph}
+                    className="mt-6 leading-relaxed text-gray-600"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
 
-            <p className="mt-6 leading-relaxed text-gray-600">
-              Paragraf berikutnya dapat berisi penjelasan, insight, cerita,
-              atau informasi pendukung lainnya.
-            </p>
-
-            <PhotoImage
-              src="/images/camera-detail.jpg"
-              alt="Detail kamera dalam proses produksi"
-              className="my-12 aspect-[16/9]"
-            />
-
-            <h2 className="font-bold">
-              Another section
-            </h2>
-
-            <p className="mt-6 leading-relaxed text-gray-600">
-              Bagian lanjutan artikel bisa menggunakan heading, paragraf,
-              gambar, video, quote, atau elemen pendukung lainnya.
-            </p>
+                {index === 0 && (
+                  <PhotoImage
+                    src={article.image}
+                    alt={article.imageAlt}
+                    className="my-12 aspect-[16/9]"
+                  />
+                )}
+              </section>
+            ))}
           </div>
         </div>
       </article>
@@ -99,59 +113,34 @@ export default function BlogDetailPage() {
               Continue Reading
             </p>
 
-            <h2 className="mt-4 font-bold">
-              Related Articles
-            </h2>
+            <h2 className="mt-4 font-bold">Related Articles</h2>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
-            <article>
-              <PhotoImage
-                src="/images/photography-session.jpg"
-                alt="Sesi pemotretan editorial"
-                className="aspect-[4/3]"
-              />
+            {relatedArticles.map((relatedArticle) => (
+              <article key={relatedArticle.slug}>
+                <Link href={`/blog/${relatedArticle.slug}`}>
+                  <PhotoImage
+                    src={relatedArticle.image}
+                    alt={relatedArticle.imageAlt}
+                    className="aspect-[4/3]"
+                  />
+                </Link>
 
-              <p className="mt-5 text-sm text-gray-500">
-                Creative
-              </p>
+                <p className="mt-5 text-sm text-gray-500">
+                  {relatedArticle.category}
+                </p>
 
-              <h3 className="mt-2 font-semibold">
-                Related article one.
-              </h3>
-            </article>
-
-            <article>
-              <PhotoImage
-                src="/images/portrait-photography.jpg"
-                alt="Fotografi portrait dalam pencahayaan studio"
-                className="aspect-[4/3]"
-              />
-
-              <p className="mt-5 text-sm text-gray-500">
-                Branding
-              </p>
-
-              <h3 className="mt-2 font-semibold">
-                Related article two.
-              </h3>
-            </article>
-
-            <article>
-              <PhotoImage
-                src="/images/film-production.jpg"
-                alt="Kamera video untuk produksi digital"
-                className="aspect-[4/3]"
-              />
-
-              <p className="mt-5 text-sm text-gray-500">
-                Digital
-              </p>
-
-              <h3 className="mt-2 font-semibold">
-                Related article three.
-              </h3>
-            </article>
+                <h3 className="mt-2 font-semibold">
+                  <Link
+                    href={`/blog/${relatedArticle.slug}`}
+                    className="transition hover:opacity-70"
+                  >
+                    {relatedArticle.title}
+                  </Link>
+                </h3>
+              </article>
+            ))}
           </div>
         </div>
       </section>

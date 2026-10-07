@@ -108,7 +108,7 @@ const projects: Record<string, Project> = {
   "project-one": {
     title: "Project Prewedding",
     category: "Prewedding",
-    year: "2026",
+    year: "2024",
     image: "/images/prewed-porto/foto-prewedding-hijab-jas-hitam-elegan.jpg",
     description:
       "Project ini merupakan dokumentasi prewedding yang menangkap momen dan karakter pasangan melalui visual yang natural, hangat, dan personal.",
@@ -129,7 +129,7 @@ const projects: Record<string, Project> = {
   "project-two": {
     title: "Project Wedding",
     category: "Wedding Documentation",
-    year: "2026",
+    year: "2024",
     image: "/images/wedding-porto/jasa-fotografer-wedding-intimate-bogor.jpg",
     description:
       "Dokumentasi pernikahan yang mengabadikan momen sakral, kebersamaan, dan cerita pasangan melalui foto yang hangat dan personal.",
@@ -232,8 +232,8 @@ export default async function ProjectDetailPage({
   return (
     <main>
       {/* PROJECT HERO */}
-      <section className="min-h-[55vh] bg-[var(--cream)] px-6 pb-16 pt-32 md:pb-24 md:pt-40">
-        <div className="mx-auto flex min-h-[35vh] max-w-7xl items-end">
+      <section className="min-h-[60vh] bg-[var(--cream)] px-6 py-16">
+        <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
           <div className="grid w-full gap-8 md:grid-cols-12 md:items-end">
             <div className={project.year ? "md:col-span-8" : "md:col-span-12"}>
               <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">

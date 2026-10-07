@@ -5,14 +5,14 @@ export default function PackagesPage() {
   return (
     <main>
       {/* HERO */}
-      <section className="min-h-[70vh] px-6 py-24">
-        <div className="mx-auto flex min-h-[50vh] max-w-7xl items-end">
-          <div className="max-w-4xl">
+      <section className="min-h-[60vh] px-6 py-16">
+        <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
+          <div className="max-w-5xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
               Packages
             </p>
 
-            <h1 className="type-hero font-bold">
+            <h1 className="type-hero min-h-[2em] font-semibold text-[var(--brown)]">
               Creative solutions built around your needs.
             </h1>
           </div>

@@ -12,14 +12,14 @@ export default function WhyUsPage() {
   return (
     <main>
       {/* HERO */}
-      <section className="min-h-[70vh] px-6 py-24">
-        <div className="mx-auto flex min-h-[50vh] max-w-7xl items-end">
+      <section className="min-h-[60vh] px-6 py-16">
+        <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
           <div className="max-w-5xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
               Why Nostalgia.Kala
             </p>
 
-            <h1 className="type-hero font-bold">
+            <h1 className="type-hero min-h-[2em] font-semibold text-[var(--brown)]">
               Why Nostalgia Exists?
             </h1>
           </div>
@@ -56,7 +56,7 @@ export default function WhyUsPage() {
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <p>{need}</p>
+                  <p className="text-lg leading-relaxed">{need}</p>
                 </div>
               ))}
             </div>
@@ -74,7 +74,7 @@ export default function WhyUsPage() {
           </div>
 
           <div className="md:col-span-8">
-            <h2 className="font-bold">
+            <h2 className="text-4xl font-bold leading-tight md:text-6xl">
               Nostalgia hadir untuk menjembatani kebutuhan tersebut.
             </h2>
           </div>

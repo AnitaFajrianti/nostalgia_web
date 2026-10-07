@@ -5,9 +5,9 @@ export default function ContactPage() {
   return (
     <main>
       {/* HERO */}
-      <section className="min-h-[65vh] px-6 py-24">
-        <div className="mx-auto flex min-h-[45vh] max-w-7xl items-end">
-          <div className="max-w-4xl">
+      <section className="min-h-[60vh] px-6 py-16">
+        <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
+          <div className="max-w-5xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
               Contact
             </p>

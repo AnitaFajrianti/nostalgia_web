@@ -152,7 +152,11 @@ const PortfolioGallery = ({
               alt={activeImage.alt}
               fill
               sizes="100vw"
-              className="object-contain"
+              className="object-contain saturate-[0.82] sepia-[0.14]"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-[var(--terracotta)]/15 mix-blend-multiply"
             />
           </div>
         </div>
