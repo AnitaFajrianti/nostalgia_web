@@ -3,6 +3,24 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import CTA from "@/components/CTA";
 import PhotoImage from "@/components/PhotoImage";
+import { articles } from "./blog/articles";
+
+const selectedWorks = [
+  {
+    slug: "project-one",
+    title: "Sesi Foto Prewedding",
+    category: "Prewedding",
+    image: "/images/prewed-porto/foto-prewedding-hijab-jas-hitam-elegan.jpg",
+    alt: "Foto prewedding pasangan dengan hijab dan jas hitam elegan",
+  },
+  {
+    slug: "basket",
+    title: "Dokumentasi Pertandingan Basket",
+    category: "Sports Photography",
+    image: "/images/basket-porto/foto-konseptual-pemain-basket-monokrom.jpg",
+    alt: "Foto konseptual pemain basket dalam gaya monokrom",
+  },
+];
 
 const serviceGroups = [
   {
@@ -86,9 +104,7 @@ export default function Home() {
                 Selected Work
               </p>
 
-              <h2 className="font-bold">
-                Featured
-              </h2>
+              <h2 className="font-bold">Karya pilihan kami.</h2>
             </div>
 
             <Link
@@ -99,48 +115,36 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-12">
-            <div className="md:col-span-8">
-              <PhotoImage
-                src="/images/film-production.jpg"
-                alt="Kamera video merekam produksi di studio"
-                className="aspect-[16/10]"
-              />
-
-              <div className="mt-5 flex items-start justify-between gap-6">
-                <div>
-                  <h3 className="font-semibold">
-                    Featured Project
-                  </h3>
-
-                  <p className="mt-2 text-sm text-[var(--brown-light)]">
-                    Creative / Digital
-                  </p>
-                </div>
-
-                <span className="text-sm text-[var(--brown-light)]">
-                  01
-                </span>
-              </div>
-            </div>
-
-            <div className="md:col-span-4 md:pt-24">
-              <PhotoImage
-                src="/images/portrait-photography.jpg"
-                alt="Kamera untuk sesi fotografi portrait"
-                className="aspect-[4/5]"
-              />
-
-              <div className="mt-5">
-                <h3 className="font-semibold">
-                  Project Two
-                </h3>
-
-                <p className="mt-2 text-sm text-[var(--brown-light)]">
-                  Branding / Campaign
-                </p>
-              </div>
-            </div>
+          <div className="grid gap-10 md:grid-cols-2">
+            {selectedWorks.map((project, index) => (
+              <article key={project.slug}>
+                <Link
+                  href={`/portfolio/${project.slug}`}
+                  className="group block"
+                >
+                  <PhotoImage
+                    src={project.image}
+                    alt={project.alt}
+                    className={`aspect-[4/3] transition duration-500 group-hover:opacity-90 ${
+                      index === 1 ? "md:mt-24" : ""
+                    }`}
+                  />
+                  <div className="mt-5 flex items-start justify-between gap-6">
+                    <div>
+                      <h3 className="font-semibold text-[var(--brown)]">
+                        {project.title}
+                      </h3>
+                      <p className="mt-2 text-sm text-[var(--brown-light)]">
+                        {project.category}
+                      </p>
+                    </div>
+                    <span className="text-sm text-[var(--brown-light)]">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -232,53 +236,26 @@ export default function Home() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
-            <article>
-              <PhotoImage
-                src="/images/photography-session.jpg"
-                alt="Fotografer sedang memotret dalam sesi kreatif"
-                className="aspect-[4/3]"
-              />
-
-              <p className="mt-5 text-xs uppercase tracking-[0.15em] text-[var(--brown-light)]">
-                Creative
-              </p>
-
-              <h3 className="mt-3 font-semibold">
-                Article title goes here.
-              </h3>
-            </article>
-
-            <article>
-              <PhotoImage
-                src="/images/camera-detail.jpg"
-                alt="Detail kamera fotografi profesional"
-                className="aspect-[4/3]"
-              />
-
-              <p className="mt-5 text-xs uppercase tracking-[0.15em] text-[var(--brown-light)]">
-                Branding
-              </p>
-
-              <h3 className="mt-3 font-semibold">
-                Another story worth reading.
-              </h3>
-            </article>
-
-            <article>
-              <PhotoImage
-                src="/images/film-production.jpg"
-                alt="Peralatan produksi film dan video"
-                className="aspect-[4/3]"
-              />
-
-              <p className="mt-5 text-xs uppercase tracking-[0.15em] text-[var(--brown-light)]">
-                Ideas
-              </p>
-
-              <h3 className="mt-3 font-semibold">
-                Thoughts from Nostalgia.Kala.
-              </h3>
-            </article>
+            {articles.slice(0, 3).map((article) => (
+              <article key={article.slug}>
+                <Link
+                  href={`/blog/${article.slug}`}
+                  className="group block"
+                >
+                  <PhotoImage
+                    src={article.image}
+                    alt={article.imageAlt}
+                    className="aspect-[4/3] transition duration-500 group-hover:opacity-90"
+                  />
+                  <p className="mt-5 text-xs uppercase tracking-[0.15em] text-[var(--brown-light)]">
+                    {article.category}
+                  </p>
+                  <h3 className="mt-3 font-semibold text-[var(--brown)]">
+                    {article.title}
+                  </h3>
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>

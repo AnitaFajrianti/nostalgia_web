@@ -2,50 +2,57 @@ import Link from "next/link";
 import CTA from "@/components/CTA";
 import PhotoImage from "@/components/PhotoImage";
 
-type PortfolioItem = {
-  slug: string;
-  title: string;
-  category: string;
-  image: string;
-  alt: string;
-};
-
-const featuredProject = {
-  slug: "17an",
-  title: "Semarak Kemerdekaan",
-  category: "Event Documentation",
-  alt: "Video dokumentasi acara 17an",
-  video: "/videos/portfolio-17an.mp4",
-};
-
-const projects: PortfolioItem[] = [
+const captureProjects = [
   {
     slug: "project-one",
-    title: "Project Prewedding",
-    category: "Prewedding",
+    title: "Sesi Foto Prewedding",
+    category: "Prewedding Photography",
+    description:
+      "Rangkaian foto prewedding yang menampilkan momen dan karakter pasangan.",
     image: "/images/prewed-porto/foto-prewedding-hijab-jas-hitam-elegan.jpg",
     alt: "Foto prewedding pasangan dengan hijab dan jas hitam elegan",
   },
   {
     slug: "project-two",
-    title: "Project Wedding",
-    category: "Wedding Documentation",
+    title: "Dokumentasi Pernikahan",
+    category: "Wedding Photography",
+    description:
+      "Dokumentasi prosesi, pasangan, dan momen kebersamaan dalam pernikahan.",
     image: "/images/wedding-porto/jasa-fotografer-wedding-intimate-bogor.jpg",
     alt: "Dokumentasi wedding intimate di Bogor",
   },
   {
-    slug: "project-three",
-    title: "Project Three",
-    category: "Digital / Experience",
-    image: "/images/portrait-photography.jpg",
-    alt: "Fotografi portrait untuk proyek digital",
+    slug: "basket",
+    title: "Dokumentasi Pertandingan Basket",
+    category: "Sports Photography",
+    description:
+      "Foto aksi pertandingan, detail permainan, dan kebersamaan tim basket.",
+    image: "/images/basket-porto/foto-konseptual-pemain-basket-monokrom.jpg",
+    alt: "Foto konseptual pemain basket dalam gaya monokrom",
+  },
+];
+
+const createProject = {
+  slug: "17an",
+  title: "Semarak Kemerdekaan",
+  category: "Event Video · Video Production & Editing",
+  description:
+    "Video dokumentasi acara 17an yang mengabadikan suasana dan momen kebersamaan.",
+  video: "/videos/portfolio-17an.mp4",
+};
+
+const serviceGroups = [
+  {
+    name: "Capture",
+    description: "Dokumentasi foto dan video untuk momen dan acara.",
   },
   {
-    slug: "project-four",
-    title: "Project Four",
-    category: "Visual / Creative",
-    image: "/images/film-production.jpg",
-    alt: "Kamera video saat proses pengambilan gambar",
+    name: "Create",
+    description: "Editing video dan produksi konten dari materi visual.",
+  },
+  {
+    name: "Design",
+    description: "Desain visual dan media sosial untuk kebutuhan komunikasi.",
   },
 ];
 
@@ -61,79 +68,65 @@ export default function PortfolioPage() {
             </p>
 
             <h1 className="type-hero font-bold text-[var(--brown)]">
-              Work that turns ideas into memorable experiences.
+              Karya visual untuk momen dan ide yang bermakna.
             </h1>
           </div>
         </div>
       </section>
 
-      {/* FEATURED PROJECT */}
-      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-24 md:px-10">
+      {/* SERVICES */}
+      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-16 md:px-10 md:py-20">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-10 flex items-end justify-between gap-6">
-            <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                Featured Project
-              </p>
-
-              <h2 className="mt-4 font-semibold text-[var(--brown)]">
-                {featuredProject.title}
-              </h2>
-            </div>
+          <div className="mb-10 max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+              Our Services
+            </p>
+            <h2 className="mt-4 font-semibold text-[var(--brown)]">
+              Tiga cara kami mengolah cerita menjadi visual.
+            </h2>
           </div>
 
-          <video
-            controls
-            playsInline
-            preload="metadata"
-            aria-label={featuredProject.alt}
-            className="aspect-[16/9] w-full bg-[var(--brown)] object-contain"
-          >
-            <source src={featuredProject.video} type="video/mp4" />
-            Browser Anda tidak mendukung pemutar video.
-          </video>
-
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
-            <div>
-              <p className="text-[var(--brown-light)]">
-                Dokumentasi acara 17an yang mengabadikan suasana, cerita, dan
-                momen kebersamaan dalam perayaan.
-              </p>
-
-              <Link
-                href={`/portfolio/${featuredProject.slug}`}
-                className="mt-5 inline-block border-b border-[var(--terracotta)] pb-1 text-sm text-[var(--terracotta)]"
+          <div className="grid gap-px bg-[var(--line)] md:grid-cols-3">
+            {serviceGroups.map((service, index) => (
+              <article
+                key={service.name}
+                className="bg-[var(--cream-light)] p-7 md:p-9"
               >
-                Lihat detail proyek →
-              </Link>
-            </div>
-
-            <div className="md:text-right">
-              <p className="text-sm text-[var(--brown-light)]">Category</p>
-
-              <p className="mt-1 font-medium text-[var(--brown)]">
-                {featuredProject.category}
-              </p>
-            </div>
+                <span className="text-sm text-[var(--brown-light)]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-8 font-semibold text-[var(--brown)]">
+                  {service.name}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-[var(--brown-light)]">
+                  {service.description}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* PROJECT GRID */}
-      <section className="bg-[var(--cream)] px-6 py-24 md:px-10">
+      {/* CAPTURE PROJECTS */}
+      <section className="bg-[var(--cream)] px-6 py-20 md:px-10 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12">
-            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Selected Work
+          <div className="mb-10 flex flex-col gap-4 border-b border-[var(--line)] pb-6 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+                Capture
+              </p>
+              <h2 className="mt-3 font-semibold text-[var(--brown)]">
+                Foto &amp; dokumentasi
+              </h2>
+            </div>
+            <p className="max-w-lg text-sm text-[var(--brown-light)]">
+              Pilihan karya fotografi dari sesi prewedding, pernikahan, dan
+              pertandingan olahraga.
             </p>
-
-            <h2 className="mt-4 font-semibold text-[var(--brown)]">
-              Our Projects
-            </h2>
           </div>
 
-          <div className="grid gap-10 md:grid-cols-2">
-            {projects.map((project, index) => (
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {captureProjects.map((project, index) => (
               <article key={project.slug}>
                 <Link
                   href={`/portfolio/${project.slug}`}
@@ -144,60 +137,103 @@ export default function PortfolioPage() {
                     alt={project.alt}
                     className="aspect-[4/3] transition duration-500 group-hover:opacity-90"
                   />
-                </Link>
-
-                <div className="mt-5 flex justify-between gap-4">
-                  <div>
-                    <Link
-                      href={`/portfolio/${project.slug}`}
-                      className="group block"
-                    >
-                      <h3 className="font-semibold text-[var(--brown)]">
-                        {project.title}
-                      </h3>
-
-                      <p className="mt-1 text-sm text-[var(--brown-light)]">
+                  <div className="mt-5 flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.12em] text-[var(--terracotta)]">
                         {project.category}
                       </p>
-
-                      <span className="mt-4 inline-block text-sm text-[var(--terracotta)]">
-                        Lihat detail proyek →
-                      </span>
-                    </Link>
+                      <h3 className="mt-2 font-semibold text-[var(--brown)]">
+                        {project.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-[var(--brown-light)]">
+                        {project.description}
+                      </p>
+                    </div>
+                    <span className="text-sm text-[var(--brown-light)]">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
                   </div>
-
-                  <span className="text-sm text-[var(--brown-light)]">
-                    {String(index + 1).padStart(2, "0")}
+                  <span className="mt-4 inline-block border-b border-[var(--terracotta)] pb-1 text-sm text-[var(--terracotta)]">
+                    Lihat hasil foto →
                   </span>
-                </div>
+                </Link>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CATEGORIES */}
-      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-24 md:px-10">
+      {/* CREATE PROJECT */}
+      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-20 md:px-10 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 md:grid-cols-2">
+          <div className="mb-10">
+            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+              Create
+            </p>
+            <h2 className="mt-3 font-semibold text-[var(--brown)]">
+              Produksi &amp; editing video
+            </h2>
+          </div>
+
+          <article className="grid gap-8 lg:grid-cols-[1.4fr_0.6fr] lg:items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                Expertise
+              <video
+                autoPlay
+                controls
+                muted
+                playsInline
+                preload="metadata"
+                aria-label={createProject.title}
+                className="aspect-[16/9] w-full bg-[var(--brown)] object-contain"
+              >
+                <source src={createProject.video} type="video/mp4" />
+                Browser Anda tidak mendukung pemutar video.
+              </video>
+            </div>
+
+            <div>
+              <p className="text-xs uppercase tracking-[0.12em] text-[var(--terracotta)]">
+                {createProject.category}
               </p>
-
-              <h2 className="mt-4 max-w-xl font-semibold text-[var(--brown)]">
-                Different needs, different approaches.
-              </h2>
+              <h3 className="mt-3 font-semibold text-[var(--brown)]">
+                {createProject.title}
+              </h3>
+              <p className="mt-4 leading-relaxed text-[var(--brown-light)]">
+                {createProject.description}
+              </p>
+              <Link
+                href={`/portfolio/${createProject.slug}`}
+                className="mt-6 inline-block border-b border-[var(--terracotta)] pb-1 text-sm text-[var(--terracotta)]"
+              >
+                Lihat detail video →
+              </Link>
             </div>
+          </article>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-2 gap-x-8 gap-y-6 text-lg text-[var(--brown)]">
-              <p>Branding</p>
-              <p>Creative</p>
-              <p>Digital</p>
-              <p>Campaign</p>
-              <p>Content</p>
-              <p>Experience</p>
-            </div>
+      {/* DESIGN */}
+      <section className="border-t border-[var(--line)] bg-[var(--cream)] px-6 py-16 md:px-10">
+        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-12 md:items-start">
+          <div className="md:col-span-4">
+            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+              Design
+            </p>
+            <h2 className="mt-3 font-semibold text-[var(--brown)]">
+              Desain visual &amp; media sosial
+            </h2>
+          </div>
+          <div className="md:col-span-8">
+            <p className="max-w-2xl leading-relaxed text-[var(--brown-light)]">
+              Layanan desain visual dan media sosial tersedia. Contoh hasil
+              desain belum dipublikasikan di portfolio ini.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-5 inline-block border-b border-[var(--terracotta)] pb-1 text-sm text-[var(--terracotta)] transition hover:text-[var(--terracotta-dark)]"
+            >
+              Diskusikan kebutuhan desain →
+            </Link>
           </div>
         </div>
       </section>

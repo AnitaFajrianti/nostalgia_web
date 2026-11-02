@@ -1,78 +1,87 @@
 import CTA from "@/components/CTA";
+import ContactForm from "@/components/ContactForm";
 import PhotoImage from "@/components/PhotoImage";
 
 export default function ContactPage() {
   return (
     <main>
       {/* HERO */}
-      <section className="min-h-[60vh] px-6 py-16">
-        <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
-          <div className="max-w-5xl">
-            <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+      <section className="bg-[var(--cream-light)] px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-4xl">
+            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--terracotta)]">
               Contact
             </p>
 
-            <h1 className="type-hero font-bold">
+            <h1 className="type-hero font-bold text-[var(--brown)]">
               Have a project in mind?
               <br />
-              Let&apos;s talk.
+              <span className="text-[var(--terracotta)]">Let&apos;s talk.</span>
             </h1>
+
+            <p className="mt-7 max-w-xl text-lg text-[var(--brown-light)]">
+              Ceritakan ide dan kebutuhanmu. Kami siap membantu mengubahnya
+              menjadi sesuatu yang layak diingat.
+            </p>
           </div>
         </div>
       </section>
 
       {/* CONTACT INFO + FORM */}
-      <section className="border-t px-6 py-24">
-        <div className="mx-auto grid max-w-7xl gap-16 md:grid-cols-2">
+      <section className="border-t border-[var(--line)] px-6 py-16 md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           {/* CONTACT INFO */}
-          <div>
-            <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Get In Touch
+          <div className="bg-[var(--brown)] p-8 text-[var(--cream-light)] md:p-10">
+            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--beige)]">
+              Get in touch
             </p>
 
-            <h2 className="mt-5 max-w-lg font-bold">
-              Tell us what you&apos;re working on.
+            <h2 className="max-w-lg font-bold">
+              Let&apos;s make something meaningful.
             </h2>
 
-            <p className="mt-6 max-w-md leading-relaxed text-gray-600">
+            <p className="mt-5 max-w-md leading-relaxed text-[var(--cream)]/75">
               Ceritakan kebutuhan, ide, atau project yang ingin kamu
-              kembangkan bersama Nostalgia.Kala.
+              kembangkan bersama Nostalgia.Kala. Hubungi kami lewat kanal
+              berikut.
             </p>
 
-            <div className="mt-12 space-y-8">
-              <div>
-                <p className="text-sm text-gray-500">Email</p>
+            <div className="mt-10 divide-y divide-[var(--cream)]/15 border-y border-[var(--cream)]/15">
+              <div className="py-5">
+                <p className="text-xs uppercase tracking-[0.14em] text-[var(--cream)]/55">Email</p>
                 <p className="mt-2 font-medium">
                   hello@nostalgia.com
                 </p>
               </div>
 
-              <div>
-                <p className="text-sm text-gray-500">WhatsApp</p>
+              <div className="py-5">
+                <p className="text-xs uppercase tracking-[0.14em] text-[var(--cream)]/55">WhatsApp</p>
                 <a
                   href="https://wa.me/628111187077?text=Halo%20Nostalgia%20Kala%2C%20saya%20ingin%20menanyakan%20informasi%20lebih%20lanjut."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 block font-medium transition hover:opacity-60"
+                  className="mt-2 inline-flex font-medium transition hover:text-[var(--beige)]"
                 >
                   +62 811-1187-077
+                  <span className="ml-2 text-[var(--beige)]" aria-hidden="true">↗</span>
                 </a>
               </div>
 
-              <div>
-                <p className="text-sm text-gray-500">Instagram</p>
+              <div className="py-5">
+                <p className="text-xs uppercase tracking-[0.14em] text-[var(--cream)]/55">Instagram</p>
                 <a
                   href="https://www.instagram.com/nostalgiakala.id"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 block font-medium transition hover:opacity-60"
+                  className="mt-2 inline-flex font-medium transition hover:text-[var(--beige)]"
                 >
                   @nostalgiakala.id
+                  <span className="ml-2 text-[var(--beige)]" aria-hidden="true">↗</span>
                 </a>
               </div>
 
-              <div>
-                <p className="text-sm text-gray-500">Location</p>
+              <div className="py-5">
+                <p className="text-xs uppercase tracking-[0.14em] text-[var(--cream)]/55">Location</p>
                 <p className="mt-2 font-medium">
                   Indonesia
                 </p>
@@ -81,100 +90,21 @@ export default function ContactPage() {
           </div>
 
           {/* FORM */}
-          <div>
-            <form className="space-y-8">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="text-sm font-medium"
-                >
-                  Name
-                </label>
-
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Your name"
-                  className="mt-3 w-full border-b border-gray-300 bg-transparent px-0 py-4 outline-none transition focus:border-black"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="text-sm font-medium"
-                >
-                  Email
-                </label>
-
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="you@email.com"
-                  className="mt-3 w-full border-b border-gray-300 bg-transparent px-0 py-4 outline-none transition focus:border-black"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="project"
-                  className="text-sm font-medium"
-                >
-                  Project Type
-                </label>
-
-                <select
-                  id="project"
-                  className="mt-3 w-full border-b border-gray-300 bg-transparent px-0 py-4 outline-none"
-                  defaultValue=""
-                >
-                  <option value="" disabled>
-                    Select project type
-                  </option>
-                  <option value="branding">Branding</option>
-                  <option value="digital">Digital</option>
-                  <option value="creative">Creative</option>
-                  <option value="campaign">Campaign</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="text-sm font-medium"
-                >
-                  Tell us about your project
-                </label>
-
-                <textarea
-                  id="message"
-                  rows={5}
-                  placeholder="Write something..."
-                  className="mt-3 w-full resize-none border-b border-gray-300 bg-transparent px-0 py-4 outline-none transition focus:border-black"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="inline-flex rounded-full bg-black px-7 py-3 text-sm font-medium text-white transition hover:bg-gray-800"
-              >
-                Send Inquiry →
-              </button>
-            </form>
+          <div className="border border-[var(--line)] bg-[var(--cream-light)] p-6 md:p-10">
+            <ContactForm />
           </div>
         </div>
       </section>
 
       {/* SOCIAL / LOCATION */}
-      <section className="border-t px-6 py-24">
+      <section className="border-t border-[var(--line)] px-6 py-16 md:py-20">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">
           <div>
-            <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--terracotta)]">
               Find Us
             </p>
 
-            <h2 className="mt-4 font-bold">
+            <h2 className="max-w-md font-bold">
               Let&apos;s stay connected.
             </h2>
           </div>

@@ -14,164 +14,217 @@ export type Article = {
 
 export const articles: Article[] = [
   {
-    slug: "article-one",
-    title: "Tips Memilih Jasa Foto dan Video yang Tepat untuk Acara",
-    category: "Foto & Video",
+    slug: "tips-memilih-jasa-foto-video-acara",
+    title: "Tips Memilih Jasa Foto dan Video untuk Dokumentasi Acara",
+    category: "Jasa Fotografi & Videografi",
     excerpt:
-      "Kenali hal-hal penting yang perlu dipertimbangkan sebelum memilih tim dokumentasi untuk acara spesialmu.",
-    image: "/images/Ruang Kerja Editor Video Sinematik.png",
-    imageAlt: "Ruang kerja editor video sinematik",
-    introduction:
-      "Memilih jasa foto dan video bukan hanya soal membandingkan harga. Tim dokumentasi yang tepat akan membantu menangkap momen penting sekaligus memahami suasana dan cerita yang ingin kamu kenang.",
-    sections: [
-      {
-        heading: "Mulai dari kebutuhan acara",
-        paragraphs: [
-          "Tentukan jenis acara, durasi dokumentasi, jumlah lokasi, serta momen yang tidak boleh terlewat. Kebutuhan pernikahan, acara keluarga, dan peluncuran brand tentu memiliki alur dan prioritas yang berbeda.",
-          "Diskusikan juga hasil akhir yang kamu butuhkan, seperti foto pilihan, video highlight, atau dokumentasi lengkap. Brief yang jelas membantu tim memberikan penawaran dan rencana kerja yang sesuai.",
-        ],
-      },
-      {
-        heading: "Periksa portofolio dan cara kerja",
-        paragraphs: [
-          "Lihat beberapa proyek yang sejenis dengan acaramu. Perhatikan konsistensi warna, cara fotografer menangkap momen, kualitas audio pada video, serta bagaimana hasil akhirnya bercerita.",
-          "Tanyakan siapa yang akan bertugas, bagaimana proses koordinasi saat acara, kapan hasil dikirim, dan apa saja yang termasuk dalam paket. Pastikan semua kesepakatan tercatat sebelum hari pelaksanaan.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "article-two",
-    title:
-      "Jasa Foto dan Video untuk Dokumentasi Acara: Apa Saja yang Perlu Dipersiapkan?",
-    category: "Persiapan Acara",
-    excerpt:
-      "Checklist sederhana untuk membantu proses dokumentasi berjalan lancar dari briefing hingga acara selesai.",
+      "Tentukan kebutuhan, momen prioritas, dan hasil akhir sebelum memilih tim dokumentasi foto dan video untuk acaramu.",
     image: "/images/Persiapan Perlengkapan Kamera di Meja.png",
-    imageAlt: "Persiapan perlengkapan kamera di meja",
+    imageAlt: "Persiapan perlengkapan kamera untuk dokumentasi acara",
     introduction:
-      "Persiapan yang baik membuat tim dokumentasi bisa bekerja lebih tenang dan fokus pada momen acara. Beberapa informasi sederhana dari penyelenggara dapat membantu menghindari momen penting yang terlewat.",
+      "Memilih jasa foto dan video acara dimulai dengan memahami kebutuhan dokumentasi. Jenis acara, alur kegiatan, dan hasil yang ingin digunakan akan membantu kamu menyusun brief yang jelas untuk tim.",
     sections: [
       {
-        heading: "Siapkan rundown dan daftar momen penting",
+        heading: "Sesuaikan dokumentasi dengan jenis acara",
         paragraphs: [
-          "Bagikan rundown terbaru, alamat dan akses lokasi, kontak PIC, serta perkiraan jumlah tamu. Tandai momen yang menjadi prioritas, misalnya prosesi, sambutan, potong kue, atau foto bersama keluarga.",
-          "Jika ada orang atau detail tertentu yang perlu didokumentasikan, sampaikan namanya atau referensi visual lebih awal. Ini membantu tim mengenali mereka di tengah acara yang ramai.",
+          "Tentukan jenis acara, durasi, lokasi, dan momen penting yang perlu direkam. Kebutuhan pernikahan, acara keluarga, dan kegiatan brand memiliki alur serta prioritas dokumentasi yang berbeda.",
+          "Pertimbangkan apakah kamu memerlukan fotografi, videografi, atau keduanya. Sampaikan juga hasil yang diharapkan, seperti foto pilihan, video highlight, atau dokumentasi acara.",
         ],
       },
       {
-        heading: "Atur koordinasi teknis sebelum hari acara",
+        heading: "Periksa portofolio dan sepakati detail kerja",
         paragraphs: [
-          "Informasikan kondisi venue, area yang boleh dimasuki, aturan penggunaan flash, kebutuhan listrik, dan titik terbaik untuk mengambil gambar. Untuk acara di luar ruangan, diskusikan juga rencana jika cuaca berubah.",
-          "Sisihkan waktu singkat untuk briefing dengan PIC dan tim dokumentasi sebelum acara dimulai. Pastikan jalur komunikasi, batas waktu kerja, serta bentuk dan jadwal penyerahan hasil sudah disepakati.",
+          "Lihat contoh karya yang relevan dengan kebutuhanmu. Perhatikan pendekatan visual, cara momen ditangkap, dan konsistensi hasilnya.",
+          "Sebelum acara, diskusikan rundown, koordinasi di lokasi, bentuk hasil, jadwal penyerahan, serta cakupan layanan. Pastikan kesepakatan tercatat dalam penawaran.",
         ],
       },
     ],
   },
   {
-    slug: "article-three",
-    title: "Mengapa Video Dokumentasi Penting untuk Mengabadikan Sebuah Momen?",
-    category: "Videografi",
+    slug: "persiapan-dokumentasi-foto-video-acara",
+    title: "Persiapan Dokumentasi Foto dan Video Acara",
+    category: "Persiapan Dokumentasi",
     excerpt:
-      "Video menyimpan gerak, suara, dan suasana yang membuat sebuah momen terasa hidup kembali saat ditonton.",
-    image: "/images/Videografer Merekam Pernikahan Outdoor.png",
-    imageAlt: "Videografer merekam pernikahan outdoor",
-    introduction:
-      "Foto dapat membekukan satu detik yang berarti, sementara video merangkai banyak detik menjadi pengalaman yang utuh. Keduanya punya kekuatan masing-masing dalam menyimpan kenangan sebuah acara.",
-    sections: [
-      {
-        heading: "Menyimpan suasana, bukan hanya gambarnya",
-        paragraphs: [
-          "Dalam video, ekspresi yang berubah, suara orang-orang terdekat, musik, dan suasana ruang hadir bersama. Detail seperti tawa, tepuk tangan, atau potongan ucapan sering membawa kembali perasaan saat momen itu terjadi.",
-          "Dokumentasi video juga dapat memperlihatkan hubungan antarmomen—dari persiapan, jalannya acara, hingga reaksi spontan para tamu—sehingga kenangan terasa lebih menyeluruh.",
-        ],
-      },
-      {
-        heading: "Membuat cerita yang bisa dibagikan",
-        paragraphs: [
-          "Dengan pemilihan adegan dan penyuntingan yang terarah, rekaman acara dapat dirangkai menjadi video highlight yang mudah ditonton ulang dan dibagikan kepada keluarga, teman, atau audiens brand.",
-          "Agar hasilnya terasa personal, ceritakan kepada tim bagian mana yang paling penting bagimu. Musik, durasi, dan gaya penyuntingan kemudian dapat disesuaikan dengan karakter acara.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "article-four",
-    title: "Perbedaan Foto Dokumentasi dan Foto Konseptual",
-    category: "Fotografi",
-    excerpt:
-      "Pahami perbedaan pendekatan foto yang menangkap kejadian apa adanya dan foto yang dirancang dengan konsep.",
+      "Rundown, daftar momen penting, dan koordinasi lokasi membantu tim dokumentasi bekerja sesuai kebutuhan acara.",
     image: "/images/Operator Kamera Merekam Acara di Auditorium.png",
     imageAlt: "Operator kamera merekam acara di auditorium",
     introduction:
-      "Foto dokumentasi dan foto konseptual sama-sama dapat bercerita, tetapi proses dan tujuan pemotretannya berbeda. Memahami perbedaannya akan membantumu memilih pendekatan yang sesuai dengan kebutuhan.",
+      "Brief yang jelas membantu fotografer dan videografer memahami alur acara serta momen yang menjadi prioritas. Persiapan ini juga memudahkan koordinasi dengan penanggung jawab acara.",
     sections: [
       {
-        heading: "Foto dokumentasi menangkap momen yang terjadi",
+        heading: "Siapkan rundown dan daftar momen prioritas",
         paragraphs: [
-          "Dalam dokumentasi, fotografer mengamati alur acara dan menangkap kejadian secara natural. Fokusnya adalah merekam suasana, interaksi, dan momen penting tanpa banyak mengatur ulang jalannya acara.",
-          "Pendekatan ini cocok untuk acara yang ingin dikenang sebagaimana berlangsung. Kepekaan membaca situasi dan kesiapan mengambil gambar pada waktu yang tepat menjadi hal penting.",
+          "Bagikan rundown terbaru, alamat dan akses lokasi, kontak penanggung jawab, serta perkiraan jumlah tamu. Tandai prosesi atau momen yang tidak boleh terlewat.",
+          "Jika ada orang atau detail tertentu yang perlu didokumentasikan, sampaikan nama atau referensi visualnya sebelum acara.",
         ],
       },
       {
-        heading: "Foto konseptual dirancang dengan arahan visual",
+        heading: "Bahas kondisi lokasi dan koordinasi teknis",
         paragraphs: [
-          "Foto konseptual biasanya berangkat dari ide atau pesan tertentu. Konsep tersebut diterjemahkan melalui pemilihan lokasi, pencahayaan, properti, busana, pose, dan arahan warna.",
-          "Pendekatan ini sesuai untuk portrait, kampanye, atau kebutuhan visual brand yang memerlukan tampilan konsisten. Keduanya juga bisa dipadukan, misalnya dokumentasi acara yang dilengkapi sesi foto terarah.",
+          "Informasikan kondisi venue, area yang dapat diakses, aturan penggunaan flash, kebutuhan listrik, dan titik pengambilan gambar. Untuk acara luar ruang, diskusikan rencana jika kondisi cuaca berubah.",
+          "Sepakati jalur komunikasi, waktu briefing, durasi kerja, serta bentuk dan jadwal penyerahan hasil dengan tim dokumentasi.",
         ],
       },
     ],
   },
   {
-    slug: "article-five",
-    title: "Color Grading dan Color Correction: Apa Bedanya?",
-    category: "Post-production",
+    slug: "manfaat-video-dokumentasi-acara",
+    title: "Manfaat Video Dokumentasi untuk Mengabadikan Acara",
+    category: "Videografi Acara",
     excerpt:
-      "Kenali proses merapikan warna dan membangun suasana visual agar hasil foto maupun video terlihat selaras.",
-    image: "/images/Rapat Kru Film di Balik Layar.png",
-    imageAlt: "Rapat kru film di balik layar",
+      "Video merangkai gerak, suara, dan suasana acara menjadi dokumentasi yang dapat ditonton kembali dan dibagikan.",
+    image: "/images/Videografer Merekam Pernikahan Outdoor.png",
+    imageAlt: "Videografer merekam acara pernikahan di luar ruangan",
     introduction:
-      "Color correction dan color grading sering disebut bersamaan dalam proses penyuntingan. Keduanya berkaitan dengan warna, tetapi memiliki tujuan yang berbeda dan biasanya dilakukan secara berurutan.",
+      "Foto membekukan momen dalam satu gambar, sedangkan video dapat merekam gerak, suara, dan hubungan antarmomen. Keduanya menawarkan cara berbeda untuk menyimpan dokumentasi acara.",
+    sections: [
+      {
+        heading: "Merekam suasana dan detail acara",
+        paragraphs: [
+          "Ekspresi, ucapan, musik, dan suasana ruang dapat hadir bersama dalam video. Detail seperti sambutan atau reaksi spontan membantu menggambarkan kembali jalannya acara.",
+          "Rekaman dapat mencakup persiapan, prosesi, dan interaksi para tamu sesuai rundown serta prioritas yang disepakati.",
+        ],
+      },
+      {
+        heading: "Menyusun rekaman menjadi cerita",
+        paragraphs: [
+          "Pemilihan adegan dan penyuntingan membantu menyusun rekaman menjadi video highlight atau dokumentasi dengan alur yang mudah diikuti.",
+          "Sampaikan kepada tim momen yang paling penting bagimu. Gaya penyuntingan dan bentuk hasil dapat dibicarakan sebelum produksi.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "foto-dokumentasi-vs-foto-konseptual",
+    title: "Foto Dokumentasi dan Foto Konseptual: Apa Bedanya?",
+    category: "Fotografi",
+    excerpt:
+      "Kenali perbedaan foto dokumentasi yang menangkap kejadian dan foto konseptual yang dirancang dengan arahan visual.",
+    image: "/images/photography-session.jpg",
+    imageAlt: "Sesi pemotretan dengan arahan visual",
+    introduction:
+      "Foto dokumentasi dan foto konseptual memiliki pendekatan yang berbeda. Memahami tujuannya dapat membantu menentukan jenis sesi fotografi yang sesuai dengan kebutuhan.",
+    sections: [
+      {
+        heading: "Foto dokumentasi menangkap momen yang berlangsung",
+        paragraphs: [
+          "Fotografer mengamati alur acara dan merekam suasana, interaksi, serta momen penting secara natural. Pendekatan ini sesuai untuk mendokumentasikan kejadian sebagaimana berlangsung.",
+          "Kepekaan membaca situasi dan koordinasi dengan penyelenggara membantu tim bersiap pada momen prioritas.",
+        ],
+      },
+      {
+        heading: "Foto konseptual berangkat dari arahan visual",
+        paragraphs: [
+          "Foto konseptual disusun berdasarkan ide atau pesan. Lokasi, pencahayaan, properti, busana, pose, dan warna dapat menjadi bagian dari arahan visual.",
+          "Pendekatan ini dapat digunakan untuk portrait atau kebutuhan visual brand. Brief dan referensi membantu menyamakan arah sebelum sesi foto.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "color-correction-dan-color-grading-video",
+    title: "Color Correction dan Color Grading Video: Kenali Perbedaannya",
+    category: "Editing Video",
+    excerpt:
+      "Color correction merapikan warna dasar, sedangkan color grading membantu membentuk suasana visual video.",
+    image: "/images/Ruang Kerja Editor Video Sinematik.png",
+    imageAlt: "Ruang kerja untuk proses editing dan pengolahan warna video",
+    introduction:
+      "Color correction dan color grading merupakan dua proses berbeda dalam editing video. Keduanya berhubungan dengan warna, tetapi memiliki tujuan yang berbeda dalam menyusun tampilan akhir.",
     sections: [
       {
         heading: "Color correction merapikan warna dasar",
         paragraphs: [
-          "Color correction membantu membuat exposure, white balance, dan warna terlihat wajar serta konsisten antaradegan. Proses ini penting ketika kondisi cahaya berubah selama pemotretan atau perekaman.",
-          "Koreksi yang rapi menjadi dasar agar detail tetap terbaca dan perpindahan antarshot tidak terasa janggal. Tujuannya bukan membuat setiap gambar tampak sama persis, melainkan menjaga tampilan tetap seimbang.",
+          "Color correction membantu menyeimbangkan exposure, white balance, dan warna agar gambar terlihat wajar serta konsisten antaradegan.",
+          "Koreksi dasar membuat detail lebih mudah dibaca dan menjadi landasan sebelum tampilan visual diarahkan lebih lanjut.",
         ],
       },
       {
-        heading: "Color grading membangun karakter visual",
+        heading: "Color grading membangun suasana visual",
         paragraphs: [
-          "Setelah warna dasar dirapikan, color grading memberi sentuhan gaya dan suasana. Tone hangat, kontras lembut, atau warna yang lebih berani dapat dipilih sesuai cerita dan identitas visual.",
-          "Grading yang baik tetap mempertimbangkan warna kulit, detail penting, dan konsistensi keseluruhan. Karena preferensi warna bersifat personal, referensi visual dari klien dapat membantu menyamakan arah sejak awal.",
+          "Color grading memberi karakter dan suasana melalui pengolahan tone, kontras, dan warna. Arah visual sebaiknya disesuaikan dengan kebutuhan video dan referensi yang disepakati.",
+          "Konsistensi warna kulit, detail penting, dan perpindahan antaradegan tetap perlu diperhatikan agar hasil editing terasa selaras.",
         ],
       },
     ],
   },
   {
-    slug: "article-six",
-    title: "Dari Footage Mentah Menjadi Video yang Bercerita",
-    category: "Penyuntingan Video",
+    slug: "proses-editing-video-dari-footage-mentah",
+    title: "Proses Editing Video: Dari Footage Mentah Menjadi Konten",
+    category: "Editing & Produksi Konten",
     excerpt:
-      "Lihat bagaimana pilihan momen, ritme, suara, dan warna mengubah rekaman menjadi cerita yang utuh.",
+      "Pemilihan momen, penyusunan alur, audio, dan warna membantu mengolah footage menjadi video yang siap digunakan.",
     image: "/images/Operator Kamera Merekam Diskusi Panel.png",
-    imageAlt: "Operator kamera merekam diskusi panel",
+    imageAlt: "Operator kamera merekam diskusi panel sebagai bahan video",
     introduction:
-      "Footage mentah adalah kumpulan bahan cerita. Lewat proses penyuntingan, potongan-potongan gambar dipilih dan disusun agar penonton dapat mengikuti suasana serta pesan yang ingin disampaikan.",
+      "Footage mentah merupakan bahan awal untuk proses editing video. Editor meninjau rekaman, memilih bagian yang relevan, lalu menyusunnya sesuai tujuan konten dan brief.",
     sections: [
       {
-        heading: "Memilih momen dan membangun alur",
+        heading: "Memilih footage dan menyusun alur",
         paragraphs: [
-          "Editor meninjau rekaman, memilih ekspresi dan kejadian yang paling bermakna, lalu menyusunnya menjadi pembuka, perkembangan, dan penutup. Tidak semua footage harus masuk; yang terpenting adalah hubungan antaradegan terasa jelas.",
-          "Ritme juga disesuaikan dengan tujuan video. Highlight singkat membutuhkan pilihan gambar yang padat, sementara video cerita dapat memberi ruang lebih bagi suasana dan detail.",
+          "Editor meninjau rekaman dan memilih momen yang sesuai dengan pesan. Potongan gambar kemudian disusun menjadi alur yang memiliki pembuka, perkembangan, dan penutup.",
+          "Ritme dan durasi disesuaikan dengan kebutuhan video. Brief yang memuat audiens, tujuan, dan platform membantu menentukan bentuk penyuntingan.",
         ],
       },
       {
-        heading: "Menyatukan gambar, suara, dan warna",
+        heading: "Merapikan audio dan tampilan akhir",
         paragraphs: [
-          "Musik, dialog, suara suasana, dan transisi membantu menghubungkan adegan. Audio yang tertata membuat video lebih nyaman diikuti dan dapat memperkuat emosi tanpa mengalihkan perhatian dari cerita.",
-          "Tahap akhir mencakup penyesuaian warna, pemeriksaan kualitas, dan ekspor sesuai kebutuhan platform. Hasilnya bukan sekadar kumpulan klip, melainkan rangkaian momen yang memiliki arah.",
+          "Musik, dialog, suara suasana, dan transisi ditata agar video nyaman diikuti. Pemilihan elemen audio perlu memperhatikan tujuan dan materi yang tersedia.",
+          "Pemeriksaan akhir mencakup alur, suara, warna, dan format ekspor sesuai kebutuhan penggunaan yang telah dibahas.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "tips-foto-produk-untuk-katalog-online",
+    title: "Tips Foto Produk untuk Katalog Online",
+    category: "Fotografi Produk",
+    excerpt:
+      "Pencahayaan, latar, sudut pengambilan, dan konsistensi membantu foto produk tampil jelas di katalog online.",
+    image: "/images/camera-detail.jpg",
+    imageAlt: "Detail kamera untuk kebutuhan fotografi produk",
+    introduction:
+      "Foto produk membantu calon pembeli melihat bentuk dan detail barang melalui katalog online. Persiapan visual yang rapi dapat membuat informasi produk lebih mudah dipahami.",
+    sections: [
+      {
+        heading: "Tampilkan bentuk dan detail produk",
+        paragraphs: [
+          "Gunakan pencahayaan yang membantu memperlihatkan warna, tekstur, dan bentuk produk. Pilih latar yang tidak mengalihkan perhatian dari objek.",
+          "Ambil sudut yang menunjukkan bagian penting produk. Foto detail dapat melengkapi tampilan utama jika ada fitur atau tekstur yang perlu diperlihatkan.",
+        ],
+      },
+      {
+        heading: "Jaga konsistensi untuk katalog",
+        paragraphs: [
+          "Gunakan arah cahaya, latar, dan komposisi yang serupa untuk produk dalam satu katalog agar tampilannya terasa teratur.",
+          "Sebelum sesi, siapkan daftar produk, informasi detail yang perlu ditampilkan, serta kebutuhan rasio dan platform. Hasil dan format akhir sebaiknya disepakati bersama tim foto.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "visual-branding-dan-desain-media-sosial",
+    title: "Visual Branding dan Desain Media Sosial yang Konsisten",
+    category: "Visual Branding & Desain Media Sosial",
+    excerpt:
+      "Arah visual yang konsisten membantu konten media sosial menyampaikan identitas dan pesan brand dengan lebih jelas.",
+    image: "/images/portrait-photography.jpg",
+    imageAlt: "Foto portrait sebagai aset visual untuk komunikasi brand",
+    introduction:
+      "Visual branding membantu menjaga karakter komunikasi brand di berbagai materi. Pada media sosial, konsistensi visual dapat dibangun melalui pilihan warna, tipografi, komposisi, dan gaya gambar.",
+    sections: [
+      {
+        heading: "Tentukan elemen visual dan pesan utama",
+        paragraphs: [
+          "Mulai dari tujuan komunikasi, audiens, dan pesan yang ingin disampaikan. Elemen visual seperti warna, tipografi, dan gaya fotografi dapat dipilih untuk mendukung arah tersebut.",
+          "Referensi visual dan panduan brand yang sudah dimiliki dapat menjadi acuan agar desain tetap sejalan dengan identitas yang digunakan.",
+        ],
+      },
+      {
+        heading: "Susun desain media sosial sesuai kebutuhan",
+        paragraphs: [
+          "Konten feed, carousel, dan materi promosi memiliki kebutuhan penyampaian informasi yang berbeda. Susunan teks dan visual perlu disesuaikan dengan tujuan setiap materi.",
+          "Sebelum produksi desain, sepakati jenis konten, ukuran atau format platform, materi yang tersedia, dan alur persetujuan. Dengan begitu, hasil desain lebih terarah dan mudah digunakan.",
         ],
       },
     ],

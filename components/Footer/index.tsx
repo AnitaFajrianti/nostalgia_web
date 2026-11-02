@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="border-t border-[var(--line)] bg-[var(--cream)] px-6 text-[var(--brown)] md:px-10">
       <div className="mx-auto max-w-7xl py-24">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_repeat(3,minmax(0,1fr))]">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.6fr)_repeat(4,minmax(0,1fr))]">
           <div>
             <Link
               href="/"
@@ -21,7 +21,7 @@ const Footer = () => {
             </Link>
 
             <p className="mt-6 max-w-sm leading-relaxed text-[var(--brown-light)]">
-              Mengabadikan cerita, emosi, dan detail kecil dari setiap acara.
+              Capture momen, create konten, dan design visual yang bermakna.
             </p>
 
             <div className="mt-6 flex items-center gap-4">
@@ -51,6 +51,26 @@ const Footer = () => {
                 <Mail size={17} strokeWidth={2} />
               </a>
             </div>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em]">
+              Services
+            </p>
+            <ul className="mt-5 flex flex-col gap-4 text-sm text-[var(--brown-light)]">
+              <li>
+                <span className="font-medium text-[var(--brown)]">Capture</span>
+                <span className="mt-1 block">Event photo &amp; video</span>
+              </li>
+              <li>
+                <span className="font-medium text-[var(--brown)]">Create</span>
+                <span className="mt-1 block">Video editing &amp; content</span>
+              </li>
+              <li>
+                <span className="font-medium text-[var(--brown)]">Design</span>
+                <span className="mt-1 block">Social media &amp; visual design</span>
+              </li>
+            </ul>
           </div>
 
           <div>

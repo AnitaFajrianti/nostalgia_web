@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CTA from "@/components/CTA";
 import PhotoImage from "@/components/PhotoImage";
@@ -6,6 +7,32 @@ import { articles } from "../articles";
 
 export function generateStaticParams() {
   return articles.map(({ slug }) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const article = articles.find((item) => item.slug === slug);
+
+  if (!article) {
+    return {
+      title: "Artikel tidak ditemukan | Journal Nostalgia.Kala",
+      description: "Artikel Journal Nostalgia.Kala tidak ditemukan.",
+    };
+  }
+
+  return {
+    title: `${article.title} | Journal Nostalgia.Kala`,
+    description: article.excerpt,
+    openGraph: {
+      title: `${article.title} | Journal Nostalgia.Kala`,
+      description: article.excerpt,
+      type: "article",
+    },
+  };
 }
 
 export default async function BlogDetailPage({
@@ -20,9 +47,11 @@ export default async function BlogDetailPage({
     notFound();
   }
 
-  const relatedArticles = articles
-    .filter((item) => item.slug !== article.slug)
-    .slice(0, 3);
+  const articleIndex = articles.findIndex((item) => item.slug === article.slug);
+  const relatedArticles = Array.from(
+    { length: Math.min(3, articles.length - 1) },
+    (_, index) => articles[(articleIndex + index + 1) % articles.length],
+  );
 
   return (
     <main>
@@ -67,6 +96,18 @@ export default async function BlogDetailPage({
                 className="mt-6 inline-block text-sm underline underline-offset-4"
               >
                 Kembali ke Journal
+              </Link>
+              <Link
+                href="/portfolio"
+                className="mt-4 block text-sm underline underline-offset-4"
+              >
+                Lihat portfolio
+              </Link>
+              <Link
+                href="/packages"
+                className="mt-4 block text-sm underline underline-offset-4"
+              >
+                Jelajahi layanan
               </Link>
             </div>
           </aside>

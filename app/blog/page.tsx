@@ -1,7 +1,20 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import CTA from "@/components/CTA";
 import PhotoImage from "@/components/PhotoImage";
 import { articles } from "./articles";
+
+export const metadata: Metadata = {
+  title: "Journal Fotografi, Videografi & Konten Visual | Nostalgia.Kala",
+  description:
+    "Panduan fotografi acara, videografi, editing video, produksi konten, foto produk, visual branding, dan desain media sosial dari Nostalgia.Kala.",
+  openGraph: {
+    title: "Journal Fotografi, Videografi & Konten Visual | Nostalgia.Kala",
+    description:
+      "Baca panduan fotografi, videografi, editing video, produksi konten, foto produk, visual branding, dan desain media sosial.",
+    type: "website",
+  },
+};
 
 export default function BlogPage() {
   const [featuredArticle, ...latestArticles] = articles;
@@ -16,8 +29,8 @@ export default function BlogPage() {
               Journal
             </p>
 
-            <h1 className="type-hero min-h-[2em] font-semibold text-[var(--brown)]">
-              Ideas, stories, and things worth sharing.
+            <h1 className="type-hero font-semibold text-[var(--brown)]">
+              Journal fotografi, video, dan konten visual.
             </h1>
           </div>
         </div>
@@ -26,16 +39,21 @@ export default function BlogPage() {
       {/* FEATURED ARTICLE */}
       <section className="border-t px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
-            Featured Article
+          <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+            Artikel pilihan
           </p>
 
           <div className="mt-10 grid gap-8 md:grid-cols-2">
-            <PhotoImage
-              src={featuredArticle.image}
-              alt={featuredArticle.imageAlt}
-              className="aspect-[4/3]"
-            />
+            <Link
+              href={`/blog/${featuredArticle.slug}`}
+              className="group block"
+            >
+              <PhotoImage
+                src={featuredArticle.image}
+                alt={featuredArticle.imageAlt}
+                className="aspect-[4/3] transition duration-500 group-hover:opacity-90"
+              />
+            </Link>
 
             <div className="flex flex-col justify-end">
               <p className="text-sm text-gray-500">
@@ -72,18 +90,22 @@ export default function BlogPage() {
             </div>
 
             <span className="hidden text-sm text-gray-500 md:block">
-              01 — 06
+              02 — {String(articles.length).padStart(2, "0")}
             </span>
           </div>
 
           <div className="grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
             {latestArticles.map((article, index) => (
               <article key={article.slug}>
-                <Link href={`/blog/${article.slug}`}>
+                <Link
+                  href={`/blog/${article.slug}`}
+                  className="group block"
+                  aria-label={`Baca artikel: ${article.title}`}
+                >
                   <PhotoImage
                     src={article.image}
                     alt={article.imageAlt}
-                    className="aspect-[4/3]"
+                    className="aspect-[4/3] transition duration-500 group-hover:opacity-90"
                   />
                 </Link>
 

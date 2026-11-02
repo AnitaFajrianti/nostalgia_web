@@ -7,12 +7,9 @@ import PortfolioGallery from "@/components/PortfolioGallery";
 type Project = {
   title: string;
   category: string;
-  year?: string;
   image?: string;
   video?: string;
   description: string;
-  challenge: string;
-  approach: string;
   services: string[];
   gallery: string[];
   interactiveGallery?: boolean;
@@ -104,19 +101,35 @@ const weddingGallery = [
   },
 ];
 
+const basketGallery = [
+  "foto-dokumentasi-pertandingan-basket.jpg",
+  "foto-pemain-basket-memegang-bola.jpg",
+  "aksi-pemain-basket-di-lapangan.jpg",
+  "pemain-basket-berlatih-dribble.jpg",
+  "foto-aksi-pertandingan-basket.jpg",
+  "pemain-basket-melakukan-shooting.jpg",
+  "foto-konseptual-pemain-basket-monokrom.jpg",
+  "duel-pemain-basket-di-lapangan.jpg",
+  "aksi-pemain-basket-merebut-bola.jpg",
+  "close-up-bola-basket-saat-bermain.jpg",
+  "foto-tim-basket-bersama.jpg",
+  "pemain-basket-melakukan-layup.jpg",
+  "rebutan-bola-di-pertandingan-basket.jpg",
+  "bola-basket-menuju-ring.jpg",
+  "dokumentasi-kegiatan-olahraga-basket.jpg",
+  "foto-aksi-pemain-basket.jpg",
+  "pemain-basket-melakukan-shooting-ring.jpg",
+].map((filename) => `/images/basket-porto/${filename}`);
+
 const projects: Record<string, Project> = {
   "project-one": {
-    title: "Project Prewedding",
-    category: "Prewedding",
-    year: "2024",
+    title: "Sesi Foto Prewedding",
+    category: "Capture · Prewedding Photography",
     image: "/images/prewed-porto/foto-prewedding-hijab-jas-hitam-elegan.jpg",
     description:
-      "Project ini merupakan dokumentasi prewedding yang menangkap momen dan karakter pasangan melalui visual yang natural, hangat, dan personal.",
-    challenge:
-      "Bagaimana menghasilkan rangkaian foto prewedding yang terasa natural dan mampu merepresentasikan karakter pasangan?",
-    approach:
-      "Kami mengabadikan momen melalui pendekatan visual yang natural, dengan memperhatikan suasana, ekspresi, dan interaksi pasangan agar setiap foto terasa personal.",
+      "Rangkaian foto prewedding yang menampilkan momen dan karakter pasangan dalam berbagai suasana dan gaya.",
     services: [
+      "Capture",
       "Prewedding Photography",
       "Creative Direction",
       "Couple Session",
@@ -127,17 +140,13 @@ const projects: Record<string, Project> = {
   },
 
   "project-two": {
-    title: "Project Wedding",
-    category: "Wedding Documentation",
-    year: "2024",
+    title: "Dokumentasi Pernikahan",
+    category: "Capture · Wedding Photography",
     image: "/images/wedding-porto/jasa-fotografer-wedding-intimate-bogor.jpg",
     description:
-      "Dokumentasi pernikahan yang mengabadikan momen sakral, kebersamaan, dan cerita pasangan melalui foto yang hangat dan personal.",
-    challenge:
-      "Bagaimana menangkap rangkaian momen pernikahan yang berlangsung spontan dengan tetap menghadirkan cerita yang utuh dan berkesan?",
-    approach:
-      "Kami mendokumentasikan prosesi dan interaksi pasangan serta keluarga dengan pendekatan yang natural agar setiap momen terasa dekat dan autentik.",
+      "Kumpulan foto yang mendokumentasikan prosesi pernikahan, pasangan, dan momen kebersamaan.",
     services: [
+      "Capture",
       "Wedding Photography",
       "Akad Documentation",
       "Couple Session",
@@ -147,65 +156,31 @@ const projects: Record<string, Project> = {
     interactiveGallery: true,
   },
 
-  "project-three": {
-    title: "Project Three",
-    category: "Digital / Experience",
-    year: "2026",
-    image: "/images/portrait-photography.jpg",
+  basket: {
+    title: "Dokumentasi Pertandingan Basket",
+    category: "Capture · Sports Photography",
+    image: "/images/basket-porto/foto-konseptual-pemain-basket-monokrom.jpg",
     description:
-      "Project digital yang berfokus pada bagaimana visual dan experience dapat bekerja bersama untuk menciptakan komunikasi yang lebih kuat.",
-    challenge:
-      "Membuat pengalaman digital yang tetap memiliki karakter visual sekaligus mudah digunakan.",
-    approach:
-      "Kami menggabungkan visual direction, content structure, dan experience design untuk membangun pengalaman yang lebih cohesive.",
+      "Kumpulan foto aksi permainan, detail pertandingan, dan kebersamaan tim basket.",
     services: [
-      "Digital Direction",
-      "Experience Design",
-      "Visual Design",
-      "Content",
+      "Capture",
+      "Sports Photography",
+      "Action Photography",
     ],
-    gallery: [
-      "/images/portrait-photography.jpg",
-      "/images/camera-detail.jpg",
-      "/images/film-production.jpg",
-    ],
-  },
-
-  "project-four": {
-    title: "Project Four",
-    category: "Visual / Creative",
-    year: "2026",
-    image: "/images/film-production.jpg",
-    description:
-      "Project visual yang mengeksplorasi bagaimana gambar, motion, dan storytelling dapat membangun sebuah pengalaman yang memorable.",
-    challenge:
-      "Menerjemahkan sebuah ide menjadi visual yang kuat dan memiliki emotional impact.",
-    approach:
-      "Proses kreatif dikembangkan mulai dari concept development, visual direction, production hingga final output.",
-    services: [
-      "Creative Concept",
-      "Visual Direction",
-      "Video Production",
-      "Post Production",
-    ],
-    gallery: [
-      "/images/film-production.jpg",
-      "/images/photography-session.jpg",
-      "/images/portrait-photography.jpg",
-    ],
+    gallery: basketGallery,
   },
 
   "17an": {
     title: "Semarak Kemerdekaan",
-    category: "Event Documentation",
+    category: "Create · Event Video",
     video: "/videos/portfolio-17an.mp4",
     description:
-      "Dokumentasi acara 17an yang mengabadikan suasana, cerita, dan momen kebersamaan dalam perayaan.",
-    challenge:
-      "Menangkap momen-momen acara yang berlangsung spontan agar suasana dan kebersamaannya dapat dikenang kembali.",
-    approach:
-      "Mendokumentasikan rangkaian acara, interaksi, dan detail suasana melalui video yang natural dan bercerita.",
-    services: ["Event Documentation", "Video Production", "Video Editing"],
+      "Video dokumentasi acara 17an yang merangkai suasana dan momen kebersamaan dalam perayaan.",
+    services: [
+      "Event Documentation",
+      "Video Production",
+      "Video Editing",
+    ],
     gallery: [],
   },
 };
@@ -235,7 +210,7 @@ export default async function ProjectDetailPage({
       <section className="min-h-[60vh] bg-[var(--cream)] px-6 py-16">
         <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
           <div className="grid w-full gap-8 md:grid-cols-12 md:items-end">
-            <div className={project.year ? "md:col-span-8" : "md:col-span-12"}>
+            <div className="md:col-span-12">
               <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
                 {project.category}
               </p>
@@ -244,15 +219,6 @@ export default async function ProjectDetailPage({
                 {project.title}
               </h1>
             </div>
-
-            {project.year && (
-              <div className="md:col-span-4 md:pb-2 md:text-right">
-                <p className="text-sm text-[var(--brown-light)]">Year</p>
-                <p className="mt-1 font-medium text-[var(--brown)]">
-                  {project.year}
-                </p>
-              </div>
-            )}
           </div>
         </div>
       </section>
@@ -263,7 +229,9 @@ export default async function ProjectDetailPage({
           {project.video ? (
             <div className="aspect-[16/9] overflow-hidden bg-[var(--brown)]">
               <video
+                autoPlay
                 controls
+                muted
                 playsInline
                 preload="metadata"
                 aria-label={`${project.title} event documentation`}
@@ -295,31 +263,6 @@ export default async function ProjectDetailPage({
           <div className="md:col-span-8">
             <p className="max-w-4xl text-[var(--brown)]">
               {project.description}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CHALLENGE & APPROACH */}
-      <section className="bg-[var(--cream)] px-6 py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">
-          <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              The Challenge
-            </p>
-
-            <p className="mt-6 max-w-xl text-[var(--brown-light)]">
-              {project.challenge}
-            </p>
-          </div>
-
-          <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Our Approach
-            </p>
-
-            <p className="mt-6 max-w-xl text-[var(--brown-light)]">
-              {project.approach}
             </p>
           </div>
         </div>
