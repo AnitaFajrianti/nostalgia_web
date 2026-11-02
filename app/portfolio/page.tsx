@@ -30,6 +30,35 @@ const captureProjects = [
     image: "/images/basket-porto/foto-konseptual-pemain-basket-monokrom.jpg",
     alt: "Foto konseptual pemain basket dalam gaya monokrom",
   },
+  {
+    slug: "sedja",
+    title: "Foto Produk Sedja",
+    category: "Fotografi Produk",
+    description:
+      "Foto produk Sedja dengan berbagai komposisi, detail, dan model.",
+    image: "/images/foto sedja-porto/detail-produk-botol-herbal-background-daun-14.jpg",
+    alt: "Botol produk herbal Sedja dengan latar daun",
+  },
+  {
+    slug: "kemerdekaan",
+    title: "Dokumentasi Lomba Kemerdekaan",
+    category: "Fotografi Acara",
+    description:
+      "Dokumentasi kegiatan dan lomba anak dalam perayaan Kemerdekaan.",
+    image:
+      "/images/kemerdekaan-dokumentasi/peserta-anak-mengikuti-lomba-09.jpg",
+    alt: "Peserta anak mengikuti lomba dalam perayaan Kemerdekaan",
+  },
+  {
+    slug: "malam-kemerdekaan",
+    title: "Dokumentasi Malam Kemerdekaan",
+    category: "Fotografi Acara",
+    description:
+      "Dokumentasi suasana, peserta, dan kegiatan dalam acara Malam Kemerdekaan.",
+    image:
+      "/images/Malam-kemerdekaan/dokumentasi-pengunjung-di-area-kegiatan-malam.jpg",
+    alt: "Pengunjung di area kegiatan Malam Kemerdekaan",
+  },
 ];
 
 const createProject = {
@@ -120,8 +149,8 @@ export default function PortfolioPage() {
               </h2>
             </div>
             <p className="max-w-lg text-sm text-[var(--brown-light)]">
-              Pilihan karya fotografi dari sesi pranikah, pernikahan, dan
-              pertandingan olahraga.
+              Pilihan karya fotografi dari sesi pranikah, pernikahan,
+              pertandingan olahraga, dan fotografi produk.
             </p>
           </div>
 

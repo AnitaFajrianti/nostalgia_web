@@ -12,7 +12,7 @@ type Project = {
   description: string;
   services: string[];
   gallery: string[];
-  interactiveGallery?: boolean;
+  preserveGalleryAspectRatio?: boolean;
 };
 
 const preweddingGallery = [
@@ -121,6 +121,67 @@ const basketGallery = [
   "pemain-basket-melakukan-shooting-ring.jpg",
 ].map((filename) => `/images/basket-porto/${filename}`);
 
+const sedjaGallery = [
+  "detail-botol-produk-herbal-background-meja-07.jpg",
+  "detail-kemasan-botol-produk-15.jpg",
+  "detail-produk-botol-dengan-background-laptop-17.jpg",
+  "detail-produk-botol-herbal-background-daun-14.jpg",
+  "foto-koleksi-produk-herbal-outdoor-12.jpg",
+  "foto-produk-botol-di-depan-laptop-16.jpg",
+  "foto-produk-botol-herbal-background-alam-03.jpg",
+  "foto-produk-herbal-tiga-varian-09.jpg",
+  "foto-promosi-produk-herbal-dua-model-05.jpg.JPG",
+  "model-memegang-botol-produk-herbal-10.jpg",
+  "model-wanita-dengan-koleksi-produk-11.jpg",
+  "model-wanita-memegang-produk-botol-08.jpg",
+  "produk-botol-herbal-bersama-model-04.jpg",
+  "produk-botol-herbal-dipegang-model-02.jpg",
+  "produk-botol-minuman-herbal-model-outdoor-01.jpg",
+  "produk-herbal-dipegang-dua-tangan-13.jpg",
+  "produk-herbal-dua-varian-bersama-model-06.jpg",
+].map((filename) => `/images/foto sedja-porto/${filename}`);
+
+const kemerdekaanGallery = [
+  "aktivitas-anak-mengikuti-perlombaan-05.jpg",
+  "dokumentasi-kegiatan-anak-festival-01.jpg",
+  "dokumentasi-kendaraan-kegiatan-event-03.jpg",
+  "dokumentasi-panitia-event-anak-07.jpg",
+  "dokumentasi-pengunjung-event-anak-10.jpg",
+  "kegiatan-anak-bersama-orang-tua-11.jpg",
+  "kegiatan-anak-bersama-peserta-event-08.jpg",
+  "kegiatan-festival-bersama-peserta-06.jpg",
+  "kegiatan-interaksi-anak-dan-panitia-04.jpg",
+  "kegiatan-lomba-anak-festival-02.jpg",
+  "peserta-anak-mengikuti-lomba-09.jpg",
+].map((filename) => `/images/kemerdekaan-dokumentasi/${filename}`);
+
+const malamKemerdekaanGallery = [
+  "dokumentasi-potret-peserta-kegiatan.jpg",
+  "dokumentasi-aktivitas-di-area-panggung.jpg",
+  "dokumentasi-anak-mengikuti-kegiatan-acara.jpg",
+  "dokumentasi-pembagian-hadiah-peserta-acara.jpg",
+  "dokumentasi-pembicara-di-area-panggung.jpg",
+  "dokumentasi-pembicara-di-atas-panggung-acara.jpg",
+  "dokumentasi-pengoperasian-laptop-saat-acara.jpg",
+  "dokumentasi-pengunjung-di-area-kegiatan-kala.jpg",
+  "dokumentasi-pengunjung-di-area-kegiatan-malam.jpg",
+  "dokumentasi-pengunjung-di-area-kegiatan.jpg",
+  "dokumentasi-pengunjung-di-samping-panggung.jpg",
+  "dokumentasi-peserta-perempuan-saat-acara.jpg",
+  "dokumentasi-sambutan-pembicara-kegiatan.jpg",
+  "interaksi-peserta-dan-pengunjung-acara.jpg",
+  "pembicara-menyampaikan-materi-di-panggung.jpg",
+  "pembicara-menyampaikan-sambutan-di-panggung.jpg",
+  "penampilan-pembicara-di-panggung-kegiatan.jpg",
+  "pengunjung-mengikuti-acara-dengan-antusias.jpg",
+  "pengunjung-menyaksikan-kegiatan-bersama.jpg",
+  "pengunjung-perempuan-menghadiri-kegiatan.jpg",
+  "penyerahan-hadiah-kepada-peserta-kegiatan.jpg",
+  "suasana-panggung-dan-dekorasi-acara.jpg",
+  "suasana-panggung-saat-kegiatan-berlangsung.jpg",
+  "suasana-pengunjung-di-area-acara.jpg",
+].map((filename) => `/images/Malam-kemerdekaan/${filename}`);
+
 const projects: Record<string, Project> = {
   "project-one": {
     title: "Sesi Foto Pranikah",
@@ -136,7 +197,6 @@ const projects: Record<string, Project> = {
       "Dokumentasi Foto",
     ],
     gallery: preweddingGallery.map(({ src }) => src),
-    interactiveGallery: true,
   },
 
   "project-two": {
@@ -153,7 +213,6 @@ const projects: Record<string, Project> = {
       "Momen Keluarga",
     ],
     gallery: weddingGallery.map(({ src }) => src),
-    interactiveGallery: true,
   },
 
   basket: {
@@ -168,6 +227,39 @@ const projects: Record<string, Project> = {
       "Fotografi Aksi",
     ],
     gallery: basketGallery,
+  },
+
+  sedja: {
+    title: "Foto Produk Sedja",
+    category: "Capture · Fotografi Produk",
+    image: "/images/foto sedja-porto/detail-produk-botol-herbal-background-daun-14.jpg",
+    description:
+      "Rangkaian foto produk Sedja dengan berbagai komposisi, detail, dan model.",
+    services: ["Capture", "Fotografi Produk", "Foto Produk dengan Model"],
+    gallery: sedjaGallery,
+    preserveGalleryAspectRatio: true,
+  },
+
+  kemerdekaan: {
+    title: "Dokumentasi Lomba Kemerdekaan",
+    category: "Capture · Fotografi Acara",
+    image:
+      "/images/kemerdekaan-dokumentasi/peserta-anak-mengikuti-lomba-09.jpg",
+    description:
+      "Rangkaian dokumentasi kegiatan dan lomba anak dalam perayaan Kemerdekaan.",
+    services: ["Capture", "Fotografi Acara", "Dokumentasi Lomba"],
+    gallery: kemerdekaanGallery,
+  },
+
+  "malam-kemerdekaan": {
+    title: "Dokumentasi Malam Kemerdekaan",
+    category: "Capture · Fotografi Acara",
+    image:
+      "/images/Malam-kemerdekaan/dokumentasi-pengunjung-di-area-kegiatan-malam.jpg",
+    description:
+      "Rangkaian dokumentasi suasana, peserta, dan kegiatan dalam acara Malam Kemerdekaan.",
+    services: ["Capture", "Fotografi Acara", "Dokumentasi Kegiatan"],
+    gallery: malamKemerdekaanGallery,
   },
 
   "17an": {
@@ -204,6 +296,16 @@ export default async function ProjectDetailPage({
     notFound();
   }
 
+  const galleryImages =
+    slug === "project-one"
+      ? preweddingGallery
+      : slug === "project-two"
+        ? weddingGallery
+        : project.gallery.map((src, index) => ({
+            src,
+            alt: `${project.title}, foto ${index + 1}`,
+          }));
+
   return (
     <main>
       {/* PROJECT HERO */}
@@ -225,7 +327,7 @@ export default async function ProjectDetailPage({
 
       {/* HERO IMAGE */}
       <section className="bg-[var(--cream)] px-6">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           {project.video ? (
             <div className="aspect-[16/9] overflow-hidden bg-[var(--brown)]">
               <video
@@ -234,6 +336,7 @@ export default async function ProjectDetailPage({
                 muted
                 playsInline
                 preload="metadata"
+                poster={project.image}
                 aria-label={`Video dokumentasi ${project.title}`}
                 className="h-full w-full object-contain"
               >
@@ -305,7 +408,7 @@ export default async function ProjectDetailPage({
       {/* PROJECT GALLERY */}
       {project.gallery.length > 0 && (
         <section className="bg-[var(--cream)] px-6 py-24">
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-5xl">
             <div className="mb-12">
               <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
                 Galeri Proyek
@@ -316,29 +419,11 @@ export default async function ProjectDetailPage({
               </h2>
             </div>
 
-            {project.interactiveGallery ? (
-              <PortfolioGallery
-                images={
-                  slug === "project-two" ? weddingGallery : preweddingGallery
-                }
-                projectTitle={project.title}
-              />
-            ) : (
-              <div className="grid gap-8 md:grid-cols-2">
-                {project.gallery.map((image, index) => (
-                  <PhotoImage
-                    key={image}
-                    src={image}
-                    alt={`${project.title}, foto ${index + 1}`}
-                    className={
-                      index === 0
-                        ? "aspect-[16/10] md:col-span-2"
-                        : "aspect-[4/3]"
-                    }
-                  />
-                ))}
-              </div>
-            )}
+            <PortfolioGallery
+              images={galleryImages}
+              projectTitle={project.title}
+              preserveAspectRatio={project.preserveGalleryAspectRatio}
+            />
           </div>
         </section>
       )}

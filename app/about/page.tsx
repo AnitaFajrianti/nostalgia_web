@@ -57,6 +57,21 @@ const selectedWorks = [
     type: "Capture · Fotografi",
   },
   {
+    href: "/portfolio/sedja",
+    title: "Foto Produk Sedja",
+    type: "Capture · Fotografi Produk",
+  },
+  {
+    href: "/portfolio/kemerdekaan",
+    title: "Dokumentasi Lomba Kemerdekaan",
+    type: "Capture · Fotografi Acara",
+  },
+  {
+    href: "/portfolio/malam-kemerdekaan",
+    title: "Dokumentasi Malam Kemerdekaan",
+    type: "Capture · Fotografi Acara",
+  },
+  {
     href: "/portfolio/17an",
     title: "Semarak Kemerdekaan",
     type: "Create · Video acara",

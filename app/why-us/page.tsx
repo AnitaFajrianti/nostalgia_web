@@ -6,19 +6,11 @@ const clientNeeds = [
     need: "Membutuhkan foto atau video untuk acara dan momen penting.",
     solution:
       "Capture menyediakan dokumentasi foto dan video; cakupan ditentukan berdasarkan jenis acara dan arahan.",
-    proof: [
-      { label: "Sesi pranikah", href: "/portfolio/project-one" },
-      { label: "Pernikahan", href: "/portfolio/project-two" },
-      { label: "Pertandingan basket", href: "/portfolio/basket" },
-    ],
   },
   {
     need: "Sudah memiliki rekaman, tetapi membutuhkan bantuan untuk mengolahnya.",
     solution:
       "Create mencakup penyuntingan, penyusunan alur, rangkuman, video pendek, dan pengolahan rekaman sesuai kebutuhan yang disepakati.",
-    proof: [
-      { label: "Video Semarak Kemerdekaan", href: "/portfolio/17an" },
-    ],
   },
   {
     need: "Membutuhkan materi visual untuk media sosial atau komunikasi merek.",
@@ -30,9 +22,6 @@ const clientNeeds = [
     need: "Menginginkan dokumentasi sekaligus materi video untuk digunakan setelah acara.",
     solution:
       "Jika sesuai arahan, kebutuhan Capture dan Create dapat dibahas dalam satu lingkup kerja, dari dokumentasi hingga penyuntingan. Bentuk hasil dan kesiapan publikasi disepakati terlebih dahulu.",
-    proof: [
-      { label: "Video Semarak Kemerdekaan", href: "/portfolio/17an" },
-    ],
   },
 ];
 
@@ -88,19 +77,6 @@ export default function WhyUsPage() {
                     <p className="mt-3 leading-relaxed text-[var(--brown-light)]">
                       {item.solution}
                     </p>
-                    {item.proof && (
-                      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
-                        {item.proof.map((work) => (
-                          <Link
-                            key={work.href}
-                            href={work.href}
-                            className="border-b border-[var(--terracotta)] pb-1 text-sm text-[var(--terracotta)] transition hover:text-[var(--terracotta-dark)]"
-                          >
-                            Lihat: {work.label} →
-                          </Link>
-                        ))}
-                      </div>
-                    )}
                     {item.note && (
                       <p className="mt-4 text-sm text-[var(--brown-light)]">
                         {item.note}
@@ -110,6 +86,12 @@ export default function WhyUsPage() {
                 </div>
               ))}
             </div>
+            <Link
+              href="/portfolio"
+              className="mt-8 inline-block border-b border-[var(--terracotta)] pb-1 text-sm text-[var(--terracotta)] transition hover:text-[var(--terracotta-dark)]"
+            >
+              Lihat portofolio selengkapnya →
+            </Link>
           </div>
         </div>
       </section>

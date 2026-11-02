@@ -12,11 +12,13 @@ type GalleryImage = {
 type PortfolioGalleryProps = {
   images: GalleryImage[];
   projectTitle: string;
+  preserveAspectRatio?: boolean;
 };
 
 const PortfolioGallery = ({
   images,
   projectTitle,
+  preserveAspectRatio = false,
 }: PortfolioGalleryProps) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [featuredIndex, setFeaturedIndex] = useState(0);
@@ -36,6 +38,14 @@ const PortfolioGallery = ({
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setActiveIndex(null);
+      } else if (event.key === "ArrowLeft") {
+        setActiveIndex((index) =>
+          index === null ? null : (index - 1 + images.length) % images.length,
+        );
+      } else if (event.key === "ArrowRight") {
+        setActiveIndex((index) =>
+          index === null ? null : (index + 1) % images.length,
+        );
       }
     };
 
@@ -45,7 +55,7 @@ const PortfolioGallery = ({
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [activeIndex]);
+  }, [activeIndex, images.length]);
 
   const activeImage =
     activeIndex === null ? null : images[activeIndex];
@@ -72,7 +82,8 @@ const PortfolioGallery = ({
             <PhotoImage
               src={featuredImage.src}
               alt={featuredImage.alt}
-              className="aspect-[16/10]"
+              className={preserveAspectRatio ? "" : "aspect-[16/10]"}
+              preserveAspectRatio={preserveAspectRatio}
             />
           </button>
 
@@ -118,7 +129,8 @@ const PortfolioGallery = ({
               <PhotoImage
                 src={image.src}
                 alt={image.alt}
-                className="aspect-[4/3]"
+                className={preserveAspectRatio ? "" : "aspect-[4/3]"}
+                preserveAspectRatio={preserveAspectRatio}
               />
             </button>
           ),
@@ -159,6 +171,40 @@ const PortfolioGallery = ({
               className="pointer-events-none absolute inset-0 bg-[var(--terracotta)]/15 mix-blend-multiply"
             />
           </div>
+          {images.length > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setActiveIndex(
+                    (index) =>
+                      index === null
+                        ? null
+                        : (index - 1 + images.length) % images.length,
+                  );
+                }}
+                aria-label="Foto sebelumnya"
+                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-2xl text-white transition hover:bg-white/30 sm:left-8"
+              >
+                &lt;
+              </button>
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setActiveIndex(
+                    (index) =>
+                      index === null ? null : (index + 1) % images.length,
+                  );
+                }}
+                aria-label="Foto berikutnya"
+                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-2xl text-white transition hover:bg-white/30 sm:right-8"
+              >
+                &gt;
+              </button>
+            </>
+          )}
         </div>
       )}
     </>
