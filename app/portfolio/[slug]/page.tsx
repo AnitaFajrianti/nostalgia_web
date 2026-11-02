@@ -182,6 +182,51 @@ const malamKemerdekaanGallery = [
   "suasana-pengunjung-di-area-acara.jpg",
 ].map((filename) => `/images/Malam-kemerdekaan/${filename}`);
 
+const greecioGallery = [
+  "koleksi-seragam-kerja (1).jpg",
+  "jaket-biru-denim-corduroy-tampak-samping-3-4.jpg",
+  "jaket-biru-kotak-kotak-flanel-tampak-depan.jpg",
+  "jasa-bikin-jersey-esport-custom.jpg",
+  "jasa-bikin-kemeja-hitam-lengan-panjang.jpg",
+  "jasa-jersey-esport-custom.jpg",
+  "jersey-dryfit-brazil-hitam-tampak-belakang.jpg",
+  "Kemeja-kerja-warna-navy-wanita-vendor.jpg",
+  "kemeja-toray-navy-tampak-depan.jpg",
+  "kemeja-twill-sweading-stretch-detail-kerah.jpg",
+  "polo-tosca-slim-polo-tampak-depan.jpg",
+  "rompi-safety-taslan-milky-warna-abu-tampak-depan.jpg",
+  "rompi-safety-verlando-cp-american-drill-tampak-depan.jpg",
+  "vendor-jersey-esport-custom.jpg",
+  "vendor-seragam-casual-custom seragam.jpg",
+  "vendor-seragam-office-casual-custom seragam.jpg",
+  "vendor-seragam-proyek-safety-office-casual-custom seragam.jpg",
+  "vest-abu-tampak-depan.jpg",
+  "vest-japan-cream-detail-resleting.jpg",
+  "vest-navy-tampak-depan.jpg",
+  "vest-safety-bahan-canvas-marsoto-coklat.jpg",
+].map((filename) => `/images/produk-pakaian-greecio/${filename}`);
+
+const mercoGallery = [
+  "nostalgia-vendor-foto-model-fashion-editorial-18.jpg",
+  "nostalgia-vendor-detail-outfit-model-10.jpg",
+  "nostalgia-vendor-detail-produk-fashion-09.jpg",
+  "nostalgia-vendor-foto-model-blazer-formal-13.jpg",
+  "nostalgia-vendor-foto-model-blazer-portfolio-17.jpg",
+  "nostalgia-vendor-foto-model-blazer-profesional-14.jpg",
+  "nostalgia-vendor-foto-model-blazer-wanita-15.jpg",
+  "nostalgia-vendor-foto-model-fashion-formal-16.jpg",
+  "nostalgia-vendor-foto-model-hijab-fashion-08.jpg",
+  "nostalgia-vendor-foto-model-hijab-memegang-produk-02.jpg",
+  "nostalgia-vendor-foto-model-hijab-outfit-formal-06.jpg",
+  "nostalgia-vendor-foto-model-hijab-portfolio-07.jpg",
+  "nostalgia-vendor-foto-model-jas-formal-11.jpg",
+  "nostalgia-vendor-foto-model-memegang-clutch-12.jpg",
+  "nostalgia-vendor-foto-model-memegang-produk-01.jpg",
+  "nostalgia-vendor-foto-model-produk-03.jpg",
+  "nostalgia-vendor-foto-model-profesional-04.jpg",
+  "nostalgia-vendor-foto-model-seragam-formal-05.jpg",
+].map((filename) => `/images/produk-merchandise-merco/${filename}`);
+
 const projects: Record<string, Project> = {
   "project-one": {
     title: "Sesi Foto Pranikah",
@@ -262,6 +307,29 @@ const projects: Record<string, Project> = {
     gallery: malamKemerdekaanGallery,
   },
 
+  greecio: {
+    title: "Seragam Kerja Greecio",
+    category: "Capture · Fotografi Produk",
+    image: "/images/produk-pakaian-greecio/koleksi-seragam-kerja (1).jpg",
+    description:
+      "Koleksi foto produk Greecio yang menampilkan seragam kerja, pakaian, dan atribut profesional.",
+    services: ["Capture", "Fotografi Produk", "Fotografi Seragam"],
+    gallery: greecioGallery,
+    preserveGalleryAspectRatio: true,
+  },
+
+  merco: {
+    title: "Foto Fashion Merco",
+    category: "Capture · Fotografi Fashion",
+    image:
+      "/images/produk-merchandise-merco/nostalgia-vendor-foto-model-jas-formal-11.jpg",
+    description:
+      "Rangkaian foto fashion Merco yang menampilkan pilihan busana dan detail produk dengan model.",
+    services: ["Capture", "Fotografi Fashion", "Fotografi Produk dengan Model"],
+    gallery: mercoGallery,
+    preserveGalleryAspectRatio: true,
+  },
+
   "17an": {
     title: "Semarak Kemerdekaan",
     category: "Create · Video Acara",
@@ -309,19 +377,15 @@ export default async function ProjectDetailPage({
   return (
     <main>
       {/* PROJECT HERO */}
-      <section className="min-h-[60vh] bg-[var(--cream)] px-6 py-16">
-        <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
-          <div className="grid w-full gap-8 md:grid-cols-12 md:items-end">
-            <div className="md:col-span-12">
-              <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                {project.category}
-              </p>
+      <section className="bg-[var(--cream)] px-6 pb-10 pt-24 md:pb-12 md:pt-28">
+        <div className="mx-auto max-w-5xl">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--terracotta)]">
+            {project.category}
+          </p>
 
-              <h1 className="type-hero font-bold text-[var(--brown)]">
-                {project.title}
-              </h1>
-            </div>
-          </div>
+          <h1 className="type-hero max-w-4xl font-bold text-[var(--brown)]">
+            {project.title}
+          </h1>
         </div>
       </section>
 
@@ -355,51 +419,33 @@ export default async function ProjectDetailPage({
       </section>
 
       {/* PROJECT INTRO */}
-      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+      <section className="border-y border-[var(--line)] bg-[var(--cream-light)] px-6 py-14 md:py-20">
+        <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--terracotta)]">
               Tentang Proyek
             </p>
-          </div>
-
-          <div className="md:col-span-8">
-            <p className="max-w-4xl text-[var(--brown)]">
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--brown)]">
               {project.description}
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* SERVICES */}
-      <section className="border-y border-[var(--line)] bg-[var(--cream-light)] px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-4">
-              <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                Yang Kami Kerjakan
-              </p>
-            </div>
-
-            <div className="md:col-span-8">
-              <div className="grid gap-0 border-t border-[var(--line)]">
-                {project.services.map((service, index) => (
-                  <div
-                    key={service}
-                    className="flex items-center justify-between border-b border-[var(--line)] py-5"
-                  >
-                    <span className="text-sm text-[var(--brown-light)]">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-
-                    <span className="type-service flex-1 px-6 text-[var(--brown)]">
-                      {service}
-                    </span>
-
-                    <span className="text-[var(--terracotta)]">↗</span>
-                  </div>
-                ))}
-              </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--terracotta)]">
+              Yang Kami Kerjakan
+            </p>
+            <div className="mt-5 grid gap-x-6 sm:grid-cols-2">
+              {project.services.map((service, index) => (
+                <div
+                  key={service}
+                  className="flex items-start gap-4 border-t border-[var(--line)] py-4"
+                >
+                  <span className="pt-1 text-xs text-[var(--brown-light)]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-[var(--brown)]">{service}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -407,16 +453,20 @@ export default async function ProjectDetailPage({
 
       {/* PROJECT GALLERY */}
       {project.gallery.length > 0 && (
-        <section className="bg-[var(--cream)] px-6 py-24">
+        <section className="bg-[var(--cream)] px-6 py-14 md:py-20">
           <div className="mx-auto max-w-5xl">
-            <div className="mb-12">
-              <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                Galeri Proyek
+            <div className="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-[var(--line)] pb-5">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--terracotta)]">
+                  Galeri Proyek
+                </p>
+                <h2 className="mt-3 font-semibold text-[var(--brown)]">
+                  Di balik karya.
+                </h2>
+              </div>
+              <p className="text-sm text-[var(--brown-light)]">
+                {galleryImages.length} foto
               </p>
-
-              <h2 className="mt-4 font-semibold text-[var(--brown)]">
-                Di balik karya.
-              </h2>
             </div>
 
             <PortfolioGallery
@@ -429,13 +479,13 @@ export default async function ProjectDetailPage({
       )}
 
       {/* BACK TO PORTFOLIO */}
-      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-24">
-        <div className="mx-auto max-w-7xl">
+      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-10 md:py-12">
+        <div className="mx-auto max-w-5xl">
           <Link
             href="/portfolio"
             className="inline-flex items-center gap-3 border-b border-[var(--terracotta)] pb-2 text-sm text-[var(--terracotta)] transition hover:text-[var(--terracotta-dark)]"
           >
-            ← Kembali ke Portofolio
+            ← Kembali ke semua portofolio
           </Link>
         </div>
       </section>

@@ -59,6 +59,25 @@ const captureProjects = [
       "/images/Malam-kemerdekaan/dokumentasi-pengunjung-di-area-kegiatan-malam.jpg",
     alt: "Pengunjung di area kegiatan Malam Kemerdekaan",
   },
+  {
+    slug: "greecio",
+    title: "Seragam Kerja Greecio",
+    category: "Fotografi Produk",
+    description:
+      "Foto koleksi seragam kerja, pakaian, dan atribut profesional Greecio.",
+    image: "/images/produk-pakaian-greecio/koleksi-seragam-kerja (1).jpg",
+    alt: "Koleksi seragam kerja Greecio",
+  },
+  {
+    slug: "merco",
+    title: "Foto Fashion Merco",
+    category: "Fotografi Fashion",
+    description:
+      "Foto fashion Merco dengan model dan beragam detail busana.",
+    image:
+      "/images/produk-merchandise-merco/nostalgia-vendor-foto-model-jas-formal-11.jpg",
+    alt: "Model fashion mengenakan busana Merco",
+  },
 ];
 
 const createProject = {

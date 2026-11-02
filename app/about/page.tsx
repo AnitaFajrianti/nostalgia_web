@@ -72,6 +72,16 @@ const selectedWorks = [
     type: "Capture · Fotografi Acara",
   },
   {
+    href: "/portfolio/greecio",
+    title: "Seragam Kerja Greecio",
+    type: "Capture · Fotografi Produk",
+  },
+  {
+    href: "/portfolio/merco",
+    title: "Foto Fashion Merco",
+    type: "Capture · Fotografi Fashion",
+  },
+  {
     href: "/portfolio/17an",
     title: "Semarak Kemerdekaan",
     type: "Create · Video acara",

@@ -20,29 +20,6 @@ const selectedWorks = [
     image: "/images/basket-porto/foto-konseptual-pemain-basket-monokrom.jpg",
     alt: "Foto konseptual pemain basket dalam gaya monokrom",
   },
-  {
-    slug: "sedja",
-    title: "Foto Produk Sedja",
-    category: "Fotografi Produk",
-    image: "/images/foto sedja-porto/detail-produk-botol-herbal-background-daun-14.jpg",
-    alt: "Botol produk herbal Sedja dengan latar daun",
-  },
-  {
-    slug: "kemerdekaan",
-    title: "Dokumentasi Lomba Kemerdekaan",
-    category: "Fotografi Acara",
-    image:
-      "/images/kemerdekaan-dokumentasi/peserta-anak-mengikuti-lomba-09.jpg",
-    alt: "Peserta anak mengikuti lomba dalam perayaan Kemerdekaan",
-  },
-  {
-    slug: "malam-kemerdekaan",
-    title: "Dokumentasi Malam Kemerdekaan",
-    category: "Fotografi Acara",
-    image:
-      "/images/Malam-kemerdekaan/dokumentasi-pengunjung-di-area-kegiatan-malam.jpg",
-    alt: "Pengunjung di area kegiatan Malam Kemerdekaan",
-  },
 ];
 
 const serviceGroups = [

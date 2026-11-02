@@ -116,7 +116,7 @@ const PortfolioGallery = ({
         </div>
       )}
 
-      <div className="mt-8 grid gap-8 md:grid-cols-2">
+      <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {images.map((image, index) =>
           index === 0 ? null : (
             <button
