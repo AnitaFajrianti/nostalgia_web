@@ -1,44 +1,65 @@
 import CTA from "@/components/CTA";
+import Link from "next/link";
 
 const missions = [
   {
     number: "01",
     title: "Capture",
     description:
-      "Mengabadikan momen melalui dokumentasi foto dan video yang natural, relevan, dan berkualitas.",
+      "Mendokumentasikan acara dan sesi melalui foto maupun video. Contoh yang tersedia mencakup sesi pranikah, pernikahan, pertandingan basket, dan video Semarak Kemerdekaan.",
   },
   {
     number: "02",
     title: "Create",
     description:
-      "Mengolah raw material menjadi konten visual yang engaging dan memiliki visual treatment yang kuat.",
+      "Mengolah materi visual menjadi video yang lebih terarah melalui pemilihan momen, penyusunan alur, penyuntingan, dan pengolahan warna sesuai arahan.",
   },
   {
     number: "03",
     title: "Design",
     description:
-      "Membantu brand menyampaikan pesan melalui visual design yang menarik dan konsisten.",
-  },
-  {
-    number: "04",
-    title: "Deliver",
-    description:
-      "Memberikan hasil visual yang siap digunakan, baik untuk kebutuhan dokumentasi maupun publikasi digital.",
+      "Menyusun kebutuhan visual untuk merek dan media sosial, seperti konten feed, karusel, materi promosi, dan pengumuman acara. Contoh hasil desain belum ditampilkan di portofolio.",
   },
 ];
 
 const capabilities = [
   {
     title: "CAPTURE",
-    description: "Event photo & video documentation",
+    description:
+      "Fotografi pranikah, pernikahan, olahraga, serta dokumentasi video acara.",
   },
   {
     title: "CREATE",
-    description: "Video editing & content production",
+    description:
+      "Penyuntingan video, rangkuman acara, konten media sosial, dan pengolahan rekaman.",
   },
   {
     title: "DESIGN",
-    description: "Social media & visual design",
+    description:
+      "Visual media sosial, feed, karusel, materi promosi, dan pengumuman acara.",
+  },
+];
+
+const selectedWorks = [
+  {
+    href: "/portfolio/project-one",
+    title: "Sesi Foto Pranikah",
+    type: "Capture · Fotografi",
+  },
+  {
+    href: "/portfolio/project-two",
+    title: "Dokumentasi Pernikahan",
+    type: "Capture · Fotografi",
+  },
+  {
+    href: "/portfolio/basket",
+    title: "Dokumentasi Pertandingan Basket",
+    type: "Capture · Fotografi",
+  },
+  {
+    href: "/portfolio/17an",
+    title: "Semarak Kemerdekaan",
+    type: "Create · Video acara",
   },
 ];
 
@@ -50,11 +71,12 @@ export default function AboutPage() {
         <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
           <div className="max-w-5xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              About Nostalgia.Kala
+              Tentang Nostalgia.Kala
             </p>
 
             <h1 className="type-hero font-semibold text-[var(--brown)]">
-              Partner visual kreatif untuk momen dan ide yang bermakna.
+              Nostalgia.Kala adalah studio kreatif untuk foto, video, dan
+              desain visual.
             </h1>
           </div>
         </div>
@@ -65,22 +87,23 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Positioning
+              Posisi Kami
             </p>
           </div>
 
           <div>
             <p className="text-[var(--brown-light)]">
-              Nostalgia adalah layanan partner visual kreatif yang membantu
-              klien mengabadikan, menciptakan, dan mengubah momen menjadi
-              konten visual yang bermakna.
+              Nostalgia.Kala adalah studio kreatif yang bekerja melalui tiga
+              layanan utama: Capture, Create, dan Design. Kami mendukung
+              kebutuhan dokumentasi foto-video, penyuntingan dan produksi konten,
+              serta desain visual dan media sosial.
             </p>
 
             <p className="mt-6 text-[var(--brown-light)]">
-              Banyak momen dan konten sebenarnya sudah dimiliki oleh klien,
-              tetapi belum tentu sudah menjadi sesuatu yang siap digunakan atau
-              memiliki nilai visual yang kuat. Nostalgia hadir sebagai partner
-              visual melalui layanan capture, create, dan design.
+              Kebutuhan dapat dimulai dari merekam sebuah momen, mengolah
+              rekaman yang sudah dimiliki, atau menyiapkan materi visual untuk
+              komunikasi merek. Lingkup dan hasil akhir dibahas berdasarkan
+              arahan setiap proyek.
             </p>
           </div>
         </div>
@@ -91,11 +114,11 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-4xl">
             <p className="mb-5 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              What We Do
+              Yang Kami Kerjakan
             </p>
 
             <h2 className="font-semibold text-[var(--brown)]">
-              Partner visual dari momen hingga konten siap digunakan.
+              Tiga layanan untuk kebutuhan visual yang berbeda.
             </h2>
           </div>
 
@@ -146,8 +169,8 @@ export default function AboutPage() {
 
             <div className="md:col-span-9">
               <p className="type-lead max-w-4xl font-[family-name:var(--font-serif)] font-medium text-[var(--brown)]">
-                Menjadi partner visual kreatif yang dipercaya untuk mengubah momen
-                dan ide menjadi konten yang bermakna dan memorable.
+                Menjadi studio kreatif yang membantu mengubah momen dan ide
+                menjadi visual bermakna melalui Capture, Create, dan Design.
               </p>
             </div>
           </div>
@@ -160,17 +183,17 @@ export default function AboutPage() {
               </p>
 
               <h3 className="font-semibold text-[var(--brown)]">
-                What we believe in.
+                Tiga layanan utama kami.
               </h3>
             </div>
 
             <span className="hidden text-xs uppercase tracking-[0.15em] text-[var(--brown-light)] md:block">
-              02 — 05
+              01 — 03
             </span>
           </div>
 
           {/* MISSION GRID */}
-          <div className="mt-12 grid gap-px bg-[var(--line)] md:grid-cols-2">
+          <div className="mt-12 grid gap-px bg-[var(--line)] md:grid-cols-3">
             {missions.map((mission) => (
               <article
                 key={mission.number}
@@ -197,6 +220,41 @@ export default function AboutPage() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SELECTED WORK */}
+      <section className="border-t border-[var(--line)] bg-[var(--cream)] px-6 py-20 md:px-10 md:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 md:grid-cols-12">
+            <div className="md:col-span-4">
+              <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+                Karya Pilihan
+              </p>
+              <h2 className="mt-4 font-semibold text-[var(--brown)]">
+                Karya yang tersedia untuk dilihat.
+              </h2>
+            </div>
+            <div className="md:col-span-8">
+              <div className="border-t border-[var(--line)]">
+                {selectedWorks.map((work) => (
+                  <Link
+                    key={work.href}
+                    href={work.href}
+                    className="flex flex-col gap-2 border-b border-[var(--line)] py-5 transition hover:text-[var(--terracotta)] sm:flex-row sm:items-center sm:justify-between"
+                  >
+                    <span className="font-medium">{work.title}</span>
+                    <span className="text-sm text-[var(--brown-light)]">
+                      {work.type} ↗
+                    </span>
+                  </Link>
+                ))}
+              </div>
+              <p className="mt-5 text-sm leading-relaxed text-[var(--brown-light)]">
+                Contoh pekerjaan Design belum dipublikasikan di portofolio.
+              </p>
+            </div>
           </div>
         </div>
       </section>

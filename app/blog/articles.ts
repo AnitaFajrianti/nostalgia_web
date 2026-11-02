@@ -22,20 +22,20 @@ export const articles: Article[] = [
     image: "/images/Persiapan Perlengkapan Kamera di Meja.png",
     imageAlt: "Persiapan perlengkapan kamera untuk dokumentasi acara",
     introduction:
-      "Memilih jasa foto dan video acara dimulai dengan memahami kebutuhan dokumentasi. Jenis acara, alur kegiatan, dan hasil yang ingin digunakan akan membantu kamu menyusun brief yang jelas untuk tim.",
+      "Memilih jasa foto dan video acara dimulai dengan memahami kebutuhan dokumentasi. Jenis acara, alur kegiatan, dan hasil yang ingin digunakan akan membantu kamu menyusun arahan yang jelas untuk tim.",
     sections: [
       {
         heading: "Sesuaikan dokumentasi dengan jenis acara",
         paragraphs: [
-          "Tentukan jenis acara, durasi, lokasi, dan momen penting yang perlu direkam. Kebutuhan pernikahan, acara keluarga, dan kegiatan brand memiliki alur serta prioritas dokumentasi yang berbeda.",
-          "Pertimbangkan apakah kamu memerlukan fotografi, videografi, atau keduanya. Sampaikan juga hasil yang diharapkan, seperti foto pilihan, video highlight, atau dokumentasi acara.",
+          "Tentukan jenis acara, durasi, lokasi, dan momen penting yang perlu direkam. Kebutuhan pernikahan, acara keluarga, dan kegiatan merek memiliki alur serta prioritas dokumentasi yang berbeda.",
+          "Pertimbangkan apakah kamu memerlukan fotografi, videografi, atau keduanya. Sampaikan juga hasil yang diharapkan, seperti foto pilihan, video sorotan, atau dokumentasi acara.",
         ],
       },
       {
         heading: "Periksa portofolio dan sepakati detail kerja",
         paragraphs: [
           "Lihat contoh karya yang relevan dengan kebutuhanmu. Perhatikan pendekatan visual, cara momen ditangkap, dan konsistensi hasilnya.",
-          "Sebelum acara, diskusikan rundown, koordinasi di lokasi, bentuk hasil, jadwal penyerahan, serta cakupan layanan. Pastikan kesepakatan tercatat dalam penawaran.",
+          "Sebelum acara, diskusikan susunan acara, koordinasi di lokasi, bentuk hasil, jadwal penyerahan, serta cakupan layanan. Pastikan kesepakatan tercatat dalam penawaran.",
         ],
       },
     ],
@@ -49,20 +49,20 @@ export const articles: Article[] = [
     image: "/images/Operator Kamera Merekam Acara di Auditorium.png",
     imageAlt: "Operator kamera merekam acara di auditorium",
     introduction:
-      "Brief yang jelas membantu fotografer dan videografer memahami alur acara serta momen yang menjadi prioritas. Persiapan ini juga memudahkan koordinasi dengan penanggung jawab acara.",
+      "Arahan yang jelas membantu fotografer dan videografer memahami alur acara serta momen yang menjadi prioritas. Persiapan ini juga memudahkan koordinasi dengan penanggung jawab acara.",
     sections: [
       {
-        heading: "Siapkan rundown dan daftar momen prioritas",
+        heading: "Siapkan susunan acara dan daftar momen prioritas",
         paragraphs: [
-          "Bagikan rundown terbaru, alamat dan akses lokasi, kontak penanggung jawab, serta perkiraan jumlah tamu. Tandai prosesi atau momen yang tidak boleh terlewat.",
+          "Bagikan susunan acara terbaru, alamat dan akses lokasi, kontak penanggung jawab, serta perkiraan jumlah tamu. Tandai prosesi atau momen yang tidak boleh terlewat.",
           "Jika ada orang atau detail tertentu yang perlu didokumentasikan, sampaikan nama atau referensi visualnya sebelum acara.",
         ],
       },
       {
         heading: "Bahas kondisi lokasi dan koordinasi teknis",
         paragraphs: [
-          "Informasikan kondisi venue, area yang dapat diakses, aturan penggunaan flash, kebutuhan listrik, dan titik pengambilan gambar. Untuk acara luar ruang, diskusikan rencana jika kondisi cuaca berubah.",
-          "Sepakati jalur komunikasi, waktu briefing, durasi kerja, serta bentuk dan jadwal penyerahan hasil dengan tim dokumentasi.",
+          "Informasikan kondisi lokasi acara, area yang dapat diakses, aturan penggunaan lampu kilat, kebutuhan listrik, dan titik pengambilan gambar. Untuk acara luar ruang, diskusikan rencana jika kondisi cuaca berubah.",
+          "Sepakati jalur komunikasi, waktu pengarahan, durasi kerja, serta bentuk dan jadwal penyerahan hasil dengan tim dokumentasi.",
         ],
       },
     ],
@@ -82,13 +82,13 @@ export const articles: Article[] = [
         heading: "Merekam suasana dan detail acara",
         paragraphs: [
           "Ekspresi, ucapan, musik, dan suasana ruang dapat hadir bersama dalam video. Detail seperti sambutan atau reaksi spontan membantu menggambarkan kembali jalannya acara.",
-          "Rekaman dapat mencakup persiapan, prosesi, dan interaksi para tamu sesuai rundown serta prioritas yang disepakati.",
+          "Rekaman dapat mencakup persiapan, prosesi, dan interaksi para tamu sesuai susunan acara serta prioritas yang disepakati.",
         ],
       },
       {
         heading: "Menyusun rekaman menjadi cerita",
         paragraphs: [
-          "Pemilihan adegan dan penyuntingan membantu menyusun rekaman menjadi video highlight atau dokumentasi dengan alur yang mudah diikuti.",
+          "Pemilihan adegan dan penyuntingan membantu menyusun rekaman menjadi video sorotan atau dokumentasi dengan alur yang mudah diikuti.",
           "Sampaikan kepada tim momen yang paling penting bagimu. Gaya penyuntingan dan bentuk hasil dapat dibicarakan sebelum produksi.",
         ],
       },
@@ -108,7 +108,7 @@ export const articles: Article[] = [
       {
         heading: "Foto dokumentasi menangkap momen yang berlangsung",
         paragraphs: [
-          "Fotografer mengamati alur acara dan merekam suasana, interaksi, serta momen penting secara natural. Pendekatan ini sesuai untuk mendokumentasikan kejadian sebagaimana berlangsung.",
+          "Fotografer mengamati alur acara dan merekam suasana, interaksi, serta momen penting secara alami. Pendekatan ini sesuai untuk mendokumentasikan kejadian sebagaimana berlangsung.",
           "Kepekaan membaca situasi dan koordinasi dengan penyelenggara membantu tim bersiap pada momen prioritas.",
         ],
       },
@@ -116,7 +116,7 @@ export const articles: Article[] = [
         heading: "Foto konseptual berangkat dari arahan visual",
         paragraphs: [
           "Foto konseptual disusun berdasarkan ide atau pesan. Lokasi, pencahayaan, properti, busana, pose, dan warna dapat menjadi bagian dari arahan visual.",
-          "Pendekatan ini dapat digunakan untuk portrait atau kebutuhan visual brand. Brief dan referensi membantu menyamakan arah sebelum sesi foto.",
+          "Pendekatan ini dapat digunakan untuk foto potret atau kebutuhan visual merek. Arahan dan referensi membantu menyamakan tujuan sebelum sesi foto.",
         ],
       },
     ],
@@ -124,13 +124,13 @@ export const articles: Article[] = [
   {
     slug: "color-correction-dan-color-grading-video",
     title: "Color Correction dan Color Grading Video: Kenali Perbedaannya",
-    category: "Editing Video",
+    category: "Penyuntingan Video",
     excerpt:
       "Color correction merapikan warna dasar, sedangkan color grading membantu membentuk suasana visual video.",
     image: "/images/Ruang Kerja Editor Video Sinematik.png",
-    imageAlt: "Ruang kerja untuk proses editing dan pengolahan warna video",
+    imageAlt: "Ruang kerja untuk proses penyuntingan dan pengolahan warna video",
     introduction:
-      "Color correction dan color grading merupakan dua proses berbeda dalam editing video. Keduanya berhubungan dengan warna, tetapi memiliki tujuan yang berbeda dalam menyusun tampilan akhir.",
+      "Color correction dan color grading merupakan dua proses berbeda dalam penyuntingan video. Keduanya berhubungan dengan warna, tetapi memiliki tujuan yang berbeda dalam menyusun tampilan akhir.",
     sections: [
       {
         heading: "Color correction merapikan warna dasar",
@@ -143,27 +143,27 @@ export const articles: Article[] = [
         heading: "Color grading membangun suasana visual",
         paragraphs: [
           "Color grading memberi karakter dan suasana melalui pengolahan tone, kontras, dan warna. Arah visual sebaiknya disesuaikan dengan kebutuhan video dan referensi yang disepakati.",
-          "Konsistensi warna kulit, detail penting, dan perpindahan antaradegan tetap perlu diperhatikan agar hasil editing terasa selaras.",
+          "Konsistensi warna kulit, detail penting, dan perpindahan antaradegan tetap perlu diperhatikan agar hasil penyuntingan terasa selaras.",
         ],
       },
     ],
   },
   {
     slug: "proses-editing-video-dari-footage-mentah",
-    title: "Proses Editing Video: Dari Footage Mentah Menjadi Konten",
-    category: "Editing & Produksi Konten",
+    title: "Proses Penyuntingan Video: Dari Rekaman Mentah Menjadi Konten",
+    category: "Penyuntingan & Produksi Konten",
     excerpt:
-      "Pemilihan momen, penyusunan alur, audio, dan warna membantu mengolah footage menjadi video yang siap digunakan.",
+      "Pemilihan momen, penyusunan alur, audio, dan warna membantu mengolah rekaman menjadi video yang siap digunakan.",
     image: "/images/Operator Kamera Merekam Diskusi Panel.png",
     imageAlt: "Operator kamera merekam diskusi panel sebagai bahan video",
     introduction:
-      "Footage mentah merupakan bahan awal untuk proses editing video. Editor meninjau rekaman, memilih bagian yang relevan, lalu menyusunnya sesuai tujuan konten dan brief.",
+      "Rekaman mentah merupakan bahan awal untuk proses penyuntingan video. Editor meninjau materi, memilih bagian yang relevan, lalu menyusunnya sesuai tujuan konten dan arahan.",
     sections: [
       {
-        heading: "Memilih footage dan menyusun alur",
+        heading: "Memilih rekaman dan menyusun alur",
         paragraphs: [
           "Editor meninjau rekaman dan memilih momen yang sesuai dengan pesan. Potongan gambar kemudian disusun menjadi alur yang memiliki pembuka, perkembangan, dan penutup.",
-          "Ritme dan durasi disesuaikan dengan kebutuhan video. Brief yang memuat audiens, tujuan, dan platform membantu menentukan bentuk penyuntingan.",
+          "Ritme dan durasi disesuaikan dengan kebutuhan video. Arahan yang memuat audiens, tujuan, dan platform membantu menentukan bentuk penyuntingan.",
         ],
       },
       {
@@ -177,14 +177,14 @@ export const articles: Article[] = [
   },
   {
     slug: "tips-foto-produk-untuk-katalog-online",
-    title: "Tips Foto Produk untuk Katalog Online",
+    title: "Tips Foto Produk untuk Katalog Daring",
     category: "Fotografi Produk",
     excerpt:
-      "Pencahayaan, latar, sudut pengambilan, dan konsistensi membantu foto produk tampil jelas di katalog online.",
+      "Pencahayaan, latar, sudut pengambilan, dan konsistensi membantu foto produk tampil jelas di katalog daring.",
     image: "/images/camera-detail.jpg",
     imageAlt: "Detail kamera untuk kebutuhan fotografi produk",
     introduction:
-      "Foto produk membantu calon pembeli melihat bentuk dan detail barang melalui katalog online. Persiapan visual yang rapi dapat membuat informasi produk lebih mudah dipahami.",
+      "Foto produk membantu calon pembeli melihat bentuk dan detail barang melalui katalog daring. Persiapan visual yang rapi dapat membuat informasi produk lebih mudah dipahami.",
     sections: [
       {
         heading: "Tampilkan bentuk dan detail produk",
@@ -204,26 +204,26 @@ export const articles: Article[] = [
   },
   {
     slug: "visual-branding-dan-desain-media-sosial",
-    title: "Visual Branding dan Desain Media Sosial yang Konsisten",
-    category: "Visual Branding & Desain Media Sosial",
+    title: "Identitas Visual dan Desain Media Sosial yang Konsisten",
+    category: "Identitas Visual & Desain Media Sosial",
     excerpt:
-      "Arah visual yang konsisten membantu konten media sosial menyampaikan identitas dan pesan brand dengan lebih jelas.",
+      "Arah visual yang konsisten membantu konten media sosial menyampaikan identitas dan pesan merek dengan lebih jelas.",
     image: "/images/portrait-photography.jpg",
-    imageAlt: "Foto portrait sebagai aset visual untuk komunikasi brand",
+    imageAlt: "Foto potret sebagai aset visual untuk komunikasi merek",
     introduction:
-      "Visual branding membantu menjaga karakter komunikasi brand di berbagai materi. Pada media sosial, konsistensi visual dapat dibangun melalui pilihan warna, tipografi, komposisi, dan gaya gambar.",
+      "Identitas visual membantu menjaga karakter komunikasi merek di berbagai materi. Pada media sosial, konsistensi visual dapat dibangun melalui pilihan warna, tipografi, komposisi, dan gaya gambar.",
     sections: [
       {
         heading: "Tentukan elemen visual dan pesan utama",
         paragraphs: [
           "Mulai dari tujuan komunikasi, audiens, dan pesan yang ingin disampaikan. Elemen visual seperti warna, tipografi, dan gaya fotografi dapat dipilih untuk mendukung arah tersebut.",
-          "Referensi visual dan panduan brand yang sudah dimiliki dapat menjadi acuan agar desain tetap sejalan dengan identitas yang digunakan.",
+          "Referensi visual dan panduan merek yang sudah dimiliki dapat menjadi acuan agar desain tetap sejalan dengan identitas yang digunakan.",
         ],
       },
       {
         heading: "Susun desain media sosial sesuai kebutuhan",
         paragraphs: [
-          "Konten feed, carousel, dan materi promosi memiliki kebutuhan penyampaian informasi yang berbeda. Susunan teks dan visual perlu disesuaikan dengan tujuan setiap materi.",
+          "Konten feed, karusel, dan materi promosi memiliki kebutuhan penyampaian informasi yang berbeda. Susunan teks dan visual perlu disesuaikan dengan tujuan setiap materi.",
           "Sebelum produksi desain, sepakati jenis konten, ukuran atau format platform, materi yang tersedia, dan alur persetujuan. Dengan begitu, hasil desain lebih terarah dan mudah digunakan.",
         ],
       },

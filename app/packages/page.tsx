@@ -6,17 +6,17 @@ const packages = [
   {
     number: "01",
     name: "Starter",
-    description: "Untuk kebutuhan project yang lebih sederhana dan terarah.",
+    description: "Untuk kebutuhan proyek yang lebih sederhana dan terarah.",
   },
   {
     number: "02",
     name: "Professional",
-    description: "Untuk project dengan kebutuhan yang lebih lengkap.",
+    description: "Untuk proyek dengan kebutuhan yang lebih lengkap.",
   },
   {
     number: "03",
     name: "Custom",
-    description: "Solusi yang disesuaikan dengan kebutuhan dan skala project.",
+    description: "Solusi yang disesuaikan dengan kebutuhan dan skala proyek.",
   },
 ];
 
@@ -24,10 +24,10 @@ const packageDetails = [
   {
     label: "Cakupan layanan",
     value:
-      "Capture (foto dan video), Create (editing dan produksi konten), atau Design (desain visual dan media sosial). Pilihan layanan per paket dikonfirmasi setelah konsultasi.",
+      "Capture (foto dan video), Create (penyuntingan dan produksi konten), atau Design (desain visual dan media sosial). Pilihan layanan per paket dikonfirmasi setelah konsultasi.",
   },
   {
-    label: "Jumlah output",
+    label: "Jumlah hasil",
     value: "Belum ditentukan; disesuaikan dan dicantumkan dalam penawaran.",
   },
   {
@@ -36,14 +36,14 @@ const packageDetails = [
   },
   {
     label: "Estimasi pengerjaan",
-    value: "Dikonfirmasi setelah brief dan jadwal project dibahas.",
+    value: "Dikonfirmasi setelah kebutuhan dan jadwal proyek dibahas.",
   },
   {
     label: "Batas revisi",
-    value: "Belum ditentukan; dicantumkan dalam penawaran sebelum project dimulai.",
+    value: "Belum ditentukan; dicantumkan dalam penawaran sebelum proyek dimulai.",
   },
   {
-    label: "Termasuk / tidak termasuk",
+    label: "Termasuk dan tidak termasuk",
     value:
       "Rincian belum tersedia. Semua layanan, kebutuhan produksi, dan item di luar cakupan akan dikonfirmasi dalam penawaran.",
   },
@@ -57,11 +57,11 @@ export default function PackagesPage() {
         <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
           <div className="max-w-5xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Packages
+              Paket
             </p>
 
             <h1 className="type-hero font-semibold text-[var(--brown)]">
-              Creative solutions built around your needs.
+              Solusi kreatif sesuai kebutuhanmu.
             </h1>
           </div>
         </div>
@@ -72,15 +72,15 @@ export default function PackagesPage() {
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-12 md:items-end">
           <div className="md:col-span-5">
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Our Packages
+              Pilihan Paket
             </p>
             <h2 className="mt-4 font-semibold text-[var(--brown)]">
               Pilih titik awal untuk kebutuhan visualmu.
             </h2>
           </div>
           <p className="text-[var(--brown-light)] md:col-span-7">
-            Setiap project memiliki kebutuhan berbeda. Konsultasikan brief
-            terlebih dahulu agar cakupan layanan, output, jadwal, dan penawaran
+            Setiap proyek memiliki kebutuhan berbeda. Konsultasikan kebutuhan
+            terlebih dahulu agar cakupan layanan, hasil, jadwal, dan penawaran
             dapat disepakati dengan jelas sebelum pekerjaan dimulai.
           </p>
         </div>
@@ -91,10 +91,10 @@ export default function PackagesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12">
             <p className="mb-5 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Choose Your Package
+              Pilih Paket
             </p>
             <h2 className="font-bold text-[var(--brown)]">
-              Tiga opsi, disesuaikan dengan kebutuhan project.
+              Tiga opsi yang disesuaikan dengan kebutuhan proyek.
             </h2>
           </div>
 
@@ -140,15 +140,15 @@ export default function PackagesPage() {
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Scope &amp; Deliverables
+              Cakupan &amp; Hasil Pekerjaan
             </p>
             <h2 className="mt-4 font-bold text-[var(--brown)]">
-              Detail paket dikonfirmasi sebelum project dimulai.
+              Detail paket dikonfirmasi sebelum proyek dimulai.
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-[var(--brown-light)]">
               Informasi spesifik yang belum tersedia tidak kami tetapkan
               sepihak. Minta penawaran untuk memperoleh ruang lingkup tertulis
-              sesuai brief.
+              sesuai kebutuhan.
             </p>
           </div>
 
@@ -177,7 +177,7 @@ export default function PackagesPage() {
         <div className="mx-auto grid max-w-7xl gap-8 bg-[var(--beige)] p-6 sm:p-10 md:grid-cols-[1fr_0.8fr] md:items-center md:p-14">
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--brown-light)]">
-              Custom Project
+              Proyek Khusus
             </p>
             <h2 className="mt-5 max-w-3xl font-bold text-[var(--brown)]">
               Punya kebutuhan yang berbeda?
@@ -195,7 +195,7 @@ export default function PackagesPage() {
           </div>
           <PhotoImage
             src="/images/portrait-photography.jpg"
-            alt="Sesi portrait untuk kebutuhan fotografi"
+            alt="Sesi foto potret untuk kebutuhan fotografi"
             className="aspect-[4/3]"
           />
         </div>

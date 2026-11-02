@@ -5,13 +5,13 @@ import PhotoImage from "@/components/PhotoImage";
 import { articles } from "./articles";
 
 export const metadata: Metadata = {
-  title: "Journal Fotografi, Videografi & Konten Visual | Nostalgia.Kala",
+  title: "Jurnal Fotografi, Videografi & Konten Visual | Nostalgia.Kala",
   description:
-    "Panduan fotografi acara, videografi, editing video, produksi konten, foto produk, visual branding, dan desain media sosial dari Nostalgia.Kala.",
+    "Panduan fotografi acara, videografi, penyuntingan video, produksi konten, foto produk, identitas visual, dan desain media sosial dari Nostalgia.Kala.",
   openGraph: {
-    title: "Journal Fotografi, Videografi & Konten Visual | Nostalgia.Kala",
+    title: "Jurnal Fotografi, Videografi & Konten Visual | Nostalgia.Kala",
     description:
-      "Baca panduan fotografi, videografi, editing video, produksi konten, foto produk, visual branding, dan desain media sosial.",
+      "Baca panduan fotografi, videografi, penyuntingan video, produksi konten, foto produk, identitas visual, dan desain media sosial.",
     type: "website",
   },
 };
@@ -26,11 +26,11 @@ export default function BlogPage() {
         <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
           <div className="max-w-5xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Journal
+              Jurnal
             </p>
 
             <h1 className="type-hero font-semibold text-[var(--brown)]">
-              Journal fotografi, video, dan konten visual.
+              Jurnal fotografi, video, dan konten visual.
             </h1>
           </div>
         </div>
@@ -83,10 +83,10 @@ export default function BlogPage() {
           <div className="mb-12 flex items-end justify-between gap-6">
             <div>
               <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                Latest
+                Terbaru
               </p>
 
-              <h2 className="mt-4 font-bold">Latest Articles</h2>
+              <h2 className="mt-4 font-bold">Artikel Terbaru</h2>
             </div>
 
             <span className="hidden text-sm text-gray-500 md:block">

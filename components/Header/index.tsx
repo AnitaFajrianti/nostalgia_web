@@ -30,13 +30,13 @@ const Header = () => {
   }, []);
 
   const mobileLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Packages", href: "/packages" },
-    { label: "Why Us", href: "/why-us" },
-    { label: "Journal", href: "/blog" },
-    { label: "Contact", href: "/contact" },
+    { label: "Beranda", href: "/" },
+    { label: "Tentang Kami", href: "/about" },
+    { label: "Portofolio", href: "/portfolio" },
+    { label: "Paket", href: "/packages" },
+    { label: "Mengapa Kami", href: "/why-us" },
+    { label: "Jurnal", href: "/blog" },
+    { label: "Kontak", href: "/contact" },
   ];
 
   return (
@@ -59,7 +59,7 @@ const Header = () => {
               Nostalgia.Kala
             </Link>
 
-            {/* DESKTOP NAV */}
+            {/* NAVIGASI DESKTOP */}
             <nav className="hidden items-center gap-6 lg:flex">
               {mobileLinks.map((item) => (
                 <Link
@@ -72,7 +72,7 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* DESKTOP CTA */}
+            {/* CTA DESKTOP */}
             <Link
               href="/contact"
               className={`hidden shrink-0 border px-5 py-3 text-sm transition sm:inline-flex ${borderClass} ${
@@ -81,14 +81,14 @@ const Header = () => {
                   : "bg-[var(--terracotta)] text-white hover:bg-[var(--terracotta-dark)]"
               }`}
             >
-              Let&apos;s Talk
+              Hubungi Kami
             </Link>
 
             {/* MOBILE MENU BUTTON */}
             <button
               type="button"
               onClick={() => setIsMenuOpen(true)}
-              aria-label="Open menu"
+              aria-label="Buka menu"
               className="flex h-11 w-11 items-center justify-center lg:hidden"
             >
               <span className="flex flex-col gap-1.5">
@@ -108,10 +108,10 @@ const Header = () => {
         </div>
       </header>
 
-      {/* MOBILE MENU */}
+      {/* MENU SELULER */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-[100] bg-[var(--cream)] text-[var(--brown)] lg:hidden">
-          {/* MOBILE HEADER */}
+          {/* HEADER SELULER */}
           <div className="flex h-[96px] items-center justify-between border-b border-[var(--brown)]/10 px-6">
             <Link
               href="/"
@@ -121,11 +121,11 @@ const Header = () => {
               Nostalgia.Kala
             </Link>
 
-            {/* CLOSE BUTTON */}
+            {/* TOMBOL TUTUP */}
             <button
               type="button"
               onClick={() => setIsMenuOpen(false)}
-              aria-label="Close menu"
+              aria-label="Tutup menu"
               className="group flex h-11 w-11 items-center justify-center"
             >
               <span className="relative block h-6 w-6">
@@ -136,7 +136,7 @@ const Header = () => {
             </button>
           </div>
 
-          {/* MENU CONTENT */}
+          {/* ISI MENU */}
           <div className="flex min-h-[calc(100vh-96px)] flex-col px-6 py-5">
             <nav className="flex flex-col">
               {mobileLinks.map((item) => {
@@ -166,7 +166,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className="flex h-14 w-full items-center justify-center bg-[var(--terracotta)] text-sm font-medium text-white transition hover:bg-[var(--terracotta-dark)]"
               >
-                Let&apos;s Talk →
+                Hubungi Kami →
               </Link>
             </div>
           </div>

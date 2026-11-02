@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { MessageCircle, Phone, X } from "lucide-react";
+import { getWhatsAppUrl } from "@/lib/contact";
 
 const WhatsAppWidget = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -11,7 +12,7 @@ const WhatsAppWidget = () => {
       {isExpanded ? (
         <div className="flex items-center gap-2">
           <a
-            href="https://wa.me/6281901604670"
+            href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-[68px] items-center gap-3 border border-[var(--terracotta)] bg-[var(--terracotta)] px-3 py-2 text-[var(--cream-light)] shadow-[0_10px_30px_rgba(72,44,32,0.18)] transition duration-200 hover:-translate-y-1 hover:bg-[var(--terracotta-dark)]"
@@ -32,7 +33,7 @@ const WhatsAppWidget = () => {
                 Nostalgia.Kala
               </span>
               <span className="mt-0.5 text-sm font-semibold">
-                Hubungi WhatsApp
+                Hubungi melalui WhatsApp
               </span>
             </span>
           </a>

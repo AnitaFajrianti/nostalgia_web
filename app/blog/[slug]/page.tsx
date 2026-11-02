@@ -19,16 +19,16 @@ export async function generateMetadata({
 
   if (!article) {
     return {
-      title: "Artikel tidak ditemukan | Journal Nostalgia.Kala",
-      description: "Artikel Journal Nostalgia.Kala tidak ditemukan.",
+      title: "Artikel tidak ditemukan | Jurnal Nostalgia.Kala",
+      description: "Artikel Jurnal Nostalgia.Kala tidak ditemukan.",
     };
   }
 
   return {
-    title: `${article.title} | Journal Nostalgia.Kala`,
+    title: `${article.title} | Jurnal Nostalgia.Kala`,
     description: article.excerpt,
     openGraph: {
-      title: `${article.title} | Journal Nostalgia.Kala`,
+      title: `${article.title} | Jurnal Nostalgia.Kala`,
       description: article.excerpt,
       type: "article",
     },
@@ -60,7 +60,7 @@ export default async function BlogDetailPage({
         <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
           <div className="max-w-5xl">
             <p className="text-sm uppercase tracking-[0.2em] text-gray-500">
-              Journal / {article.category}
+              Jurnal / {article.category}
             </p>
 
             <h1 className="mt-6 font-bold">{article.title}</h1>
@@ -95,13 +95,13 @@ export default async function BlogDetailPage({
                 href="/blog"
                 className="mt-6 inline-block text-sm underline underline-offset-4"
               >
-                Kembali ke Journal
+                Kembali ke Jurnal
               </Link>
               <Link
                 href="/portfolio"
                 className="mt-4 block text-sm underline underline-offset-4"
               >
-                Lihat portfolio
+                Lihat portofolio
               </Link>
               <Link
                 href="/packages"
@@ -151,10 +151,10 @@ export default async function BlogDetailPage({
         <div className="mx-auto max-w-7xl">
           <div className="mb-12">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Continue Reading
+              Lanjutkan Membaca
             </p>
 
-            <h2 className="mt-4 font-bold">Related Articles</h2>
+            <h2 className="mt-4 font-bold">Artikel Terkait</h2>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">

@@ -5,26 +5,26 @@ import PhotoImage from "@/components/PhotoImage";
 const captureProjects = [
   {
     slug: "project-one",
-    title: "Sesi Foto Prewedding",
-    category: "Prewedding Photography",
+    title: "Sesi Foto Pranikah",
+    category: "Fotografi Pranikah",
     description:
-      "Rangkaian foto prewedding yang menampilkan momen dan karakter pasangan.",
+      "Rangkaian foto pranikah yang menampilkan momen dan karakter pasangan.",
     image: "/images/prewed-porto/foto-prewedding-hijab-jas-hitam-elegan.jpg",
-    alt: "Foto prewedding pasangan dengan hijab dan jas hitam elegan",
+    alt: "Foto pranikah pasangan dengan hijab dan jas hitam elegan",
   },
   {
     slug: "project-two",
     title: "Dokumentasi Pernikahan",
-    category: "Wedding Photography",
+    category: "Fotografi Pernikahan",
     description:
       "Dokumentasi prosesi, pasangan, dan momen kebersamaan dalam pernikahan.",
     image: "/images/wedding-porto/jasa-fotografer-wedding-intimate-bogor.jpg",
-    alt: "Dokumentasi wedding intimate di Bogor",
+    alt: "Dokumentasi pernikahan intim di Bogor",
   },
   {
     slug: "basket",
     title: "Dokumentasi Pertandingan Basket",
-    category: "Sports Photography",
+    category: "Fotografi Olahraga",
     description:
       "Foto aksi pertandingan, detail permainan, dan kebersamaan tim basket.",
     image: "/images/basket-porto/foto-konseptual-pemain-basket-monokrom.jpg",
@@ -35,7 +35,7 @@ const captureProjects = [
 const createProject = {
   slug: "17an",
   title: "Semarak Kemerdekaan",
-  category: "Event Video · Video Production & Editing",
+  category: "Video Acara · Produksi dan Penyuntingan Video",
   description:
     "Video dokumentasi acara 17an yang mengabadikan suasana dan momen kebersamaan.",
   video: "/videos/portfolio-17an.mp4",
@@ -48,7 +48,7 @@ const serviceGroups = [
   },
   {
     name: "Create",
-    description: "Editing video dan produksi konten dari materi visual.",
+    description: "Penyuntingan video dan produksi konten dari materi visual.",
   },
   {
     name: "Design",
@@ -64,7 +64,7 @@ export default function PortfolioPage() {
         <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
           <div className="max-w-5xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Our Portfolio
+              Portofolio Kami
             </p>
 
             <h1 className="type-hero font-bold text-[var(--brown)]">
@@ -79,7 +79,7 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-2xl">
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Our Services
+              Layanan Kami
             </p>
             <h2 className="mt-4 font-semibold text-[var(--brown)]">
               Tiga cara kami mengolah cerita menjadi visual.
@@ -120,7 +120,7 @@ export default function PortfolioPage() {
               </h2>
             </div>
             <p className="max-w-lg text-sm text-[var(--brown-light)]">
-              Pilihan karya fotografi dari sesi prewedding, pernikahan, dan
+              Pilihan karya fotografi dari sesi pranikah, pernikahan, dan
               pertandingan olahraga.
             </p>
           </div>
@@ -154,7 +154,7 @@ export default function PortfolioPage() {
                     </span>
                   </div>
                   <span className="mt-4 inline-block border-b border-[var(--terracotta)] pb-1 text-sm text-[var(--terracotta)]">
-                    Lihat hasil foto →
+                    Lihat hasil fotografi →
                   </span>
                 </Link>
               </article>
@@ -171,7 +171,7 @@ export default function PortfolioPage() {
               Create
             </p>
             <h2 className="mt-3 font-semibold text-[var(--brown)]">
-              Produksi &amp; editing video
+              Produksi &amp; penyuntingan video
             </h2>
           </div>
 
@@ -226,7 +226,7 @@ export default function PortfolioPage() {
           <div className="md:col-span-8">
             <p className="max-w-2xl leading-relaxed text-[var(--brown-light)]">
               Layanan desain visual dan media sosial tersedia. Contoh hasil
-              desain belum dipublikasikan di portfolio ini.
+              desain belum dipublikasikan di portofolio ini.
             </p>
             <Link
               href="/contact"

@@ -18,39 +18,39 @@ type Project = {
 const preweddingGallery = [
   {
     src: "/images/prewed-porto/foto-prewedding-kasual-pasangan-jaket-kuning.jpg",
-    alt: "Prewedding kasual pasangan dengan jaket kuning",
+    alt: "Foto pranikah kasual pasangan dengan jaket kuning",
   },
   {
     src: "/images/prewed-porto/foto-prewedding-vespa-vintage-outdoor.jpg",
-    alt: "Prewedding vespa vintage outdoor",
+    alt: "Foto pranikah dengan Vespa bergaya vintage di luar ruang",
   },
   {
     src: "/images/prewed-porto/foto-prewedding-hitam-putih-estetik.jpg",
-    alt: "Prewedding hitam putih estetik",
+    alt: "Foto pranikah hitam putih",
   },
   {
     src: "/images/prewed-porto/foto-prewedding-pose-candid-danau-alam.jpg",
-    alt: "Prewedding candid di danau dan alam",
+    alt: "Foto pranikah spontan di danau dan alam",
   },
   {
     src: "/images/prewed-porto/foto-prewedding-lamaran.jpg",
-    alt: "Foto prewedding lamaran",
+    alt: "Foto pranikah saat lamaran",
   },
   {
     src: "/images/prewed-porto/foto-prewedding-elegan-pasangan.jpg",
-    alt: "Prewedding pasangan elegan",
+    alt: "Foto pranikah pasangan dengan gaya elegan",
   },
   {
     src: "/images/prewed-porto/foto-prewedding-hijab-jas-hitam-elegan.jpg",
-    alt: "Prewedding hijab dan jas hitam elegan",
+    alt: "Foto pranikah dengan hijab dan jas hitam elegan",
   },
   {
     src: "/images/prewed-porto/foto-prewedding-santai-duduk-di-taman.jpg",
-    alt: "Prewedding santai duduk di taman",
+    alt: "Foto pranikah dengan pasangan duduk santai di taman",
   },
   {
     src: "/images/prewed-porto/foto-prewedding-close-up-senyum-pasangan.jpg",
-    alt: "Prewedding close-up senyum pasangan",
+    alt: "Foto jarak dekat senyum pasangan",
   },
 ];
 
@@ -123,17 +123,17 @@ const basketGallery = [
 
 const projects: Record<string, Project> = {
   "project-one": {
-    title: "Sesi Foto Prewedding",
-    category: "Capture · Prewedding Photography",
+    title: "Sesi Foto Pranikah",
+    category: "Capture · Fotografi Pranikah",
     image: "/images/prewed-porto/foto-prewedding-hijab-jas-hitam-elegan.jpg",
     description:
-      "Rangkaian foto prewedding yang menampilkan momen dan karakter pasangan dalam berbagai suasana dan gaya.",
+      "Rangkaian foto pranikah yang menampilkan momen dan karakter pasangan dalam berbagai suasana dan gaya.",
     services: [
       "Capture",
-      "Prewedding Photography",
-      "Creative Direction",
-      "Couple Session",
-      "Photo Documentation",
+      "Fotografi Pranikah",
+      "Arahan Kreatif",
+      "Sesi Pasangan",
+      "Dokumentasi Foto",
     ],
     gallery: preweddingGallery.map(({ src }) => src),
     interactiveGallery: true,
@@ -141,16 +141,16 @@ const projects: Record<string, Project> = {
 
   "project-two": {
     title: "Dokumentasi Pernikahan",
-    category: "Capture · Wedding Photography",
+    category: "Capture · Fotografi Pernikahan",
     image: "/images/wedding-porto/jasa-fotografer-wedding-intimate-bogor.jpg",
     description:
       "Kumpulan foto yang mendokumentasikan prosesi pernikahan, pasangan, dan momen kebersamaan.",
     services: [
       "Capture",
-      "Wedding Photography",
-      "Akad Documentation",
-      "Couple Session",
-      "Family Moments",
+      "Fotografi Pernikahan",
+      "Dokumentasi Akad",
+      "Sesi Pasangan",
+      "Momen Keluarga",
     ],
     gallery: weddingGallery.map(({ src }) => src),
     interactiveGallery: true,
@@ -158,28 +158,28 @@ const projects: Record<string, Project> = {
 
   basket: {
     title: "Dokumentasi Pertandingan Basket",
-    category: "Capture · Sports Photography",
+    category: "Capture · Fotografi Olahraga",
     image: "/images/basket-porto/foto-konseptual-pemain-basket-monokrom.jpg",
     description:
       "Kumpulan foto aksi permainan, detail pertandingan, dan kebersamaan tim basket.",
     services: [
       "Capture",
-      "Sports Photography",
-      "Action Photography",
+      "Fotografi Olahraga",
+      "Fotografi Aksi",
     ],
     gallery: basketGallery,
   },
 
   "17an": {
     title: "Semarak Kemerdekaan",
-    category: "Create · Event Video",
+    category: "Create · Video Acara",
     video: "/videos/portfolio-17an.mp4",
     description:
       "Video dokumentasi acara 17an yang merangkai suasana dan momen kebersamaan dalam perayaan.",
     services: [
-      "Event Documentation",
-      "Video Production",
-      "Video Editing",
+      "Dokumentasi Acara",
+      "Produksi Video",
+      "Penyuntingan Video",
     ],
     gallery: [],
   },
@@ -234,7 +234,7 @@ export default async function ProjectDetailPage({
                 muted
                 playsInline
                 preload="metadata"
-                aria-label={`${project.title} event documentation`}
+                aria-label={`Video dokumentasi ${project.title}`}
                 className="h-full w-full object-contain"
               >
                 <source src={project.video} type="video/mp4" />
@@ -256,7 +256,7 @@ export default async function ProjectDetailPage({
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              About The Project
+              Tentang Proyek
             </p>
           </div>
 
@@ -274,7 +274,7 @@ export default async function ProjectDetailPage({
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-4">
               <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                What We Did
+                Yang Kami Kerjakan
               </p>
             </div>
 
@@ -308,11 +308,11 @@ export default async function ProjectDetailPage({
           <div className="mx-auto max-w-7xl">
             <div className="mb-12">
               <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                Project Gallery
+                Galeri Proyek
               </p>
 
               <h2 className="mt-4 font-semibold text-[var(--brown)]">
-                Behind the work.
+                Di balik karya.
               </h2>
             </div>
 
@@ -329,7 +329,7 @@ export default async function ProjectDetailPage({
                   <PhotoImage
                     key={image}
                     src={image}
-                    alt={`${project.title} gallery ${index + 1}`}
+                    alt={`${project.title}, foto ${index + 1}`}
                     className={
                       index === 0
                         ? "aspect-[16/10] md:col-span-2"
@@ -350,7 +350,7 @@ export default async function ProjectDetailPage({
             href="/portfolio"
             className="inline-flex items-center gap-3 border-b border-[var(--terracotta)] pb-2 text-sm text-[var(--terracotta)] transition hover:text-[var(--terracotta-dark)]"
           >
-            ← Back to Portfolio
+            ← Kembali ke Portofolio
           </Link>
         </div>
       </section>

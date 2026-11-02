@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUp, Camera, Mail, MessageCircle } from "lucide-react";
+import { ArrowUp, Camera, Mail, MapPin, MessageCircle } from "lucide-react";
+import { contactDetails, getWhatsAppUrl } from "@/lib/contact";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -21,12 +22,12 @@ const Footer = () => {
             </Link>
 
             <p className="mt-6 max-w-sm leading-relaxed text-[var(--brown-light)]">
-              Capture momen, create konten, dan design visual yang bermakna.
+              Abadikan momen, ciptakan konten, dan rancang visual yang bermakna.
             </p>
 
             <div className="mt-6 flex items-center gap-4">
               <a
-                href="https://www.instagram.com/nostalgiakala.id"
+                href={contactDetails.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -35,7 +36,7 @@ const Footer = () => {
                 <Camera size={17} strokeWidth={2} />
               </a>
               <a
-                href="https://wa.me/628111187077"
+                href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -44,67 +45,76 @@ const Footer = () => {
                 <MessageCircle size={17} strokeWidth={2} />
               </a>
               <a
-                href="mailto:hello@nostalgia.com"
+                href={`mailto:${contactDetails.email}`}
                 aria-label="Email"
                 className="text-[var(--brown)] transition hover:text-[var(--terracotta)]"
               >
                 <Mail size={17} strokeWidth={2} />
+              </a>
+              <a
+                href={contactDetails.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Google Maps"
+                className="text-[var(--brown)] transition hover:text-[var(--terracotta)]"
+              >
+                <MapPin size={17} strokeWidth={2} />
               </a>
             </div>
           </div>
 
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.16em]">
-              Services
+              Layanan
             </p>
             <ul className="mt-5 flex flex-col gap-4 text-sm text-[var(--brown-light)]">
               <li>
                 <span className="font-medium text-[var(--brown)]">Capture</span>
-                <span className="mt-1 block">Event photo &amp; video</span>
+                <span className="mt-1 block">Foto dan video acara</span>
               </li>
               <li>
                 <span className="font-medium text-[var(--brown)]">Create</span>
-                <span className="mt-1 block">Video editing &amp; content</span>
+                <span className="mt-1 block">Penyuntingan video dan konten</span>
               </li>
               <li>
                 <span className="font-medium text-[var(--brown)]">Design</span>
-                <span className="mt-1 block">Social media &amp; visual design</span>
+                <span className="mt-1 block">Media sosial dan desain visual</span>
               </li>
             </ul>
           </div>
 
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.16em]">
-              Explore
+              Jelajahi
             </p>
             <nav className="mt-5 flex flex-col gap-3 text-sm text-[var(--brown-light)]">
-              <Link href="/portfolio" className="transition hover:text-[var(--terracotta)]">Portfolio</Link>
-              <Link href="/packages" className="transition hover:text-[var(--terracotta)]">Packages</Link>
-              <Link href="/blog" className="transition hover:text-[var(--terracotta)]">Journal</Link>
+              <Link href="/portfolio" className="transition hover:text-[var(--terracotta)]">Portofolio</Link>
+              <Link href="/packages" className="transition hover:text-[var(--terracotta)]">Paket</Link>
+              <Link href="/blog" className="transition hover:text-[var(--terracotta)]">Jurnal</Link>
             </nav>
           </div>
 
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.16em]">
-              Company
+              Perusahaan
             </p>
             <nav className="mt-5 flex flex-col gap-3 text-sm text-[var(--brown-light)]">
-              <Link href="/about" className="transition hover:text-[var(--terracotta)]">About Us</Link>
-              <Link href="/why-us" className="transition hover:text-[var(--terracotta)]">Why Us</Link>
-              <Link href="/contact" className="transition hover:text-[var(--terracotta)]">Contact</Link>
+              <Link href="/about" className="transition hover:text-[var(--terracotta)]">Tentang Kami</Link>
+              <Link href="/why-us" className="transition hover:text-[var(--terracotta)]">Mengapa Kami</Link>
+              <Link href="/contact" className="transition hover:text-[var(--terracotta)]">Kontak</Link>
             </nav>
           </div>
 
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.16em]">
-              Support
+              Kontak
             </p>
             <div className="mt-5 flex flex-col gap-3 text-sm text-[var(--brown-light)]">
-              <a href="mailto:hello@nostalgia.com" className="transition hover:text-[var(--terracotta)]">
-                Email Us
+              <a href={`mailto:${contactDetails.email}`} className="transition hover:text-[var(--terracotta)]">
+                Kirim Email
               </a>
               <a
-                href="https://wa.me/628111187077?text=Halo%2C%20Nostalgia%20Kala.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
+                href={getWhatsAppUrl("Halo, Nostalgia.Kala! Saya ingin mendapatkan informasi lebih lanjut.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition hover:text-[var(--terracotta)]"
@@ -112,27 +122,34 @@ const Footer = () => {
                 WhatsApp
               </a>
               <a
-                href="https://www.instagram.com/nostalgiakala.id"
+                href={contactDetails.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition hover:text-[var(--terracotta)]"
               >
                 Instagram
               </a>
-              <span>Indonesia</span>
+              <a
+                href={contactDetails.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-[var(--terracotta)]"
+              >
+                Lokasi di Google Maps
+              </a>
             </div>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col items-center gap-4 border-t border-[var(--line)] pt-6 text-xs text-[var(--brown-light)] sm:flex-row sm:justify-between">
           <p className="text-center sm:text-left">
-            © {new Date().getFullYear()} Nostalgia.Kala. All rights reserved.
+            © {new Date().getFullYear()} Nostalgia.Kala. Hak cipta dilindungi.
           </p>
 
           <button
             type="button"
             onClick={scrollToTop}
-            aria-label="Scroll to top"
+            aria-label="Kembali ke atas"
             className="flex h-10 w-10 items-center justify-center bg-[var(--brown)] text-[var(--cream)] transition hover:-translate-y-1"
           >
             <ArrowUp size={18} strokeWidth={1.8} />

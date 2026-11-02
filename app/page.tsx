@@ -8,15 +8,15 @@ import { articles } from "./blog/articles";
 const selectedWorks = [
   {
     slug: "project-one",
-    title: "Sesi Foto Prewedding",
-    category: "Prewedding",
+    title: "Sesi Foto Pranikah",
+    category: "Fotografi Pranikah",
     image: "/images/prewed-porto/foto-prewedding-hijab-jas-hitam-elegan.jpg",
-    alt: "Foto prewedding pasangan dengan hijab dan jas hitam elegan",
+    alt: "Foto pranikah pasangan dengan hijab dan jas hitam elegan",
   },
   {
     slug: "basket",
     title: "Dokumentasi Pertandingan Basket",
-    category: "Sports Photography",
+    category: "Fotografi Olahraga",
     image: "/images/basket-porto/foto-konseptual-pemain-basket-monokrom.jpg",
     alt: "Foto konseptual pemain basket dalam gaya monokrom",
   },
@@ -24,39 +24,127 @@ const selectedWorks = [
 
 const serviceGroups = [
   {
-    name: "Event Documentation",
+    name: "Dokumentasi Acara",
     category: "CAPTURE",
     services: [
-      "Event Photography",
-      "Event Videography",
-      "Highlight Video",
-      "Event Recap",
-      "Behind The Scenes",
+      "Fotografi acara",
+      "Videografi acara",
+      "Video sorotan",
+      "Rangkuman acara",
+      "Di balik layar",
     ],
   },
   {
-    name: "Content Editing",
+    name: "Penyuntingan Konten",
     category: "CREATE",
     services: [
-      "Reels Editing",
-      "Short-form Video",
-      "Event Recap Editing",
-      "Social Media Video",
-      "Raw Footage Editing",
+      "Penyuntingan Reels",
+      "Video berdurasi pendek",
+      "Penyuntingan rangkuman acara",
+      "Video media sosial",
+      "Penyuntingan rekaman mentah",
     ],
   },
   {
-    name: "Visual Content",
+    name: "Konten Visual",
     category: "DESIGN",
     services: [
-      "Instagram Feed",
-      "Carousel",
-      "Promotional Content",
-      "Event Announcement",
-      "Social Media Visual",
+      "Konten feed Instagram",
+      "Karusel",
+      "Materi promosi",
+      "Pengumuman acara",
+      "Visual media sosial",
     ],
   },
 ];
+
+const workFlows = [
+  {
+    number: "01",
+    title: "Mengolah bahan yang sudah ada",
+    service: "CREATE · DESIGN",
+    description:
+      "Untuk klien yang sudah memiliki rekaman, foto, atau materi merek dan membutuhkan bantuan penyuntingan maupun desain.",
+    steps: [
+      ["Arahan awal", "Ceritakan tujuan, audiens, materi, dan kebutuhan konten."],
+      ["Tinjau bahan", "Pilih rekaman atau aset yang akan diolah bersama."],
+      ["Olah konten", "Kerjakan penyuntingan video atau desain sesuai arahan."],
+      ["Konten akhir", "Serahkan hasil sesuai format dan cakupan yang disepakati."],
+    ],
+  },
+  {
+    number: "02",
+    title: "Dokumentasi dan pengolahan",
+    service: "CAPTURE · CREATE",
+    description:
+      "Untuk kebutuhan dokumentasi foto atau video acara yang dilanjutkan dengan penyuntingan hasil.",
+    steps: [
+      ["Arahan awal", "Bahas acara, jadwal, momen prioritas, dan hasil yang dibutuhkan."],
+      ["Dokumentasi", "Ambil foto atau video sesuai cakupan yang disepakati."],
+      ["Pilih dan olah", "Tinjau materi, lalu sunting hasil sesuai arahan."],
+      ["Konten akhir", "Serahkan hasil dokumentasi dan olahan sesuai kesepakatan."],
+    ],
+  },
+  {
+    number: "03",
+    title: "Layanan terintegrasi",
+    service: "CAPTURE · CREATE · DESIGN",
+    description:
+      "Untuk proyek yang membutuhkan proses dari perencanaan visual hingga materi akhir.",
+    steps: [
+      ["Arahan dan konsep visual", "Selaraskan tujuan, kebutuhan, referensi, dan alur kerja."],
+      ["Produksi", "Lakukan dokumentasi foto atau video sesuai rencana."],
+      ["Olah dan rancang", "Sunting materi dan siapkan desain sesuai cakupan."],
+      ["Konten akhir", "Tinjau hasil dan serahkan materi sesuai format yang disepakati."],
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question: "Apakah Nostalgia.Kala menerima pekerjaan di luar kota?",
+    answer:
+      "Ceritakan lokasi, tanggal, dan kebutuhan proyek melalui halaman Kontak. Ketersediaan tim serta kebutuhan perjalanan akan dikonfirmasi sebelum penawaran disusun.",
+  },
+  {
+    question: "Apakah bisa menggunakan jasa penyuntingan tanpa dokumentasi?",
+    answer:
+      "Bisa dikonsultasikan. Nostalgia.Kala menyediakan penyuntingan rekaman yang sudah dimiliki klien. Sampaikan materi, tujuan konten, dan format yang dibutuhkan agar cakupan pekerjaan dapat dibahas.",
+  },
+  {
+    question: "Apakah konsep dan hasil bisa disesuaikan?",
+    answer:
+      "Ya. Sampaikan tujuan, referensi, materi, serta kebutuhan penggunaan saat konsultasi awal. Konsep, format, dan hasil akan dibahas dan dicantumkan dalam cakupan proyek sebelum pekerjaan dimulai.",
+  },
+  {
+    question: "Berapa lama estimasi pengerjaan?",
+    answer:
+      "Estimasi bergantung pada jenis layanan, jumlah materi, dan hasil yang disepakati. Jadwal pengerjaan akan dikonfirmasi setelah kebutuhan dan cakupan proyek dibahas.",
+  },
+  {
+    question: "Berapa kali revisi yang termasuk?",
+    answer:
+      "Batas dan cakupan revisi belum ditetapkan secara umum. Detail revisi akan dibahas dan dicantumkan dalam penawaran sebelum proyek dimulai.",
+  },
+  {
+    question: "Bagaimana cara memesan layanan?",
+    answer:
+      "Hubungi kami melalui formulir Kontak atau WhatsApp. Sertakan jenis layanan, jadwal atau tenggat, lokasi jika ada, serta gambaran kebutuhan. Tim akan menindaklanjuti ketersediaan dan cakupan pekerjaan.",
+  },
+  {
+    question: "Bagaimana ketentuan pembayaran?",
+    answer:
+      "Metode, jadwal, dan ketentuan pembayaran belum ditetapkan di halaman ini. Detailnya akan disampaikan dan disepakati dalam penawaran sebelum proyek dimulai.",
+  },
+];
+
+type Testimonial = {
+  quote: string;
+  name: string;
+  project: string;
+};
+
+const testimonials: Testimonial[] = [];
 
 export default function Home() {
   return (
@@ -69,7 +157,7 @@ export default function Home() {
           <div className="grid gap-12 md:grid-cols-2">
             <div>
               <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                About Nostalgia.Kala
+                Tentang Nostalgia.Kala
               </p>
             </div>
 
@@ -101,7 +189,7 @@ export default function Home() {
           <div className="mb-12 flex items-end justify-between gap-6">
             <div>
               <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                Selected Work
+                Karya Pilihan
               </p>
 
               <h2 className="font-bold">Karya pilihan kami.</h2>
@@ -111,7 +199,7 @@ export default function Home() {
               href="/portfolio"
               className="hidden border-b border-[var(--brown)] pb-1 text-sm md:block"
             >
-              View All Work →
+              Lihat Semua Karya →
             </Link>
           </div>
 
@@ -153,13 +241,13 @@ export default function Home() {
       <section className="border-t border-[var(--line)] bg-[var(--brown)] px-6 py-24 text-[var(--cream)]">
         <div className="mx-auto max-w-7xl">
           <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--cream)]/60">
-            Our Philosophy
+            Filosofi Kami
           </p>
 
           <h2 className="max-w-6xl font-bold">
-            Good work doesn&apos;t just look good.
+            Karya yang baik bukan hanya terlihat menarik.
             <br />
-            It stays with you.
+            Namun juga membekas.
           </h2>
 
           <div className="mt-12 flex justify-end">
@@ -176,7 +264,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-3xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Our Services
+              Layanan Kami
             </p>
 
             <h2 className="font-bold">
@@ -213,17 +301,171 @@ export default function Home() {
         </div>
       </section>
 
+      {/* HOW WE WORK */}
+      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-24 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 grid gap-6 md:grid-cols-12 md:items-end">
+            <div className="md:col-span-7">
+              <p className="mb-5 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+                Cara Kami Bekerja
+              </p>
+              <h2 className="font-bold text-[var(--brown)]">
+                Alur kerja dari arahan awal hingga konten akhir.
+              </h2>
+            </div>
+            <p className="text-sm leading-relaxed text-[var(--brown-light)] md:col-span-5">
+              Pilih alur yang sesuai dengan kebutuhan. Lingkup layanan, materi,
+              format, dan hasil akhir dibahas sejak arahan awal sebelum pekerjaan
+              dimulai.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {workFlows.map((flow) => (
+              <article
+                key={flow.number}
+                className="border border-[var(--line)] bg-[var(--cream)] p-6 md:p-8"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <span className="font-display text-4xl leading-none text-[var(--terracotta)]">
+                    {flow.number}
+                  </span>
+                  <span className="text-right text-xs tracking-[0.12em] text-[var(--terracotta)]">
+                    {flow.service}
+                  </span>
+                </div>
+
+                <h3 className="mt-8 font-semibold text-[var(--brown)]">
+                  {flow.title}
+                </h3>
+                <p className="mt-3 min-h-20 text-sm leading-relaxed text-[var(--brown-light)]">
+                  {flow.description}
+                </p>
+
+                <ol className="mt-6 border-t border-[var(--line)]">
+                  {flow.steps.map(([title, description], index) => (
+                    <li
+                      key={title}
+                      className="grid grid-cols-[2rem_1fr] gap-3 border-b border-[var(--line)] py-4 last:border-b-0"
+                    >
+                      <span className="pt-0.5 text-xs text-[var(--terracotta)]">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <h4 className="text-sm font-semibold text-[var(--brown)]">
+                          {title}
+                        </h4>
+                        <p className="mt-1 text-sm leading-relaxed text-[var(--brown-light)]">
+                          {description}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      {testimonials.length > 0 && (
+        <section className="border-t border-[var(--line)] bg-[var(--cream)] px-6 py-24 md:px-10">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-12 max-w-2xl">
+              <p className="mb-5 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+                Testimoni
+              </p>
+              <h2 className="font-bold text-[var(--brown)]">
+                Cerita dari klien kami.
+              </h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              {testimonials.map((testimonial) => (
+                <figure
+                  key={`${testimonial.name}-${testimonial.project}`}
+                  className="border border-[var(--line)] bg-[var(--cream-light)] p-7 md:p-9"
+                >
+                  <blockquote className="leading-relaxed text-[var(--brown)]">
+                    “{testimonial.quote}”
+                  </blockquote>
+                  <figcaption className="mt-6 border-t border-[var(--line)] pt-4">
+                    <span className="block font-medium text-[var(--brown)]">
+                      {testimonial.name}
+                    </span>
+                    <span className="mt-1 block text-sm text-[var(--brown-light)]">
+                      {testimonial.project}
+                    </span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ */}
+      <section className="border-t border-[var(--line)] bg-[var(--cream)] px-6 py-20 md:px-10 md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-12 md:gap-16">
+          <div className="md:col-span-4">
+            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+              Pertanyaan Umum
+            </p>
+            <h2 className="mt-4 font-bold text-[var(--brown)]">
+              Pertanyaan yang sering diajukan.
+            </h2>
+            <p className="mt-5 text-sm leading-relaxed text-[var(--brown-light)]">
+              Belum menemukan jawaban yang kamu cari? Ceritakan kebutuhanmu
+              kepada tim kami.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-5 inline-block border-b border-[var(--terracotta)] pb-1 text-sm font-medium text-[var(--terracotta)] transition hover:text-[var(--terracotta-dark)]"
+            >
+              Hubungi Nostalgia.Kala →
+            </Link>
+          </div>
+
+          <div className="md:col-span-8">
+            {faqs.map((faq, index) => (
+              <details
+                key={faq.question}
+                className="group border-t border-[var(--line)] py-5 last:border-b"
+              >
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-base font-semibold text-[var(--brown)] marker:hidden">
+                  <span>
+                    <span className="mr-4 text-sm font-normal text-[var(--terracotta)]">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    {faq.question}
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="text-xl font-normal text-[var(--terracotta)] transition-transform group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 max-w-2xl pl-10 leading-relaxed text-[var(--brown-light)]">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* JOURNAL */}
       <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex items-end justify-between gap-6">
             <div>
               <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-                Journal
+                Jurnal
               </p>
 
               <h2 className="font-bold">
-                From our desk.
+                Catatan dari kami.
               </h2>
             </div>
 
@@ -231,7 +473,7 @@ export default function Home() {
               href="/blog"
               className="hidden border-b border-[var(--brown)] pb-1 text-sm md:block"
             >
-              View Journal →
+              Baca Jurnal →
             </Link>
           </div>
 

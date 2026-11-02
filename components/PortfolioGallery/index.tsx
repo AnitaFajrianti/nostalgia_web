@@ -129,7 +129,7 @@ const PortfolioGallery = ({
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={`${projectTitle} gallery`}
+          aria-label={`Galeri ${projectTitle}`}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 text-white sm:p-8"
           onClick={() => setActiveIndex(null)}
         >

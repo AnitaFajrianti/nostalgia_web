@@ -1,11 +1,39 @@
 import CTA from "@/components/CTA";
+import Link from "next/link";
 
 const clientNeeds = [
-  "Sudah punya raw footage tetapi tidak punya waktu atau tenaga untuk mengolahnya.",
-  "Membutuhkan Reels atau social media content dengan hasil yang lebih polished.",
-  "Membutuhkan design untuk memperkuat visual brand.",
-  "Membutuhkan dokumentasi event sekaligus hasil edit yang siap dipublikasikan.",
-  "Ingin mendapatkan hasil visual yang lebih premium tanpa harus membangun tim kreatif sendiri.",
+  {
+    need: "Membutuhkan foto atau video untuk acara dan momen penting.",
+    solution:
+      "Capture menyediakan dokumentasi foto dan video; cakupan ditentukan berdasarkan jenis acara dan arahan.",
+    proof: [
+      { label: "Sesi pranikah", href: "/portfolio/project-one" },
+      { label: "Pernikahan", href: "/portfolio/project-two" },
+      { label: "Pertandingan basket", href: "/portfolio/basket" },
+    ],
+  },
+  {
+    need: "Sudah memiliki rekaman, tetapi membutuhkan bantuan untuk mengolahnya.",
+    solution:
+      "Create mencakup penyuntingan, penyusunan alur, rangkuman, video pendek, dan pengolahan rekaman sesuai kebutuhan yang disepakati.",
+    proof: [
+      { label: "Video Semarak Kemerdekaan", href: "/portfolio/17an" },
+    ],
+  },
+  {
+    need: "Membutuhkan materi visual untuk media sosial atau komunikasi merek.",
+    solution:
+      "Design mencakup konten feed, karusel, materi promosi, pengumuman acara, dan visual media sosial.",
+    note: "Contoh hasil Design belum dipublikasikan di portofolio.",
+  },
+  {
+    need: "Menginginkan dokumentasi sekaligus materi video untuk digunakan setelah acara.",
+    solution:
+      "Jika sesuai arahan, kebutuhan Capture dan Create dapat dibahas dalam satu lingkup kerja, dari dokumentasi hingga penyuntingan. Bentuk hasil dan kesiapan publikasi disepakati terlebih dahulu.",
+    proof: [
+      { label: "Video Semarak Kemerdekaan", href: "/portfolio/17an" },
+    ],
+  },
 ];
 
 export default function WhyUsPage() {
@@ -16,11 +44,11 @@ export default function WhyUsPage() {
         <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
           <div className="max-w-5xl">
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Why Nostalgia.Kala
+              Mengapa Nostalgia.Kala
             </p>
 
-            <h1 className="type-hero min-h-[2em] font-semibold text-[var(--brown)]">
-              Why Nostalgia Exists?
+            <h1 className="type-hero font-semibold text-[var(--brown)]">
+              Studio kreatif untuk menangkap, mengolah, dan merancang visual.
             </h1>
           </div>
         </div>
@@ -31,32 +59,54 @@ export default function WhyUsPage() {
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Kebutuhan Klien
+              Kebutuhan &amp; Solusi
             </p>
           </div>
 
           <div className="md:col-span-8">
             <p className="mb-12 text-base leading-relaxed">
-              Banyak momen dan konten sebenarnya sudah dimiliki oleh klien,
-              tetapi belum tentu sudah menjadi sesuatu yang siap digunakan atau
-              memiliki nilai visual yang kuat.
-            </p>
-
-            <p className="mb-4 text-sm uppercase tracking-[0.15em] text-[var(--brown-light)]">
-              Ada klien yang:
+              Kebutuhan visual bisa dimulai dari momen yang perlu didokumentasikan,
+              rekaman yang perlu disunting, hingga materi merek yang perlu dirancang.
+              Nostalgia.Kala mengerjakannya melalui layanan Capture, Create, dan
+              Design.
             </p>
 
             <div>
-              {clientNeeds.map((need, index) => (
+              {clientNeeds.map((item, index) => (
                 <div
-                  key={need}
-                  className="grid gap-3 border-t border-[var(--line)] py-6 sm:grid-cols-[3rem_1fr] sm:gap-6"
+                  key={item.need}
+                  className="grid gap-4 border-t border-[var(--line)] py-7 sm:grid-cols-[3rem_1fr] sm:gap-6"
                 >
                   <span className="text-sm text-[var(--brown-light)]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
-                  <p className="text-lg leading-relaxed">{need}</p>
+                  <div>
+                    <h2 className="text-lg font-semibold leading-relaxed text-[var(--brown)]">
+                      {item.need}
+                    </h2>
+                    <p className="mt-3 leading-relaxed text-[var(--brown-light)]">
+                      {item.solution}
+                    </p>
+                    {item.proof && (
+                      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+                        {item.proof.map((work) => (
+                          <Link
+                            key={work.href}
+                            href={work.href}
+                            className="border-b border-[var(--terracotta)] pb-1 text-sm text-[var(--terracotta)] transition hover:text-[var(--terracotta-dark)]"
+                          >
+                            Lihat: {work.label} →
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                    {item.note && (
+                      <p className="mt-4 text-sm text-[var(--brown-light)]">
+                        {item.note}
+                      </p>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -69,14 +119,20 @@ export default function WhyUsPage() {
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-12 md:items-end">
           <div className="md:col-span-4">
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--cream)]/60">
-              Our Role
+              Peran Kami
             </p>
           </div>
 
           <div className="md:col-span-8">
             <h2 className="text-4xl font-bold leading-tight md:text-6xl">
-              Nostalgia hadir untuk menjembatani kebutuhan tersebut.
+              Satu studio untuk kebutuhan Capture, Create, dan Design.
             </h2>
+            <p className="mt-6 max-w-3xl leading-relaxed text-[var(--cream)]/75">
+              Kamu dapat memulai dari satu layanan atau mengonsultasikan
+              kebutuhan yang menggabungkan dokumentasi dan penyuntingan. Cakupan
+              pekerjaan, materi yang tersedia, dan hasil akhir dibahas dalam
+              arahan agar sesuai dengan kebutuhan proyek.
+            </p>
           </div>
         </div>
       </section>

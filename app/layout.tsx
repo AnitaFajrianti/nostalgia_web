@@ -20,7 +20,7 @@ const sans = Inter({
 
 export const metadata: Metadata = {
   title: "Nostalgia.Kala",
-  description: "Nostalgia.Kala — Event Documentation",
+  description: "Nostalgia.Kala — Studio kreatif untuk foto, video, konten, dan desain visual.",
 };
 
 export default function RootLayout({

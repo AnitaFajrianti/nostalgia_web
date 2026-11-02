@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="flex flex-1 items-center justify-center">
           <div className="text-center">
             <p className="mb-6 text-xs uppercase tracking-[0.35em] text-white/85 md:text-sm">
-              Stories Worth Remembering
+              Cerita yang Layak Dikenang
             </p>
 
             <h1 className="hero-brand-title font-semibold">
@@ -38,7 +38,7 @@ const Hero = () => {
         <div className="border-t border-white/30 pt-5">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <p className="max-w-md leading-relaxed text-white/85">
-              Creative studio untuk ide, visual, dan pengalaman yang layak
+              Studio kreatif untuk ide, visual, dan pengalaman yang layak
               untuk diingat.
             </p>
 
@@ -46,7 +46,7 @@ const Hero = () => {
               href="/portfolio"
               className="w-fit border border-white px-6 py-3 text-sm transition hover:bg-white hover:text-black"
             >
-              Explore Our Work →
+              Lihat Karya Kami →
             </Link>
           </div>
         </div>
