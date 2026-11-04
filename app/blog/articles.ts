@@ -127,8 +127,8 @@ export const articles: Article[] = [
     category: "Penyuntingan Video",
     excerpt:
       "Color correction merapikan warna dasar, sedangkan color grading membantu membentuk suasana visual video.",
-    image: "/images/Ruang Kerja Editor Video Sinematik.png",
-    imageAlt: "Ruang kerja untuk proses penyuntingan dan pengolahan warna video",
+    image: "/images/Color Correction dan Color Grading Video Kenali Perbedaannya.jpeg",
+    imageAlt: "Tampilan proses color correction dan color grading video",
     introduction:
       "Color correction dan color grading merupakan dua proses berbeda dalam penyuntingan video. Keduanya berhubungan dengan warna, tetapi memiliki tujuan yang berbeda dalam menyusun tampilan akhir.",
     sections: [

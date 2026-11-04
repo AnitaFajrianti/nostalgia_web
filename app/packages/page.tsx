@@ -5,18 +5,34 @@ import PhotoImage from "@/components/PhotoImage";
 const packages = [
   {
     number: "01",
-    name: "Starter",
-    description: "Untuk kebutuhan proyek yang lebih sederhana dan terarah.",
+    name: "Memory",
+    subtitle: "Essential Documentation",
+    features: [
+      "Photographers",
+      "Videographers",
+      "Equipment",
+      "Included Photo Edit",
+      "Simple Video Edit",
+      "Raw included",
+      "3x Minor Revision",
+    ],
   },
   {
     number: "02",
-    name: "Professional",
-    description: "Untuk proyek dengan kebutuhan yang lebih lengkap.",
-  },
-  {
-    number: "03",
-    name: "Custom",
-    description: "Solusi yang disesuaikan dengan kebutuhan dan skala proyek.",
+    name: "Legacy",
+    subtitle: "Complete Production",
+    dark: true,
+    features: [
+      "Photographers",
+      "Videographers",
+      "Professional gear",
+      "Meeting supported",
+      "Included Photo Edit",
+      "Final Video Edit",
+      "Motion graphics",
+      "Color grading",
+      "3x Minor Revision",
+    ],
   },
 ];
 
@@ -52,91 +68,94 @@ const packageDetails = [
 export default function PackagesPage() {
   return (
     <main>
-      {/* HERO */}
-      <section className="min-h-[60vh] px-6 py-16">
-        <div className="mx-auto flex min-h-[40vh] max-w-7xl items-end">
-          <div className="max-w-5xl">
-            <p className="mb-6 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Paket
-            </p>
-
-            <h1 className="type-hero font-semibold text-[var(--brown)]">
-              Solusi kreatif sesuai kebutuhanmu.
-            </h1>
-          </div>
-        </div>
-      </section>
-
-      {/* INTRO */}
-      <section className="border-t border-[var(--line)] bg-[var(--cream-light)] px-6 py-16 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-12 md:items-end">
-          <div className="md:col-span-5">
-            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Pilihan Paket
-            </p>
-            <h2 className="mt-4 font-semibold text-[var(--brown)]">
-              Pilih titik awal untuk kebutuhan visualmu.
-            </h2>
-          </div>
-          <p className="text-[var(--brown-light)] md:col-span-7">
-            Setiap proyek memiliki kebutuhan berbeda. Konsultasikan kebutuhan
-            terlebih dahulu agar cakupan layanan, hasil, jadwal, dan penawaran
-            dapat disepakati dengan jelas sebelum pekerjaan dimulai.
-          </p>
-        </div>
-      </section>
-
-      {/* PACKAGE CARDS */}
-      <section className="px-6 py-20 md:px-10 md:py-24">
+      <section className="bg-[var(--cream)] px-6 py-12 md:px-10 md:py-16">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12">
-            <p className="mb-5 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Pilih Paket
+          <div className="mb-6">
+            <p className="text-xs font-medium uppercase tracking-wide text-[var(--terracotta)]">
+              Our Packages
             </p>
-            <h2 className="font-bold text-[var(--brown)]">
-              Tiga opsi yang disesuaikan dengan kebutuhan proyek.
-            </h2>
+            <h1 className="mt-2 font-sans text-3xl font-medium tracking-tight text-[var(--brown)] md:text-4xl">
+              Find the right way to tell your story.
+            </h1>
+            <p className="mt-2 text-sm text-[var(--brown-light)]">
+              Pilihan layanan dokumentasi yang dirancang mengikuti kebutuhan
+              setiap proyek.
+            </p>
           </div>
 
-          <div className="grid gap-5 lg:grid-cols-3">
+          <div className="grid gap-3 lg:grid-cols-2">
             {packages.map((item) => (
               <article
                 key={item.name}
-                className="flex h-full flex-col border border-[var(--line)] bg-[var(--cream-light)] p-7 md:p-8"
+                className={`flex min-h-[34rem] flex-col p-5 md:p-7 ${
+                  item.dark
+                    ? "bg-[var(--brown)] text-[var(--cream-light)]"
+                    : "bg-[var(--cream-light)] text-[var(--brown)]"
+                }`}
               >
-                <span className="text-sm text-[var(--brown-light)]">
-                  {item.number}
-                </span>
-                <h3 className="mt-8 font-semibold text-[var(--brown)]">
+                <div className="flex items-center justify-between gap-4">
+                  <span className={`text-xs uppercase ${item.dark ? "text-[var(--beige)]" : "text-[var(--terracotta)]"}`}>
+                    Package {item.number}
+                  </span>
+                </div>
+
+                <h2 className="mt-6 font-sans text-2xl font-medium tracking-tight">
                   {item.name}
-                </h3>
-                <p className="mt-3 min-h-12 text-sm leading-relaxed text-[var(--brown-light)]">
-                  {item.description}
+                </h2>
+                <p className={`mt-2 text-xs ${item.dark ? "text-[var(--cream)]/75" : "text-[var(--brown-light)]"}`}>
+                  {item.subtitle}
                 </p>
 
-                <div className="mt-7 border-t border-[var(--line)] pt-5">
-                  <p className="text-xs uppercase tracking-[0.14em] text-[var(--brown-light)]">
-                    Harga
+                <div className={`mt-5 border-t pt-5 ${item.dark ? "border-[var(--cream-light)]/20" : "border-[var(--line)]"}`}>
+                  <p className={`text-[0.65rem] font-medium uppercase tracking-wide ${item.dark ? "text-[var(--beige)]" : "text-[var(--terracotta)]"}`}>
+                    Included Services
                   </p>
-                  <p className="mt-2 font-medium text-[var(--brown)]">
-                    Minta penawaran
-                  </p>
+                  <ul className="mt-3 space-y-2.5">
+                    {item.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className={`flex items-baseline gap-3 text-xs leading-5 ${item.dark ? "text-[var(--cream-light)]" : "text-[var(--brown-light)]"}`}
+                      >
+                        <span className="text-[var(--terracotta)]" aria-hidden="true">
+                          ✓
+                        </span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 <Link
                   href="/contact"
-                  className="mt-7 inline-flex w-full items-center justify-center border border-[var(--terracotta)] px-5 py-3 text-sm font-medium text-[var(--terracotta)] transition hover:bg-[var(--terracotta)] hover:text-[var(--cream-light)]"
+                  className={`mt-auto inline-flex w-full items-center justify-center gap-1 px-4 py-2.5 text-xs font-medium transition ${
+                    item.dark
+                      ? "bg-[var(--cream-light)] text-[var(--brown)] hover:bg-[var(--beige)]"
+                      : "border border-[var(--terracotta)] text-[var(--terracotta)] hover:bg-[var(--terracotta)] hover:text-[var(--cream-light)]"
+                  }`}
                 >
-                  Konsultasikan Kebutuhan →
+                  Konsultasikan Kebutuhan <span aria-hidden="true">↗</span>
                 </Link>
               </article>
             ))}
+          </div>
+
+          <div className="relative mt-5 flex justify-center">
+            <Link
+              href="#package-details"
+              aria-label="Lihat detail paket"
+              className="absolute -top-3 flex size-8 items-center justify-center rounded-full bg-black text-lg text-white transition hover:bg-[var(--terracotta)]"
+            >
+              ↓
+            </Link>
+            <p className="pt-4 text-[0.55rem] uppercase tracking-wide text-[var(--brown-light)]">
+              Nostalgia.Kala — Services &amp; Experience
+            </p>
           </div>
         </div>
       </section>
 
       {/* SCOPE DETAILS */}
-      <section className="border-y border-[var(--line)] bg-[var(--cream-light)] px-6 py-20 md:px-10 md:py-24">
+      <section id="package-details" className="border-y border-[var(--line)] bg-[var(--cream-light)] px-6 py-20 md:px-10 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">

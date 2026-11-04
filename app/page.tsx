@@ -324,7 +324,7 @@ export default function Home() {
             {workFlows.map((flow) => (
               <article
                 key={flow.number}
-                className="border border-[var(--line)] bg-[var(--cream)] p-6 md:p-8"
+                className="flex h-full flex-col border border-[var(--line)] bg-[var(--cream)] p-6 md:p-8"
               >
                 <div className="flex items-start justify-between gap-4">
                   <span className="font-display text-4xl leading-none text-[var(--terracotta)]">
@@ -342,7 +342,7 @@ export default function Home() {
                   {flow.description}
                 </p>
 
-                <ol className="mt-6 border-t border-[var(--line)]">
+                <ol className="mt-6 grid flex-1 grid-rows-4 border-t border-[var(--line)]">
                   {flow.steps.map(([title, description], index) => (
                     <li
                       key={title}
@@ -352,10 +352,10 @@ export default function Home() {
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       <div>
-                        <h4 className="text-sm font-semibold text-[var(--brown)]">
+                        <h4 className="text-base font-semibold leading-snug text-[var(--brown)]">
                           {title}
                         </h4>
-                        <p className="mt-1 text-sm leading-relaxed text-[var(--brown-light)]">
+                        <p className="mt-1 text-[0.9375rem] leading-relaxed text-[var(--brown-light)]">
                           {description}
                         </p>
                       </div>
