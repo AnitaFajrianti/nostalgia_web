@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import CTA from "@/components/CTA";
 import PhotoImage from "@/components/PhotoImage";
 import { articles } from "./blog/articles";
+import { packages } from "@/lib/packages";
 
 const selectedWorks = [
   {
@@ -362,6 +363,82 @@ export default function Home() {
                     </li>
                   ))}
                 </ol>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PACKAGES */}
+      <section className="border-t border-[var(--line)] bg-[var(--cream)] px-6 py-24 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-3xl">
+              <p className="mb-5 text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
+                Pilihan Paket
+              </p>
+              <h2 className="font-bold text-[var(--brown)]">
+                Dokumentasi yang sesuai dengan ceritamu.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-[var(--brown-light)]">
+                Pilih kebutuhan dokumentasi dasar atau produksi lengkap.
+              </p>
+            </div>
+            <Link
+              href="/packages"
+              className="w-fit border-b border-[var(--brown)] pb-1 text-sm font-medium"
+            >
+              Lihat Semua Paket →
+            </Link>
+          </div>
+
+          <div className="grid gap-3 md:grid-cols-2">
+            {packages.map((item) => (
+              <article
+                key={item.name}
+                className={`flex min-h-72 flex-col p-6 md:p-8 ${
+                  item.dark
+                    ? "bg-[var(--brown)] text-[var(--cream-light)]"
+                    : "bg-[var(--cream-light)] text-[var(--brown)]"
+                }`}
+              >
+                <span
+                  className={`text-xs uppercase ${
+                    item.dark ? "text-[var(--beige)]" : "text-[var(--terracotta)]"
+                  }`}
+                >
+                  Package {item.number}
+                </span>
+                <h3 className="mt-5 font-sans text-2xl font-medium tracking-tight">
+                  {item.name}
+                </h3>
+                <p
+                  className={`mt-1 text-xs ${
+                    item.dark ? "text-[var(--cream)]/75" : "text-[var(--brown-light)]"
+                  }`}
+                >
+                  {item.subtitle}
+                </p>
+                <ul className="mt-5 grid flex-1 gap-x-6 gap-y-2 border-t border-current/15 pt-5 text-xs sm:grid-cols-2">
+                  {item.features.slice(0, 4).map((feature) => (
+                    <li key={feature} className="flex items-baseline gap-2">
+                      <span className="text-[var(--terracotta)]" aria-hidden="true">
+                        ✓
+                      </span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/packages"
+                  className={`mt-6 inline-flex w-fit border-b pb-1 text-xs font-medium ${
+                    item.dark
+                      ? "border-[var(--cream-light)] text-[var(--cream-light)]"
+                      : "border-[var(--terracotta)] text-[var(--terracotta)]"
+                  }`}
+                >
+                  Lihat detail paket →
+                </Link>
               </article>
             ))}
           </div>

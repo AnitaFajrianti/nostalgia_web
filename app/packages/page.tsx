@@ -1,69 +1,7 @@
 import Link from "next/link";
 import CTA from "@/components/CTA";
 import PhotoImage from "@/components/PhotoImage";
-
-const packages = [
-  {
-    number: "01",
-    name: "Memory",
-    subtitle: "Essential Documentation",
-    features: [
-      "Photographers",
-      "Videographers",
-      "Equipment",
-      "Included Photo Edit",
-      "Simple Video Edit",
-      "Raw included",
-      "3x Minor Revision",
-    ],
-  },
-  {
-    number: "02",
-    name: "Legacy",
-    subtitle: "Complete Production",
-    dark: true,
-    features: [
-      "Photographers",
-      "Videographers",
-      "Professional gear",
-      "Meeting supported",
-      "Included Photo Edit",
-      "Final Video Edit",
-      "Motion graphics",
-      "Color grading",
-      "3x Minor Revision",
-    ],
-  },
-];
-
-const packageDetails = [
-  {
-    label: "Cakupan layanan",
-    value:
-      "Capture (foto dan video), Create (penyuntingan dan produksi konten), atau Design (desain visual dan media sosial). Pilihan layanan per paket dikonfirmasi setelah konsultasi.",
-  },
-  {
-    label: "Jumlah hasil",
-    value: "Belum ditentukan; disesuaikan dan dicantumkan dalam penawaran.",
-  },
-  {
-    label: "Format hasil",
-    value: "Belum ditentukan; disepakati sesuai kebutuhan penggunaan.",
-  },
-  {
-    label: "Estimasi pengerjaan",
-    value: "Dikonfirmasi setelah kebutuhan dan jadwal proyek dibahas.",
-  },
-  {
-    label: "Batas revisi",
-    value: "Belum ditentukan; dicantumkan dalam penawaran sebelum proyek dimulai.",
-  },
-  {
-    label: "Termasuk dan tidak termasuk",
-    value:
-      "Rincian belum tersedia. Semua layanan, kebutuhan produksi, dan item di luar cakupan akan dikonfirmasi dalam penawaran.",
-  },
-];
+import { packages } from "@/lib/packages";
 
 export default function PackagesPage() {
   return (
@@ -139,55 +77,6 @@ export default function PackagesPage() {
             ))}
           </div>
 
-          <div className="relative mt-5 flex justify-center">
-            <Link
-              href="#package-details"
-              aria-label="Lihat detail paket"
-              className="absolute -top-3 flex size-8 items-center justify-center rounded-full bg-black text-lg text-white transition hover:bg-[var(--terracotta)]"
-            >
-              ↓
-            </Link>
-            <p className="pt-4 text-[0.55rem] uppercase tracking-wide text-[var(--brown-light)]">
-              Nostalgia.Kala — Services &amp; Experience
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SCOPE DETAILS */}
-      <section id="package-details" className="border-y border-[var(--line)] bg-[var(--cream-light)] px-6 py-20 md:px-10 md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-12 md:gap-16">
-          <div className="md:col-span-4">
-            <p className="text-sm uppercase tracking-[0.2em] text-[var(--terracotta)]">
-              Cakupan &amp; Hasil Pekerjaan
-            </p>
-            <h2 className="mt-4 font-bold text-[var(--brown)]">
-              Detail paket dikonfirmasi sebelum proyek dimulai.
-            </h2>
-            <p className="mt-5 text-sm leading-relaxed text-[var(--brown-light)]">
-              Informasi spesifik yang belum tersedia tidak kami tetapkan
-              sepihak. Minta penawaran untuk memperoleh ruang lingkup tertulis
-              sesuai kebutuhan.
-            </p>
-          </div>
-
-          <dl className="md:col-span-8">
-            {packageDetails.map((detail, index) => (
-              <div
-                key={detail.label}
-                className={`grid gap-2 py-5 sm:grid-cols-[12rem_1fr] sm:gap-6 ${
-                  index === 0 ? "border-y" : "border-b"
-                } border-[var(--line)]`}
-              >
-                <dt className="text-sm font-medium text-[var(--brown)]">
-                  {detail.label}
-                </dt>
-                <dd className="text-sm leading-relaxed text-[var(--brown-light)]">
-                  {detail.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
 
